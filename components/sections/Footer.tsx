@@ -47,7 +47,7 @@ export default function Footer() {
                 EVER KNITTING
               </h2>
               <p className="max-w-xs text-sm leading-relaxed text-wool">
-                Best Trading (Dongguan) Co., Ltd.
+                Ever Knitting Company Limited.
                 <br />
                 Premium knitwear manufacturer specializing in luxury cashmere and 
                 high-end blends since 1993.
@@ -63,7 +63,7 @@ export default function Footer() {
                   <Linkedin size={20} />
                 </a>
                 <a 
-                  href="mailto:info@ever-knitting.com"
+                  href="mailto:info@everknitting.com"
                   className="flex h-10 w-10 items-center justify-center rounded-xl border border-wool/30 bg-cashmere/5 transition hover:border-copper hover:text-copper"
                 >
                   <Mail size={20} />
@@ -131,7 +131,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-cashmere">Inquiries</p>
-                  <p className="mt-1 text-xs text-wool">sales@ever-knitting.com</p>
+                  <p className="mt-1 text-xs text-wool">info@everknitting.com</p>
                 </div>
               </div>
             </div>
@@ -141,7 +141,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-20 border-t border-wool/20 pt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
           <p className="text-xs text-wool/60">
-            © {currentYear} Best Trading (Dongguan) Co., Ltd. All rights reserved.
+            © {currentYear} Ever Knitting Company Limited. All rights reserved.
           </p>
           <div className="flex gap-8">
             <p className="text-xs text-wool/40 italic">
