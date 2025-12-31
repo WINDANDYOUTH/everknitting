@@ -8,7 +8,7 @@ const FOOTER_LINKS = [
   {
     title: "Services",
     links: [
-      { name: "What We Manufacture", href: "#manufacture" },
+      { name: "What We Manufacture", href: "/manufacturing" },
       { name: "Materials & Yarns", href: "#materials" },
       { name: "Custom Development", href: "#contact" },
       { name: "Quality Control", href: "#process" },

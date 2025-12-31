@@ -7,7 +7,7 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 const NAV_LINKS = [
-  { name: "Manufacturing", href: "#manufacture" },
+  { name: "Manufacturing", href: "/manufacturing" },
   { name: "Materials", href: "#materials" },
   { name: "Process", href: "#process" },
   { name: "FAQ", href: "#faq" },

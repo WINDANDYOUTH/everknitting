@@ -12,6 +12,7 @@
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import Link from "next/link";
 import { industrySlugs, getIndustryBySlug } from "@/app/data/industries";
 import { generateIndustryMetadata } from "@/lib/seo";
 import { CombinedSchema } from "@/components/seo/SeoSchema";
@@ -250,18 +251,18 @@ export default async function IndustryPage({
             for their manufacturing needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+            <Link
               href="/contact"
               className="inline-block bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors"
             >
               Schedule Consultation
-            </a>
-            <a
+            </Link>
+            <Link
               href="/products"
               className="inline-block bg-indigo-700 text-white border-2 border-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-800 transition-colors"
             >
               View Our Products
-            </a>
+            </Link>
           </div>
         </section>
       </article>
