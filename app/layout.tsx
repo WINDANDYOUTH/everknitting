@@ -20,7 +20,7 @@ import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/schema"
  */
 export const metadata: Metadata = {
   title: {
-    default: "Ever Knitting | Professional Knitwear Manufacturer in China",
+    default: "Ever Knitting | Professional Knitwear Manufacturer in China and Cambodia",
     template: "%s | Ever Knitting",
   },
   description:
