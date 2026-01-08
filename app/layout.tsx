@@ -80,7 +80,7 @@ export default function RootLayout({
           suppressHydrationWarning
         />
       </head>
-      <body className="antialiased font-sans">
+      <body className="antialiased font-sans" suppressHydrationWarning>
         <Header />
         {children}
       </body>

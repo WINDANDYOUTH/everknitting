@@ -143,8 +143,9 @@ export async function sendInquiry(
     }
 
     return { ok: true, message: "Sent! We'll reply in 12–24 hours." };
-  } catch (e: any) {
+  } catch (e: unknown) {
     console.error("❌ Send inquiry error:", e);
-    return { ok: false, message: e?.message ?? "Unexpected error." };
+    const errorMessage = e instanceof Error ? e.message : "Unexpected error.";
+    return { ok: false, message: errorMessage };
   }
 }
