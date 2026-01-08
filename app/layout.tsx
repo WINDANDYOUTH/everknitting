@@ -14,8 +14,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/schema";
 
-export const runtime = "edge";
-
 /**
  * Default metadata
  * This is overridden by page-specific generateMetadata() functions
