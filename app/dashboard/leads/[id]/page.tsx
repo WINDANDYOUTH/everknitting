@@ -3,6 +3,8 @@ import Link from "next/link";
 import { ArrowLeft, Plus } from "lucide-react";
 import { notFound } from "next/navigation";
 
+export const runtime = 'edge';
+
 export default async function LeadDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const { id } = await params;
   const lead = await getLeadById(id);
