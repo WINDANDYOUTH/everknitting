@@ -43,7 +43,7 @@ export const metadata: Metadata = {
   },
 };
 
-import Header from "@/components/sections/Header";
+import { ClerkProvider } from "@clerk/nextjs";
 
 export default function RootLayout({
   children,
@@ -55,33 +55,34 @@ export default function RootLayout({
   const websiteSchema = generateWebsiteSchema();
 
   return (
-    <html lang="en" className="scroll-smooth">
-      <head>
-        {/*
-          SITE-WIDE STRUCTURED DATA
-          
-          These schemas appear on every page:
-          - Organization: Business entity information
-          - WebSite: Site-level information
-          
-          Page-specific schemas (Service, Product, FAQ) are added
-          by individual page components.
-        */}
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@graph": [organizationSchema, websiteSchema],
-            }),
-          }}
-          suppressHydrationWarning
-        />
-      </head>
-      <body className="antialiased font-sans" suppressHydrationWarning>
-        <Header />
-        {children}
-      </body>
-    </html>
+    <ClerkProvider>
+      <html lang="en" className="scroll-smooth">
+        <head>
+          {/*
+            SITE-WIDE STRUCTURED DATA
+            
+            These schemas appear on every page:
+            - Organization: Business entity information
+            - WebSite: Site-level information
+            
+            Page-specific schemas (Service, Product, FAQ) are added
+            by individual page components.
+          */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                "@context": "https://schema.org",
+                "@graph": [organizationSchema, websiteSchema],
+              }),
+            }}
+            suppressHydrationWarning
+          />
+        </head>
+        <body className="antialiased font-sans" suppressHydrationWarning>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

@@ -9,18 +9,18 @@ const FOOTER_LINKS = [
     title: "Services",
     links: [
       { name: "What We Manufacture", href: "/manufacturing" },
-      { name: "Materials & Yarns", href: "#materials" },
-      { name: "Custom Development", href: "#contact" },
-      { name: "Quality Control", href: "#process" },
+      { name: "Materials & Yarns", href: "/materials" },
+      { name: "Custom Development", href: "/contact" },
+      { name: "Quality Control", href: "/process" },
     ],
   },
   {
     title: "Navigation",
     links: [
-      { name: "How We Work", href: "#process" },
-      { name: "Why Choose Us", href: "#why-us" },
-      { name: "FAQ", href: "#faq" },
-      { name: "Start Project", href: "#contact" },
+      { name: "How We Work", href: "/process" },
+      { name: "Why Choose Us", href: "/why-us" },
+      { name: "FAQ", href: "/faq" },
+      { name: "Start Project", href: "/contact" },
     ],
   },
   {
@@ -109,7 +109,7 @@ export default function Footer() {
                 <div>
                   <p className="text-sm font-medium text-cashmere">Factory Address</p>
                   <p className="mt-1 text-xs leading-relaxed text-wool">
-                    No. 88, Industry Road, Dalang Town,<br />
+                    No. 34, Changlang Road, Changping Town,<br />
                     Dongguan City, Guangdong, China
                   </p>
                 </div>
@@ -121,7 +121,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-cashmere">Phone</p>
-                  <p className="mt-1 text-xs text-wool">+86 (769) 8312 XXXX</p>
+                  <p className="mt-1 text-xs text-wool">+86 15626260157</p>
                 </div>
               </div>
 

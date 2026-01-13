@@ -1,5 +1,5 @@
 // app/page.tsx
-import HeroSection from "../components/sections/HeroSection";
+import HeroSection from "@/components/sections/HeroSection";
 import WhatWeManufactureSection from "@/components/sections/WhatWeManufactureSection";
 import MaterialsSection from "@/components/sections/MaterialsSection";
 import MobileMaterialsStack from "@/components/sections/MobileMaterialsStack";
@@ -9,7 +9,6 @@ import StartYourProjectSection from "@/components/sections/StartYourProjectSecti
 import FAQSection, { faqs } from "@/components/sections/FAQSection";
 import JSONLD from "@/components/seo/JSONLD";
 
-import Footer from "@/components/sections/Footer";
 
 export default function HomePage() {
   return (
@@ -28,7 +27,6 @@ export default function HomePage() {
       <WhyEverKnittingSection />
       <StartYourProjectSection />
       <FAQSection />
-      <Footer />
       {/* ✅ SEO JSON-LD (server component) */}
       <JSONLD faqs={faqs} />
     </main>

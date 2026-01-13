@@ -1,0 +1,20 @@
+export default function QuotationsPage() {
+  return (
+    <div className="space-y-6">
+      <div className="flex items-center justify-between">
+        <div>
+          <h1 className="text-3xl font-bold tracking-tight text-neutral-900">Quotations</h1>
+          <p className="text-neutral-500 mt-2">Manage price quotes and validity.</p>
+        </div>
+        <button className="bg-emerald-600 text-white px-4 py-2 rounded-md hover:bg-emerald-700 transition-colors">
+          + Create Quotation
+        </button>
+      </div>
+
+      <div className="border rounded-lg bg-white overflow-hidden shadow-sm p-12 text-center text-neutral-500">
+        <p>No quotations found.</p>
+        <p className="text-sm mt-2">Connect the database to see real data.</p>
+      </div>
+    </div>
+  );
+}

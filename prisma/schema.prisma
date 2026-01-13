@@ -1,0 +1,113 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+}
+
+model Lead {
+  id          String        @id @default(uuid())
+  companyName String        // Brand Name
+  contactName String?
+  email       String?       @unique
+  country     String?
+  source      String?
+  status      LeadStatus    @default(NEW)
+  priority    Priority      @default(MEDIUM)
+  owner       String?       // Owner name/email
+  notes       String?       // General remarks
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
+  
+  interactions Interaction[] // Outreach
+  followUps    FollowUp[]    // Follow-ups timeline
+  samples      SampleRequest[]
+  quotations   Quotation[]
+}
+
+enum LeadStatus {
+  NEW
+  CONTACTED
+  QUALIFIED
+  SAMPLE_SENT
+  NEGOTIATION
+  WON
+  LOST
+}
+
+enum Priority {
+  LOW
+  MEDIUM
+  HIGH
+}
+
+model Interaction {
+  id        String          @id @default(uuid())
+  leadId    String
+  lead      Lead            @relation(fields: [leadId], references: [id])
+  type      InteractionType
+  template  String?         // Template used
+  channel   String?         // Specific channel details
+  notes     String
+  date      DateTime        @default(now())
+}
+
+enum InteractionType {
+  EMAIL
+  CALL
+  MEETING
+  WHATSAPP
+  LINKEDIN
+  OTHER
+}
+
+model FollowUp {
+  id        String   @id @default(uuid())
+  leadId    String
+  lead      Lead     @relation(fields: [leadId], references: [id])
+  note      String
+  stage     String   // The stage at this follow-up (e.g. "Waiting for feedback")
+  date      DateTime @default(now())
+}
+
+model SampleRequest {
+  id             String       @id @default(uuid())
+  leadId         String
+  lead           Lead         @relation(fields: [leadId], references: [id])
+  items          Json         // List of styles/yarns requested
+  isPaid         Boolean      @default(false)
+  cost           Decimal?
+  probability    Int?         // Success probability 0-100
+  status         SampleStatus @default(PREPARING)
+  trackingNumber String?
+  createdAt      DateTime     @default(now())
+}
+
+enum SampleStatus {
+  PREPARING
+  SENT
+  DELIVERED
+  CANCELLED
+}
+
+model Quotation {
+  id          String          @id @default(uuid())
+  leadId      String
+  lead        Lead            @relation(fields: [leadId], references: [id])
+  totalAmount Decimal
+  currency    String          @default("USD")
+  status      QuotationStatus @default(DRAFT)
+  validUntil  DateTime?
+  items       Json?           // Optional line items
+  createdAt   DateTime        @default(now())
+}
+
+enum QuotationStatus {
+  DRAFT
+  SENT
+  ACCEPTED
+  REJECTED
+  EXPIRED
+}
