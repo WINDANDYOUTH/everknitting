@@ -13,8 +13,6 @@ import { generateServiceSchema, generateFAQSchema } from "@/lib/schema";
 import { ServiceCTA } from "@/components/sections/ServiceCTA";
 import { setRequestLocale } from 'next-intl/server';
 
-export const runtime = 'edge';
-
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
