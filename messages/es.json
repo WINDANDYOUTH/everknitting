@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "title": "Ever Knitting | Fabricante profesional de prendas de punto en China y Camboya",
+    "description": "Ever Knitting es un fabricante profesional de prendas de punto que ofrece servicios OEM y ODM para marcas de moda, mayoristas y empresas de marca propia."
+  },
+  "navigation": {
+    "home": "Inicio",
+    "materials": "Materiales",
+    "process": "Proceso",
+    "products": "Productos",
+    "services": "Servicios",
+    "industries": "Industrias",
+    "about": "Nosotros",
+    "contact": "Contacto",
+    "faq": "FAQ",
+    "manufacturing": "Fabricación",
+    "getQuote": "Solicitar presupuesto"
+  },
+  "hero": {
+    "brand": "Ever Knitting Company Limited",
+    "title": "Fabricante Premium de Cachemira y Prendas de Punto",
+    "titleHighlight": "Desde 1993",
+    "subtitle": "Producción directa de fábrica de jerséis de cachemira de alta calidad y prendas de punto.",
+    "subtitleLine2": "Desde muestreo hasta pedidos a granel, a medida para marcas globales.",
+    "cta": "Solicitar presupuesto",
+    "ctaSecondary": "Consulta de muestras gratis",
+    "ctaNote": "Respuesta en 12–24 horas • NDA disponible",
+    "badges": {
+      "experience": "30+ años de experiencia en tejido",
+      "specialists": "Especialistas en cachemira y punto fino",
+      "moq": "MOQ bajo y muestreo flexible",
+      "quality": "Calidad estable y entrega puntual"
+    }
+  },
+  "common": {
+    "readMore": "Leer más",
+    "viewAll": "Ver todo",
+    "contactUs": "Contáctenos",
+    "submit": "Enviar",
+    "loading": "Cargando...",
+    "error": "Se produjo un error",
+    "success": "¡Éxito!",
+    "required": "Requerido",
+    "optional": "Opcional",
+    "learnMore": "Más información",
+    "startProject": "Iniciar su proyecto",
+    "idealFor": "Ideal para:",
+    "faqTitle": "Preguntas frecuentes"
+  },
+  "contact": {
+    "title": "Contáctenos",
+    "subtitle": "Póngase en contacto con nuestro equipo",
+    "heroTitle": "Hablemos.",
+    "heroSubtitle": "Ya sea que sea una marca establecida buscando un nuevo socio o una startup lanzando su primera colección, estamos aquí para ayudarle.",
+    "infoTitle": "Información de contacto",
+    "form": {
+      "name": "Su nombre",
+      "email": "Correo electrónico",
+      "company": "Nombre de la empresa",
+      "phone": "Número de teléfono",
+      "country": "País",
+      "message": "Su mensaje",
+      "submit": "Enviar mensaje",
+      "submitting": "Enviando...",
+      "success": "¡Gracias! Nos pondremos en contacto pronto.",
+      "error": "Algo salió mal. Por favor, inténtelo de nuevo."
+    },
+    "info": {
+      "factoryAddress": "Dirección de fábrica",
+      "emailUs": "Envíenos un correo",
+      "callUs": "Llámenos"
+    }
+  },
+  "footer": {
+    "company": "Empresa",
+    "services": "Servicios",
+    "navigation": "Navegación",
+    "legal": "Legal",
+    "contactUs": "Contacto",
+    "privacy": "Política de privacidad",
+    "terms": "Términos de servicio",
+    "cookies": "Política de cookies",
+    "copyright": "© {year} Ever Knitting Company Limited. Todos los derechos reservados.",
+    "tagline": "Excelencia en prendas de punto desde 1993",
+    "description": "Fabricante de prendas de punto premium especializado en cachemira de lujo y mezclas de alta gama desde 1993.",
+    "links": {
+      "whatWeManufacture": "Lo que fabricamos",
+      "materialsYarns": "Materiales e hilos",
+      "customDevelopment": "Desarrollo personalizado",
+      "qualityControl": "Control de calidad",
+      "howWeWork": "Cómo trabajamos",
+      "whyChooseUs": "Por qué elegirnos",
+      "faq": "FAQ",
+      "startProject": "Iniciar proyecto"
+    },
+    "contactInfo": {
+      "factoryAddress": "Dirección de fábrica",
+      "phone": "Teléfono",
+      "inquiries": "Consultas"
+    }
+  },
+  "about": {
+    "title": "Acerca de Ever Knitting",
+    "subtitle": "Más de 15 años de excelencia en la fabricación de prendas de punto",
+    "heroTitle": "Tejemos",
+    "heroHighlight": "Legados",
+    "heroSubtitle": "Desde 2008, Ever Knitting ha sido el socio silencioso detrás de algunas de las marcas de moda más prestigiosas del mundo.",
+    "storyTitle": "Nuestra historia",
+    "storyP1": "Fundada en el corazón del distrito textil de Dongguan, Ever Knitting comenzó con solo cinco máquinas de tejer y el sueño de redefinir la calidad.",
+    "storyP2": "En los últimos 15 años, nos hemos expandido a una instalación de última generación que emplea a más de 200 artesanos y técnicos calificados. Combinamos técnicas tradicionales de acabado a mano con tecnología automatizada moderna para entregar prendas que realmente se destacan.",
+    "storyP3": "Creemos que cada puntada importa. Desde la tensión del hilo hasta el planchado final al vapor, nuestra obsesión por el detalle es lo que nos distingue.",
+    "valuesTitle": "Nuestros valores fundamentales",
+    "values": {
+      "integrity": {
+        "title": "Integridad",
+        "desc": "Precios honestos y comunicación transparente con todos nuestros clientes."
+      },
+      "quality": {
+        "title": "Calidad",
+        "desc": "Tolerancia cero a defectos. Si no es perfecto, no sale de nuestra fábrica."
+      },
+      "innovation": {
+        "title": "Innovación",
+        "desc": "Explorando constantemente nuevas estructuras de tejido, hilos y prácticas sostenibles."
+      }
+    }
+  },
+  "materials": {
+    "title": "Materiales premium",
+    "subtitle": "Solo utilizamos los mejores materiales para nuestras prendas de punto",
+    "heroTitle": "Materiales",
+    "heroTitleSuffix": "Exquisitos",
+    "heroSubtitle": "Obtenemos solo los hilos más finos de todo el mundo. ¿Su marca requiere cachemira sedosa, merino duradero o algodón orgánico sostenible? Tenemos la fibra perfecta para cada obra maestra.",
+    "cashmere": {
+      "title": "Cachemira pura",
+      "desc": "Conocida como \"oro suave\", nuestra cachemira proviene de Mongolia Interior. Ofrece una suavidad, calidez y lujo inigualables para colecciones premium."
+    },
+    "merino": {
+      "title": "Lana Merino",
+      "desc": "Lana Merino extra-fina que es transpirable, absorbe la humedad y es increíblemente suave contra la piel. Perfecta para prendas de punto versátiles durante todo el año."
+    },
+    "cotton": {
+      "title": "Algodón y mezclas ecológicas",
+      "desc": "Algodón orgánico, poliéster reciclado y mezclas ecológicas innovadoras para la marca consciente del medio ambiente. Sostenible sin comprometer la calidad."
+    },
+    "sourcingTitle": "Abastecimiento global,",
+    "sourcingHighlight": "Calidad inigualable",
+    "sourcingDesc": "Nuestro equipo de abastecimiento de materiales viaja por el mundo para encontrar hilos que cumplan con nuestros rigurosos estándares. Mantenemos relaciones sólidas con hilanderos de primer nivel en Italia, Japón y Perú para garantizar consistencia y excelencia en cada carrete.",
+    "viewAllYarns": "Ver todos los hilos"
+  },
+  "process": {
+    "title": "Nuestro proceso",
+    "subtitle": "Desde el diseño hasta la entrega, garantizamos calidad en cada paso",
+    "heroTitle": "El",
+    "heroHighlight": "Arte",
+    "heroTitleSuffix": "de la producción",
+    "heroSubtitle": "La ingeniería de precisión se encuentra con la artesanía artesanal. Vea cómo damos vida a sus diseños.",
+    "steps": {
+      "step1": {
+        "title": "Diseño y consulta",
+        "desc": "Comenzamos entendiendo su visión. Nuestro equipo de diseño colabora con usted para seleccionar hilos, definir galgas y finalizar paquetes técnicos."
+      },
+      "step2": {
+        "title": "Prototipado y muestreo",
+        "desc": "Creamos una muestra física para su aprobación. Esto asegura que el ajuste, el tacto y el aspecto cumplan con sus especificaciones exactas antes de la producción en masa."
+      },
+      "step3": {
+        "title": "Producción en masa",
+        "desc": "Utilizando máquinas Shima Seiki y Stoll de última generación, comenzamos la producción en masa con estricta adherencia a la muestra aprobada."
+      },
+      "step4": {
+        "title": "Control de calidad",
+        "desc": "Cada pieza se somete a un proceso de inspección de múltiples etapas. Verificamos medidas, defectos de tejido y calidad de acabado."
+      },
+      "step5": {
+        "title": "Acabado y embalaje",
+        "desc": "Las prendas se lavan, se planchan al vapor, se etiquetan y se empaquetan según sus requisitos de venta al por menor, listas para el envío."
+      }
+    },
+    "ctaTitle": "¿Listo para empezar?",
+    "ctaButton": "Iniciar su proyecto"
+  },
+  "faq": {
+    "title": "Preguntas frecuentes",
+    "subtitle": "Encuentre respuestas a preguntas comunes sobre nuestros servicios",
+    "heroTitle": "Preguntas",
+    "heroHighlight": "frecuentes",
+    "heroSubtitle": "Todo lo que necesita saber sobre trabajar con Ever Knitting.",
+    "notFound": "¿No encuentra lo que busca?",
+    "contactSupport": "Contactar soporte"
+  },
+  "sections": {
+    "whatWeMake": "Lo que fabricamos",
+    "whyEverKnitting": "Por qué Ever Knitting",
+    "howWeWork": "Cómo trabajamos"
+  },
+  "cta": {
+    "partnerWithUs": "Asóciese con nosotros",
+    "scheduleConsultation": "Programar consulta",
+    "viewProducts": "Ver nuestros productos"
+  }
+}

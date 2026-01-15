@@ -1,18 +1,21 @@
 "use client";
 
 import * as React from "react";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import { motion, useScroll, useMotionValueEvent, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { trackQuotationRequest } from "@/components/analytics";
+import { LanguageSwitcher } from "@/components/i18n";
+import { useTranslations } from "next-intl";
 
 const NAV_LINKS = [
-  { name: "Manufacturing", href: "/manufacturing" },
-  { name: "Materials", href: "/materials" },
-  { name: "Process", href: "/process" },
-  { name: "About Us", href: "/about-us" },
-  { name: "Contact Us", href: "/contact-us" },
+  { nameKey: "manufacturing", href: "/manufacturing" },
+  { nameKey: "materials", href: "/materials" },
+  { nameKey: "process", href: "/process" },
+  { nameKey: "about", href: "/about-us" },
+  { nameKey: "contact", href: "/contact-us" },
 ];
 
 export default function Header() {
@@ -22,6 +25,7 @@ export default function Header() {
   const [scrolled, setScrolled] = React.useState(false);
   const [isMobile, setIsMobile] = React.useState(false);
   const pathname = usePathname();
+  const t = useTranslations("navigation");
 
   // Handle Resize for isMobile
   React.useEffect(() => {
@@ -117,7 +121,7 @@ export default function Header() {
                   pathname === link.href ? "text-primary" : "text-muted-foreground"
                 )}
               >
-                {link.name}
+                {t(link.nameKey)}
                 {pathname === link.href && (
                   <motion.span
                     layoutId="underline"
@@ -128,17 +132,25 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right: CTA & Mobile Toggle */}
-          <div className="flex items-center gap-4">
+          {/* Right: Language Switcher, CTA & Mobile Toggle */}
+          <div className="flex items-center gap-2 md:gap-4">
+            {/* Language Switcher (Desktop) */}
+            <LanguageSwitcher className="hidden md:block" />
+
             <Link
               href="/contact-us"
+              onClick={() => {
+                trackQuotationRequest({
+                  source: "header_cta_desktop",
+                });
+              }}
               className={cn(
                 "hidden md:inline-flex items-center justify-center space-x-2 rounded-full text-sm font-semibold transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50",
                 "bg-primary text-primary-foreground hover:bg-primary/90 h-10 px-6",
                 "shadow-lg shadow-primary/20 hover:shadow-primary/30"
               )}
             >
-              <span>Get a Quote</span>
+              <span>{t("getQuote")}</span>
             </Link>
 
             {/* Mobile Menu Toggle */}
@@ -209,20 +221,35 @@ export default function Header() {
                         pathname === link.href ? "text-copper" : "text-gray-900 hover:text-copper"
                       )}
                     >
-                      {link.name}
+                      {t(link.nameKey)}
                     </Link>
                   </motion.div>
                 ))}
+
+                {/* Language Switcher (Mobile) */}
+                <motion.div
+                  initial={{ opacity: 0, x: 20 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ delay: 0.1 + NAV_LINKS.length * 0.05 }}
+                  className="mt-6 pt-4 border-t border-gray-200"
+                >
+                  <LanguageSwitcher variant="mobile" />
+                </motion.div>
               </nav>
 
               {/* Drawer Footer */}
               <div className="p-6 border-t border-gray-100 bg-gray-50">
                 <Link
                   href="/contact-us"
-                  onClick={() => setMobileMenuOpen(false)}
+                  onClick={() => {
+                    setMobileMenuOpen(false);
+                    trackQuotationRequest({
+                      source: "header_cta_mobile",
+                    });
+                  }}
                   className="w-full flex items-center justify-center rounded-xl bg-navy text-white h-12 text-lg font-semibold shadow-lg hover:bg-navy-deep active:scale-95 transition-all"
                 >
-                  Get a Quote
+                  {t("getQuote")}
                 </Link>
               </div>
             </motion.div>

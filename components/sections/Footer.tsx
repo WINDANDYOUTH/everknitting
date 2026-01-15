@@ -3,38 +3,41 @@
 
 import React from "react";
 import { Mail, Phone, MapPin, Linkedin, ArrowUpRight } from "lucide-react";
-
-const FOOTER_LINKS = [
-  {
-    title: "Services",
-    links: [
-      { name: "What We Manufacture", href: "/manufacturing" },
-      { name: "Materials & Yarns", href: "/materials" },
-      { name: "Custom Development", href: "/contact" },
-      { name: "Quality Control", href: "/process" },
-    ],
-  },
-  {
-    title: "Navigation",
-    links: [
-      { name: "How We Work", href: "/process" },
-      { name: "Why Choose Us", href: "/why-us" },
-      { name: "FAQ", href: "/faq" },
-      { name: "Start Project", href: "/contact" },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      { name: "Privacy Policy", href: "/privacy" },
-      { name: "Terms of Service", href: "/terms" },
-      { name: "Cookie Policy", href: "/cookies" },
-    ],
-  },
-];
+import { Link } from "@/i18n/navigation";
+import { useTranslations } from "next-intl";
 
 export default function Footer() {
+  const t = useTranslations("footer");
   const currentYear = new Date().getFullYear();
+
+  const FOOTER_LINKS = [
+    {
+      titleKey: "services",
+      links: [
+        { nameKey: "links.whatWeManufacture", href: "/manufacturing" },
+        { nameKey: "links.materialsYarns", href: "/materials" },
+        { nameKey: "links.customDevelopment", href: "/contact-us" },
+        { nameKey: "links.qualityControl", href: "/process" },
+      ],
+    },
+    {
+      titleKey: "navigation",
+      links: [
+        { nameKey: "links.howWeWork", href: "/process" },
+        { nameKey: "links.whyChooseUs", href: "/about-us" },
+        { nameKey: "links.faq", href: "/faq" },
+        { nameKey: "links.startProject", href: "/contact-us" },
+      ],
+    },
+    {
+      titleKey: "legal",
+      links: [
+        { nameKey: "privacy", href: "/privacy" },
+        { nameKey: "terms", href: "/terms" },
+        { nameKey: "cookies", href: "/cookies" },
+      ],
+    },
+  ];
 
   return (
     <footer className="bg-navy-deep text-cashmere border-t border-wool/20">
@@ -49,8 +52,7 @@ export default function Footer() {
               <p className="max-w-xs text-sm leading-relaxed text-wool">
                 Ever Knitting Company Limited.
                 <br />
-                Premium knitwear manufacturer specializing in luxury cashmere and 
-                high-end blends since 1993.
+                {t("description")}
               </p>
               
               <div className="flex gap-4">
@@ -74,21 +76,21 @@ export default function Footer() {
 
           {/* Links Columns */}
           <div className="lg:col-span-5 grid grid-cols-2 sm:grid-cols-3 gap-8">
-            {FOOTER_LINKS.map((group) => (group.title !== "Legal" || true) && (
-              <div key={group.title}>
+            {FOOTER_LINKS.map((group) => (
+              <div key={group.titleKey}>
                 <h3 className="text-sm font-semibold text-cashmere/50 uppercase tracking-wider mb-6">
-                  {group.title}
+                  {t(group.titleKey)}
                 </h3>
                 <ul className="space-y-4">
                   {group.links.map((link) => (
-                    <li key={link.name}>
-                      <a
+                    <li key={link.nameKey}>
+                      <Link
                         href={link.href}
                         className="group flex items-center text-sm text-wool transition hover:text-copper"
                       >
-                        {link.name}
+                        {t(link.nameKey)}
                         <ArrowUpRight size={14} className="ml-1 opacity-0 transition group-hover:opacity-100" />
-                      </a>
+                      </Link>
                     </li>
                   ))}
                 </ul>
@@ -99,7 +101,7 @@ export default function Footer() {
           {/* Contact Column */}
           <div className="lg:col-span-3">
             <h3 className="text-sm font-semibold text-cashmere/50 uppercase tracking-wider mb-6">
-              Contact Us
+              {t("contactUs")}
             </h3>
             <div className="space-y-6">
               <div className="flex items-start gap-4">
@@ -107,7 +109,7 @@ export default function Footer() {
                   <MapPin size={18} />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-cashmere">Factory Address</p>
+                  <p className="text-sm font-medium text-cashmere">{t("contactInfo.factoryAddress")}</p>
                   <p className="mt-1 text-xs leading-relaxed text-wool">
                     No. 34, Changlang Road, Changping Town,<br />
                     Dongguan City, Guangdong, China
@@ -120,7 +122,7 @@ export default function Footer() {
                   <Phone size={18} />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-cashmere">Phone</p>
+                  <p className="text-sm font-medium text-cashmere">{t("contactInfo.phone")}</p>
                   <p className="mt-1 text-xs text-wool">+86 15626260157</p>
                 </div>
               </div>
@@ -130,7 +132,7 @@ export default function Footer() {
                   <Mail size={18} />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-cashmere">Inquiries</p>
+                  <p className="text-sm font-medium text-cashmere">{t("contactInfo.inquiries")}</p>
                   <p className="mt-1 text-xs text-wool">info@everknitting.com</p>
                 </div>
               </div>
@@ -141,11 +143,11 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="mt-20 border-t border-wool/20 pt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
           <p className="text-xs text-wool/60">
-            © {currentYear} Ever Knitting Company Limited. All rights reserved.
+            {t("copyright", { year: currentYear })}
           </p>
           <div className="flex gap-8">
             <p className="text-xs text-wool/40 italic">
-              Excellence in Knitwear Since 1993
+              {t("tagline")}
             </p>
           </div>
         </div>

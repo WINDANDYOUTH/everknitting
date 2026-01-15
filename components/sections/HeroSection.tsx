@@ -1,15 +1,20 @@
-// app/components/HeroSection.tsx
-import React from "react";
-import { RainbowButton } from "@/components/ui/rainbow-button";
+// components/sections/HeroSection.tsx
+"use client";
 
-const badges = [
-  "30+ years knitting experience",
-  "Cashmere & fine-gauge specialists",
-  "Low MOQ & flexible sampling",
-  "Stable quality & on-time delivery",
-];
+import React from "react";
+import { QuoteButton } from "@/components/ui/QuoteButton";
+import { useTranslations } from "next-intl";
 
 export default function HeroSection() {
+  const t = useTranslations("hero");
+
+  const badges = [
+    t("badges.experience"),
+    t("badges.specialists"),
+    t("badges.moq"),
+    t("badges.quality"),
+  ];
+
   return (
     <section className="relative overflow-hidden bg-navy text-cashmere">
       {/* subtle, textile-like light */}
@@ -25,21 +30,20 @@ export default function HeroSection() {
       <div className="relative mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:px-8 lg:py-24">
         {/* Brand one-liner */}
         <p className="text-sm font-medium tracking-wide text-cashmere/75">
-          Ever Knitting Company Limited
+          {t("brand")}
         </p>
 
         {/* H1 */}
         <h1 className="mt-3 text-4xl font-semibold leading-tight tracking-tight sm:text-5xl lg:text-6xl">
-          Premium Cashmere &amp; Knitwear Manufacturer{" "}
-          <span className="text-cashmere/85">Since 1993</span>
+          {t("title")}{" "}
+          <span className="text-cashmere/85">{t("titleHighlight")}</span>
         </h1>
 
         {/* Subtitle */}
         <p className="mt-5 max-w-3xl text-base leading-relaxed text-wool sm:text-lg">
-          Factory-direct production of high-quality cashmere sweaters and knitted
-          garments.
+          {t("subtitle")}
           <br className="hidden sm:block" />
-          From sampling to bulk orders, tailored for global brands.
+          {t("subtitleLine2")}
         </p>
 
         {/* Badges */}
@@ -56,19 +60,24 @@ export default function HeroSection() {
 
         {/* CTAs */}
         <div className="mt-9 flex flex-col gap-3 sm:flex-row sm:items-center">
-          <RainbowButton className="h-12 px-6 text-sm font-semibold">
-            Request a Quote
-          </RainbowButton>
+          {/* Quote button with GA4 tracking */}
+          <QuoteButton 
+            source="hero_cta"
+            productType="knitwear"
+            className="h-12 px-6 text-sm font-semibold"
+          >
+            {t("cta")}
+          </QuoteButton>
 
           <a
             href="#consultation"
             className="inline-flex h-12 items-center justify-center rounded-2xl border border-wool/50 bg-cashmere/5 px-6 text-sm font-semibold text-cashmere backdrop-blur transition hover:bg-cashmere/10"
           >
-            Get Free Sample Consultation
+            {t("ctaSecondary")}
           </a>
 
           <span className="text-xs text-cashmere/60">
-            Reply in 12–24 hours • NDA available
+            {t("ctaNote")}
           </span>
         </div>
       </div>

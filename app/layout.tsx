@@ -8,11 +8,15 @@
  * 2. Site-wide JSON-LD schemas (Organization, Website)
  * 3. HTML lang attribute for internationalization
  * 4. Semantic HTML structure
+ * 
+ * Analytics:
+ * - Google Tag Manager (manages GA4, Bing, and other trackers)
  */
 
 import "./globals.css";
 import type { Metadata } from "next";
 import { generateOrganizationSchema, generateWebsiteSchema } from "@/lib/schema";
+import { GoogleTagManager, GTMNoScript } from "@/components/analytics";
 
 /**
  * Default metadata
@@ -56,7 +60,7 @@ export default function RootLayout({
 
   return (
     <ClerkProvider>
-      <html lang="en" className="scroll-smooth">
+      <html className="scroll-smooth" suppressHydrationWarning>
         <head>
           {/*
             SITE-WIDE STRUCTURED DATA
@@ -80,6 +84,12 @@ export default function RootLayout({
           />
         </head>
         <body className="antialiased font-sans" suppressHydrationWarning>
+          {/* GTM NoScript Fallback - loads when JavaScript is disabled */}
+          <GTMNoScript gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+          
+          {/* Google Tag Manager - loads after page becomes interactive */}
+          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+          
           {children}
         </body>
       </html>

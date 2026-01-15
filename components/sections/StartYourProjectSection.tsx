@@ -5,6 +5,7 @@ import React, { useEffect, useRef } from "react";
 import { useFormStatus } from "react-dom";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { sendInquiry } from "@/app/actions/send-inquiry";
+import { trackFormSubmission } from "@/components/analytics";
 
 const MATERIALS = [
   "Cashmere",
@@ -31,9 +32,20 @@ export default function StartYourProjectSection() {
   // Capture timestamp once on mount to avoid impure function during render
   const [timestamp] = React.useState(() => Date.now().toString());
 
-  // Reset form on success
+  // Reset form on success & track results
   useEffect(() => {
-    if (state?.ok) formRef.current?.reset();
+    if (state?.ok) {
+      formRef.current?.reset();
+      trackFormSubmission({
+        formName: "start_project_success",
+        formLocation: "start_project_section",
+      });
+    } else if (state && !state.ok) {
+      trackFormSubmission({
+        formName: "start_project_error",
+        formLocation: "start_project_section",
+      });
+    }
   }, [state]);
 
   // Client-side rate limiting wrapper
@@ -51,6 +63,12 @@ export default function StartYourProjectSection() {
       }
     }
     
+    // Track submission start
+    trackFormSubmission({
+      formName: "start_project_submit",
+      formLocation: "start_project_section",
+    });
+
     localStorage.setItem("lastInquirySubmit", now.toString());
     return formAction(formData);
   };

@@ -1,0 +1,255 @@
+{
+  "metadata": {
+    "title": "Ever Knitting | Professioneller Strickwarenhersteller in China und Kambodscha",
+    "description": "Ever Knitting ist ein professioneller Strickwarenhersteller mit OEM- und ODM-Dienstleistungen für Modemarken, Großhändler und Private-Label-Unternehmen."
+  },
+  "navigation": {
+    "home": "Startseite",
+    "materials": "Materialien",
+    "process": "Prozess",
+    "products": "Produkte",
+    "services": "Dienstleistungen",
+    "industries": "Branchen",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "faq": "FAQ",
+    "manufacturing": "Fertigung",
+    "getQuote": "Angebot anfordern"
+  },
+  "hero": {
+    "brand": "Ever Knitting Company Limited",
+    "title": "Premium Kaschmir & Strickwaren Hersteller",
+    "titleHighlight": "Seit 1993",
+    "subtitle": "Direkte Fabrikproduktion von hochwertigen Kaschmir-Pullovern und Strickwaren.",
+    "subtitleLine2": "Von Musterproduktion bis Großaufträgen, maßgeschneidert für globale Marken.",
+    "cta": "Angebot anfordern",
+    "ctaSecondary": "Kostenlose Musterberatung",
+    "ctaNote": "Antwort in 12–24 Stunden • NDA verfügbar",
+    "badges": {
+      "experience": "30+ Jahre Strickerfahrung",
+      "specialists": "Kaschmir & Fein-Gauge Spezialisten",
+      "moq": "Niedrige MOQ & flexible Muster",
+      "quality": "Stabile Qualität & pünktliche Lieferung"
+    }
+  },
+  "common": {
+    "readMore": "Mehr lesen",
+    "viewAll": "Alle anzeigen",
+    "contactUs": "Kontaktieren Sie uns",
+    "submit": "Absenden",
+    "loading": "Laden...",
+    "error": "Ein Fehler ist aufgetreten",
+    "success": "Erfolg!",
+    "required": "Erforderlich",
+    "optional": "Optional",
+    "learnMore": "Mehr erfahren",
+    "startProject": "Projekt starten",
+    "idealFor": "Ideal für:",
+    "faqTitle": "Häufig gestellte Fragen"
+  },
+  "contact": {
+    "title": "Kontaktieren Sie uns",
+    "subtitle": "Nehmen Sie Kontakt zu unserem Team auf",
+    "heroTitle": "Lassen Sie uns sprechen.",
+    "heroSubtitle": "Ob Sie eine etablierte Marke auf der Suche nach einem neuen Partner sind oder ein Startup, das seine erste Kollektion lanciert – wir sind für Sie da.",
+    "infoTitle": "Kontaktinformationen",
+    "form": {
+      "name": "Ihr Name",
+      "email": "E-Mail-Adresse",
+      "company": "Firmenname",
+      "phone": "Telefonnummer",
+      "country": "Land",
+      "message": "Ihre Nachricht",
+      "submit": "Nachricht senden",
+      "submitting": "Wird gesendet...",
+      "success": "Vielen Dank! Wir werden uns bald bei Ihnen melden.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+    },
+    "info": {
+      "factoryAddress": "Fabrikadresse",
+      "emailUs": "E-Mail an uns",
+      "callUs": "Rufen Sie uns an"
+    }
+  },
+  "footer": {
+    "company": "Unternehmen",
+    "services": "Dienstleistungen",
+    "navigation": "Navigation",
+    "legal": "Rechtliches",
+    "contactUs": "Kontakt",
+    "privacy": "Datenschutz",
+    "terms": "Nutzungsbedingungen",
+    "cookies": "Cookie-Richtlinie",
+    "copyright": "© {year} Ever Knitting Company Limited. Alle Rechte vorbehalten.",
+    "tagline": "Exzellenz in Strickwaren seit 1993",
+    "description": "Premium-Strickwarenhersteller, spezialisiert auf Luxus-Kaschmir und hochwertige Mischungen seit 1993.",
+    "links": {
+      "whatWeManufacture": "Was wir herstellen",
+      "materialsYarns": "Materialien & Garne",
+      "customDevelopment": "Individuelle Entwicklung",
+      "qualityControl": "Qualitätskontrolle",
+      "howWeWork": "Wie wir arbeiten",
+      "whyChooseUs": "Warum wir",
+      "faq": "FAQ",
+      "startProject": "Projekt starten"
+    },
+    "contactInfo": {
+      "factoryAddress": "Fabrikadresse",
+      "phone": "Telefon",
+      "inquiries": "Anfragen"
+    }
+  },
+  "about": {
+    "title": "Über Ever Knitting",
+    "subtitle": "Über 15 Jahre Erfahrung in der Strickwarenherstellung",
+    "heroTitle": "Wir stricken",
+    "heroHighlight": "Vermächtnisse",
+    "heroSubtitle": "Seit 2008 ist Ever Knitting der stille Partner hinter einigen der renommiertesten Modemarken der Welt.",
+    "storyTitle": "Unsere Geschichte",
+    "storyP1": "Im Herzen des Textilviertels von Dongguan gegründet, startete Ever Knitting mit nur fünf Strickmaschinen und dem Traum, Qualität neu zu definieren.",
+    "storyP2": "In den letzten 15 Jahren haben wir uns zu einer hochmodernen Anlage mit über 200 qualifizierten Handwerkern und Technikern entwickelt. Wir verbinden traditionelle Handveredelungstechniken mit moderner automatisierter Technologie, um Kleidungsstücke zu liefern, die wirklich herausragen.",
+    "storyP3": "Wir glauben, dass jeder Stich zählt. Von der Garnspannung bis zum letzten Dampfbügeln – unsere Liebe zum Detail ist das, was uns auszeichnet.",
+    "valuesTitle": "Unsere Kernwerte",
+    "values": {
+      "integrity": {
+        "title": "Integrität",
+        "desc": "Ehrliche Preisgestaltung und transparente Kommunikation mit allen unseren Kunden."
+      },
+      "quality": {
+        "title": "Qualität",
+        "desc": "Null Toleranz für Mängel. Wenn es nicht perfekt ist, verlässt es unsere Fabrik nicht."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Ständige Erforschung neuer Strickstrukturen, Garne und nachhaltiger Praktiken."
+      }
+    }
+  },
+  "materials": {
+    "title": "Premium Materialien",
+    "subtitle": "Wir verwenden nur die besten Materialien für unsere Strickwaren",
+    "heroTitle": "Exquisite",
+    "heroTitleSuffix": "Materialien",
+    "heroSubtitle": "Wir beziehen nur die feinsten Garne aus aller Welt. Benötigt Ihre Marke seidigen Kaschmir, strapazierfähige Merinowolle oder nachhaltige Bio-Baumwolle? Wir haben die perfekte Faser für jedes Meisterwerk.",
+    "cashmere": {
+      "title": "Reines Kaschmir",
+      "desc": "Als \"weiches Gold\" bekannt, stammt unser Kaschmir aus der Inneren Mongolei. Es bietet unvergleichliche Weichheit, Wärme und Luxus für Premium-Kollektionen."
+    },
+    "merino": {
+      "title": "Merinowolle",
+      "desc": "Extra-feine Merinowolle, die atmungsaktiv und feuchtigkeitsableitend ist und sich unglaublich weich auf der Haut anfühlt. Perfekt für vielseitige, ganzjährige Strickwaren."
+    },
+    "cotton": {
+      "title": "Baumwolle & Öko-Mischungen",
+      "desc": "Bio-Baumwolle, recyceltes Polyester und innovative Öko-Mischungen für die umweltbewusste Marke. Nachhaltig ohne Kompromisse bei der Qualität."
+    },
+    "sourcingTitle": "Globale Beschaffung,",
+    "sourcingHighlight": "Unübertroffene Qualität",
+    "sourcingDesc": "Unser Materialbeschaffungsteam reist um die Welt, um Garne zu finden, die unseren strengen Standards entsprechen. Wir pflegen starke Beziehungen zu erstklassigen Spinnereien in Italien, Japan und Peru, um Konsistenz und Exzellenz in jeder Spule zu gewährleisten.",
+    "viewAllYarns": "Alle Garne anzeigen"
+  },
+  "process": {
+    "title": "Unser Prozess",
+    "subtitle": "Vom Design bis zur Lieferung garantieren wir Qualität in jedem Schritt",
+    "heroTitle": "Die",
+    "heroHighlight": "Kunst",
+    "heroTitleSuffix": "der Produktion",
+    "heroSubtitle": "Präzisionstechnik trifft handwerkliche Kunstfertigkeit. Sehen Sie, wie wir Ihre Designs zum Leben erwecken.",
+    "steps": {
+      "step1": {
+        "title": "Design & Beratung",
+        "desc": "Wir beginnen damit, Ihre Vision zu verstehen. Unser Design-Team arbeitet mit Ihnen zusammen, um Garne auszuwählen, Gauge zu definieren und Tech-Packs zu finalisieren."
+      },
+      "step2": {
+        "title": "Prototyping & Muster",
+        "desc": "Wir erstellen ein physisches Muster zur Freigabe. Dies stellt sicher, dass Passform, Gefühl und Aussehen Ihren genauen Spezifikationen entsprechen, bevor die Massenproduktion beginnt."
+      },
+      "step3": {
+        "title": "Massenproduktion",
+        "desc": "Mit modernsten Shima Seiki und Stoll Maschinen beginnen wir die Massenproduktion unter strenger Einhaltung des genehmigten Musters."
+      },
+      "step4": {
+        "title": "Qualitätskontrolle",
+        "desc": "Jedes Stück durchläuft einen mehrstufigen Inspektionsprozess. Wir prüfen Maße, Strickfehler und Verarbeitungsqualität."
+      },
+      "step5": {
+        "title": "Veredelung & Verpackung",
+        "desc": "Kleidungsstücke werden gewaschen, gedämpft, etikettiert und gemäß Ihren Einzelhandelsanforderungen verpackt, versandbereit."
+      }
+    },
+    "ctaTitle": "Bereit loszulegen?",
+    "ctaButton": "Projekt starten"
+  },
+  "faq": {
+    "title": "Häufig gestellte Fragen",
+    "subtitle": "Finden Sie Antworten auf häufige Fragen zu unseren Dienstleistungen",
+    "heroTitle": "Häufig gestellte",
+    "heroHighlight": "Fragen",
+    "heroSubtitle": "Alles, was Sie über die Zusammenarbeit mit Ever Knitting wissen müssen.",
+    "notFound": "Können Sie nicht finden, wonach Sie suchen?",
+    "contactSupport": "Support kontaktieren"
+  },
+  "sections": {
+    "whatWeMake": "Was wir herstellen",
+    "whyEverKnitting": "Warum Ever Knitting",
+    "howWeWork": "Wie wir arbeiten"
+  },
+  "cta": {
+    "partnerWithUs": "Werden Sie Partner",
+    "scheduleConsultation": "Beratung vereinbaren",
+    "viewProducts": "Unsere Produkte ansehen"
+  },
+  "images": {
+    "hero": {
+      "alt": "Premium-Kaschmirpullover und Strickwaren von Ever Knitting"
+    },
+    "factory": {
+      "alt": "Ever Knitting Fabrikhalle mit modernen Shima Seiki Strickmaschinen"
+    },
+    "qualityControl": {
+      "alt": "Qualitätskontrolleur prüft Kaschmirpullover auf Mängel"
+    },
+    "yarnCones": {
+      "alt": "Premium-Garnkonen in verschiedenen Farben für die Strickproduktion"
+    },
+    "materials": {
+      "cashmere": {
+        "alt": "Mongolische Kaschmirfasern der Güteklasse A in natürlicher Cremefarbe"
+      },
+      "merino": {
+        "alt": "Extra-feine australische Merinowollfasern in Nahaufnahme"
+      },
+      "cotton": {
+        "alt": "Bio-Baumwolle und Öko-Mischgarn-Muster"
+      },
+      "alpacaMohair": {
+        "alt": "Alpaka- und Mohair-Mischung Luxusgarn"
+      }
+    },
+    "products": {
+      "mensKnitwear": {
+        "alt": "Herren Premium-Kaschmir-Rundhalspullover in Marineblau"
+      },
+      "womensKnitwear": {
+        "alt": "Damen elegante Kaschmir-Strickjacke in zartem Rosa"
+      },
+      "luxuryCashmere": {
+        "alt": "Luxus-Kaschmir-Rundhalspullover mit Rippstrickdetails"
+      },
+      "woolBlend": {
+        "alt": "Wollmischpullover mit klassischem Zopfmuster"
+      }
+    },
+    "process": {
+      "knittingMachine": {
+        "alt": "Computergesteuerte Stoll-Strickmaschine in Betrieb"
+      },
+      "handLinking": {
+        "alt": "Erfahrener Handwerker beim Handketteln von Kaschmirpullover-Nähten"
+      },
+      "steamFinishing": {
+        "alt": "Dampffinish-Prozess für Premium-Strickwaren"
+      }
+    }
+  }
+}

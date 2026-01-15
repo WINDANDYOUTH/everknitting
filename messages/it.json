@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "title": "Ever Knitting | Produttore professionale di maglieria in Cina e Cambogia",
+    "description": "Ever Knitting è un produttore professionale di maglieria che offre servizi OEM e ODM per marchi di moda, grossisti e aziende di private label."
+  },
+  "navigation": {
+    "home": "Home",
+    "materials": "Materiali",
+    "process": "Processo",
+    "products": "Prodotti",
+    "services": "Servizi",
+    "industries": "Industrie",
+    "about": "Chi siamo",
+    "contact": "Contatti",
+    "faq": "FAQ",
+    "manufacturing": "Produzione",
+    "getQuote": "Richiedi preventivo"
+  },
+  "hero": {
+    "brand": "Ever Knitting Company Limited",
+    "title": "Produttore Premium di Cashmere e Maglieria",
+    "titleHighlight": "Dal 1993",
+    "subtitle": "Produzione diretta in fabbrica di maglioni in cashmere di alta qualità e capi in maglia.",
+    "subtitleLine2": "Dalla campionatura agli ordini all'ingrosso, su misura per marchi globali.",
+    "cta": "Richiedi preventivo",
+    "ctaSecondary": "Consulenza campioni gratuita",
+    "ctaNote": "Risposta in 12–24 ore • NDA disponibile",
+    "badges": {
+      "experience": "30+ anni di esperienza nella maglieria",
+      "specialists": "Specialisti cashmere e finezze",
+      "moq": "MOQ basso e campionatura flessibile",
+      "quality": "Qualità stabile e consegna puntuale"
+    }
+  },
+  "common": {
+    "readMore": "Leggi di più",
+    "viewAll": "Vedi tutto",
+    "contactUs": "Contattaci",
+    "submit": "Invia",
+    "loading": "Caricamento...",
+    "error": "Si è verificato un errore",
+    "success": "Successo!",
+    "required": "Obbligatorio",
+    "optional": "Opzionale",
+    "learnMore": "Scopri di più",
+    "startProject": "Inizia il tuo progetto",
+    "idealFor": "Ideale per:",
+    "faqTitle": "Domande frequenti"
+  },
+  "contact": {
+    "title": "Contattaci",
+    "subtitle": "Mettiti in contatto con il nostro team",
+    "heroTitle": "Parliamo.",
+    "heroSubtitle": "Che tu sia un marchio affermato alla ricerca di un nuovo partner o una startup che lancia la sua prima collezione, siamo qui per aiutarti.",
+    "infoTitle": "Informazioni di contatto",
+    "form": {
+      "name": "Il tuo nome",
+      "email": "Indirizzo email",
+      "company": "Nome azienda",
+      "phone": "Numero di telefono",
+      "country": "Paese",
+      "message": "Il tuo messaggio",
+      "submit": "Invia messaggio",
+      "submitting": "Invio in corso...",
+      "success": "Grazie! Ti risponderemo presto.",
+      "error": "Qualcosa è andato storto. Riprova."
+    },
+    "info": {
+      "factoryAddress": "Indirizzo fabbrica",
+      "emailUs": "Scrivici",
+      "callUs": "Chiamaci"
+    }
+  },
+  "footer": {
+    "company": "Azienda",
+    "services": "Servizi",
+    "navigation": "Navigazione",
+    "legal": "Legale",
+    "contactUs": "Contatti",
+    "privacy": "Informativa sulla privacy",
+    "terms": "Termini di servizio",
+    "cookies": "Informativa sui cookie",
+    "copyright": "© {year} Ever Knitting Company Limited. Tutti i diritti riservati.",
+    "tagline": "Eccellenza nella maglieria dal 1993",
+    "description": "Produttore di maglieria premium specializzato in cashmere di lusso e miscele di alta gamma dal 1993.",
+    "links": {
+      "whatWeManufacture": "Cosa produciamo",
+      "materialsYarns": "Materiali e filati",
+      "customDevelopment": "Sviluppo personalizzato",
+      "qualityControl": "Controllo qualità",
+      "howWeWork": "Come lavoriamo",
+      "whyChooseUs": "Perché sceglierci",
+      "faq": "FAQ",
+      "startProject": "Inizia progetto"
+    },
+    "contactInfo": {
+      "factoryAddress": "Indirizzo fabbrica",
+      "phone": "Telefono",
+      "inquiries": "Richieste"
+    }
+  },
+  "about": {
+    "title": "Chi è Ever Knitting",
+    "subtitle": "Oltre 15 anni di eccellenza nella produzione di maglieria",
+    "heroTitle": "Tessiamo",
+    "heroHighlight": "Eredità",
+    "heroSubtitle": "Dal 2008, Ever Knitting è il partner silenzioso dietro alcuni dei marchi di moda più prestigiosi al mondo.",
+    "storyTitle": "La nostra storia",
+    "storyP1": "Fondata nel cuore del distretto tessile di Dongguan, Ever Knitting è iniziata con sole cinque macchine da maglieria e il sogno di ridefinire la qualità.",
+    "storyP2": "Negli ultimi 15 anni, ci siamo espansi in uno stabilimento all'avanguardia che impiega oltre 200 artigiani e tecnici qualificati. Uniamo tecniche tradizionali di rifinitura a mano con moderna tecnologia automatizzata per consegnare capi che si distinguono davvero.",
+    "storyP3": "Crediamo che ogni punto conti. Dalla tensione del filato alla stiratura finale a vapore, la nostra ossessione per i dettagli è ciò che ci distingue.",
+    "valuesTitle": "I nostri valori fondamentali",
+    "values": {
+      "integrity": {
+        "title": "Integrità",
+        "desc": "Prezzi onesti e comunicazione trasparente con tutti i nostri clienti."
+      },
+      "quality": {
+        "title": "Qualità",
+        "desc": "Zero tolleranza per i difetti. Se non è perfetto, non lascia la nostra fabbrica."
+      },
+      "innovation": {
+        "title": "Innovazione",
+        "desc": "Esplorazione costante di nuove strutture di maglia, filati e pratiche sostenibili."
+      }
+    }
+  },
+  "materials": {
+    "title": "Materiali premium",
+    "subtitle": "Utilizziamo solo i migliori materiali per la nostra maglieria",
+    "heroTitle": "Materiali",
+    "heroTitleSuffix": "Squisiti",
+    "heroSubtitle": "Ci approvvigioniamo solo dei filati più pregiati da tutto il mondo. Il tuo marchio richiede cashmere setoso, merino resistente o cotone biologico sostenibile? Abbiamo la fibra perfetta per ogni capolavoro.",
+    "cashmere": {
+      "title": "Cashmere puro",
+      "desc": "Conosciuto come \"oro morbido\", il nostro cashmere proviene dalla Mongolia Interna. Offre morbidezza, calore e lusso impareggiabili per collezioni premium."
+    },
+    "merino": {
+      "title": "Lana Merino",
+      "desc": "Lana Merino extra-fine che è traspirante, traspirante e incredibilmente morbida sulla pelle. Perfetta per maglieria versatile tutto l'anno."
+    },
+    "cotton": {
+      "title": "Cotone e miscele eco",
+      "desc": "Cotone biologico, poliestere riciclato e miscele eco innovative per il marchio attento all'ambiente. Sostenibile senza compromettere la qualità."
+    },
+    "sourcingTitle": "Approvvigionamento globale,",
+    "sourcingHighlight": "Qualità ineguagliata",
+    "sourcingDesc": "Il nostro team di approvvigionamento materiali viaggia per il mondo per trovare filati che soddisfino i nostri rigorosi standard. Manteniamo solidi rapporti con filatori di primo livello in Italia, Giappone e Perù per garantire coerenza ed eccellenza in ogni bobina.",
+    "viewAllYarns": "Vedi tutti i filati"
+  },
+  "process": {
+    "title": "Il nostro processo",
+    "subtitle": "Dal design alla consegna, garantiamo qualità in ogni fase",
+    "heroTitle": "L'",
+    "heroHighlight": "Arte",
+    "heroTitleSuffix": "della produzione",
+    "heroSubtitle": "L'ingegneria di precisione incontra l'artigianalità. Scopri come diamo vita ai tuoi design.",
+    "steps": {
+      "step1": {
+        "title": "Design e consulenza",
+        "desc": "Iniziamo comprendendo la tua visione. Il nostro team di design collabora con te per selezionare filati, definire finezze e finalizzare schede tecniche."
+      },
+      "step2": {
+        "title": "Prototipazione e campionatura",
+        "desc": "Creiamo un campione fisico per la tua approvazione. Questo assicura che vestibilità, sensazione e aspetto soddisfino le tue esatte specifiche prima della produzione di massa."
+      },
+      "step3": {
+        "title": "Produzione di massa",
+        "desc": "Utilizzando macchinari Shima Seiki e Stoll all'avanguardia, iniziamo la produzione di massa con rigorosa aderenza al campione approvato."
+      },
+      "step4": {
+        "title": "Controllo qualità",
+        "desc": "Ogni pezzo subisce un processo di ispezione a più fasi. Verifichiamo misure, difetti di lavorazione e qualità di finitura."
+      },
+      "step5": {
+        "title": "Rifinitura e imballaggio",
+        "desc": "I capi vengono lavati, stirati a vapore, etichettati e imballati secondo le tue esigenze retail, pronti per la spedizione."
+      }
+    },
+    "ctaTitle": "Pronto per iniziare?",
+    "ctaButton": "Inizia il tuo progetto"
+  },
+  "faq": {
+    "title": "Domande frequenti",
+    "subtitle": "Trova risposte alle domande comuni sui nostri servizi",
+    "heroTitle": "Domande",
+    "heroHighlight": "frequenti",
+    "heroSubtitle": "Tutto ciò che devi sapere sulla collaborazione con Ever Knitting.",
+    "notFound": "Non trovi quello che cerchi?",
+    "contactSupport": "Contatta il supporto"
+  },
+  "sections": {
+    "whatWeMake": "Cosa produciamo",
+    "whyEverKnitting": "Perché Ever Knitting",
+    "howWeWork": "Come lavoriamo"
+  },
+  "cta": {
+    "partnerWithUs": "Diventa partner",
+    "scheduleConsultation": "Prenota una consulenza",
+    "viewProducts": "Vedi i nostri prodotti"
+  }
+}

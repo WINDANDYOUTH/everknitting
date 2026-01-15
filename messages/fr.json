@@ -1,0 +1,202 @@
+{
+  "metadata": {
+    "title": "Ever Knitting | Fabricant professionnel de tricots en Chine et au Cambodge",
+    "description": "Ever Knitting est un fabricant professionnel de tricots offrant des services OEM et ODM pour les marques de mode, les grossistes et les entreprises de marque privée."
+  },
+  "navigation": {
+    "home": "Accueil",
+    "materials": "Matériaux",
+    "process": "Processus",
+    "products": "Produits",
+    "services": "Services",
+    "industries": "Industries",
+    "about": "À propos",
+    "contact": "Contact",
+    "faq": "FAQ",
+    "manufacturing": "Fabrication",
+    "getQuote": "Obtenir un devis"
+  },
+  "hero": {
+    "brand": "Ever Knitting Company Limited",
+    "title": "Fabricant de Cachemire & Tricots Premium",
+    "titleHighlight": "Depuis 1993",
+    "subtitle": "Production directe en usine de pulls en cachemire de haute qualité et de vêtements tricotés.",
+    "subtitleLine2": "De l'échantillonnage aux commandes en gros, sur mesure pour les marques mondiales.",
+    "cta": "Demander un devis",
+    "ctaSecondary": "Consultation d'échantillon gratuite",
+    "ctaNote": "Réponse sous 12–24 heures • NDA disponible",
+    "badges": {
+      "experience": "30+ ans d'expérience en tricot",
+      "specialists": "Spécialistes cachemire & jauge fine",
+      "moq": "MOQ faible & échantillonnage flexible",
+      "quality": "Qualité stable & livraison ponctuelle"
+    }
+  },
+  "common": {
+    "readMore": "Lire la suite",
+    "viewAll": "Voir tout",
+    "contactUs": "Contactez-nous",
+    "submit": "Soumettre",
+    "loading": "Chargement...",
+    "error": "Une erreur s'est produite",
+    "success": "Succès !",
+    "required": "Requis",
+    "optional": "Optionnel",
+    "learnMore": "En savoir plus",
+    "startProject": "Démarrer votre projet",
+    "idealFor": "Idéal pour :",
+    "faqTitle": "Questions fréquemment posées"
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Prenez contact avec notre équipe",
+    "heroTitle": "Parlons.",
+    "heroSubtitle": "Que vous soyez une marque établie à la recherche d'un nouveau partenaire ou une startup lançant sa première collection, nous sommes là pour vous aider.",
+    "infoTitle": "Coordonnées",
+    "form": {
+      "name": "Votre nom",
+      "email": "Adresse e-mail",
+      "company": "Nom de l'entreprise",
+      "phone": "Numéro de téléphone",
+      "country": "Pays",
+      "message": "Votre message",
+      "submit": "Envoyer le message",
+      "submitting": "Envoi en cours...",
+      "success": "Merci ! Nous vous répondrons bientôt.",
+      "error": "Une erreur s'est produite. Veuillez réessayer."
+    },
+    "info": {
+      "factoryAddress": "Adresse de l'usine",
+      "emailUs": "Envoyez-nous un e-mail",
+      "callUs": "Appelez-nous"
+    }
+  },
+  "footer": {
+    "company": "Entreprise",
+    "services": "Services",
+    "navigation": "Navigation",
+    "legal": "Mentions légales",
+    "contactUs": "Contact",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "cookies": "Politique de cookies",
+    "copyright": "© {year} Ever Knitting Company Limited. Tous droits réservés.",
+    "tagline": "Excellence en tricot depuis 1993",
+    "description": "Fabricant de tricots premium spécialisé dans le cachemire de luxe et les mélanges haut de gamme depuis 1993.",
+    "links": {
+      "whatWeManufacture": "Ce que nous fabriquons",
+      "materialsYarns": "Matériaux et fils",
+      "customDevelopment": "Développement sur mesure",
+      "qualityControl": "Contrôle qualité",
+      "howWeWork": "Comment nous travaillons",
+      "whyChooseUs": "Pourquoi nous choisir",
+      "faq": "FAQ",
+      "startProject": "Démarrer un projet"
+    },
+    "contactInfo": {
+      "factoryAddress": "Adresse de l'usine",
+      "phone": "Téléphone",
+      "inquiries": "Demandes"
+    }
+  },
+  "about": {
+    "title": "À propos d'Ever Knitting",
+    "subtitle": "Plus de 15 ans d'excellence dans la fabrication de tricots",
+    "heroTitle": "Nous tricotons des",
+    "heroHighlight": "Héritages",
+    "heroSubtitle": "Depuis 2008, Ever Knitting est le partenaire discret derrière certaines des marques de mode les plus prestigieuses au monde.",
+    "storyTitle": "Notre histoire",
+    "storyP1": "Fondée au cœur du quartier textile de Dongguan, Ever Knitting a démarré avec seulement cinq machines à tricoter et le rêve de redéfinir la qualité.",
+    "storyP2": "Au cours des 15 dernières années, nous nous sommes développés en une installation ultramoderne employant plus de 200 artisans et techniciens qualifiés. Nous allions les techniques de finition traditionnelles à la main avec une technologie automatisée moderne pour livrer des vêtements qui se démarquent vraiment.",
+    "storyP3": "Nous croyons que chaque point compte. De la tension du fil au repassage final à la vapeur, notre obsession du détail est ce qui nous distingue.",
+    "valuesTitle": "Nos valeurs fondamentales",
+    "values": {
+      "integrity": {
+        "title": "Intégrité",
+        "desc": "Tarification honnête et communication transparente avec tous nos clients."
+      },
+      "quality": {
+        "title": "Qualité",
+        "desc": "Tolérance zéro pour les défauts. Si ce n'est pas parfait, ça ne quitte pas notre usine."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Exploration constante de nouvelles structures de tricot, de fils et de pratiques durables."
+      }
+    }
+  },
+  "materials": {
+    "title": "Matériaux premium",
+    "subtitle": "Nous n'utilisons que les meilleurs matériaux pour nos tricots",
+    "heroTitle": "Matériaux",
+    "heroTitleSuffix": "Exquis",
+    "heroSubtitle": "Nous ne sourçons que les fils les plus fins du monde entier. Votre marque a-t-elle besoin de cachemire soyeux, de mérinos durable ou de coton biologique durable ? Nous avons la fibre parfaite pour chaque chef-d'œuvre.",
+    "cashmere": {
+      "title": "Cachemire pur",
+      "desc": "Connu comme \"or doux\", notre cachemire provient de Mongolie intérieure. Il offre une douceur, une chaleur et un luxe inégalés pour les collections premium."
+    },
+    "merino": {
+      "title": "Laine Mérinos",
+      "desc": "Laine Mérinos extra-fine respirante, évacuant l'humidité et incroyablement douce contre la peau. Parfaite pour des tricots polyvalents toute l'année."
+    },
+    "cotton": {
+      "title": "Coton & Mélanges Éco",
+      "desc": "Coton biologique, polyester recyclé et mélanges éco innovants pour la marque soucieuse de l'environnement. Durable sans compromettre la qualité."
+    },
+    "sourcingTitle": "Approvisionnement mondial,",
+    "sourcingHighlight": "Qualité inégalée",
+    "sourcingDesc": "Notre équipe d'approvisionnement en matériaux parcourt le monde pour trouver des fils qui répondent à nos normes rigoureuses. Nous maintenons des relations solides avec des filatures de premier plan en Italie, au Japon et au Pérou pour garantir cohérence et excellence dans chaque bobine.",
+    "viewAllYarns": "Voir tous les fils"
+  },
+  "process": {
+    "title": "Notre processus",
+    "subtitle": "De la conception à la livraison, nous garantissons la qualité à chaque étape",
+    "heroTitle": "L'",
+    "heroHighlight": "Art",
+    "heroTitleSuffix": "de la production",
+    "heroSubtitle": "L'ingénierie de précision rencontre l'artisanat artisanal. Découvrez comment nous donnons vie à vos designs.",
+    "steps": {
+      "step1": {
+        "title": "Design & Consultation",
+        "desc": "Nous commençons par comprendre votre vision. Notre équipe de design collabore avec vous pour sélectionner les fils, définir les jauges et finaliser les fiches techniques."
+      },
+      "step2": {
+        "title": "Prototypage & Échantillonnage",
+        "desc": "Nous créons un échantillon physique pour votre approbation. Cela garantit que la coupe, le toucher et l'apparence correspondent exactement à vos spécifications avant la production en masse."
+      },
+      "step3": {
+        "title": "Production en série",
+        "desc": "Utilisant des machines Shima Seiki et Stoll à la pointe de la technologie, nous commençons la production de masse en stricte conformité avec l'échantillon approuvé."
+      },
+      "step4": {
+        "title": "Contrôle qualité",
+        "desc": "Chaque pièce subit un processus d'inspection en plusieurs étapes. Nous vérifions les mesures, les défauts de tricot et la qualité de finition."
+      },
+      "step5": {
+        "title": "Finition & Emballage",
+        "desc": "Les vêtements sont lavés, repassés à la vapeur, étiquetés et emballés selon vos exigences de vente au détail, prêts à être expédiés."
+      }
+    },
+    "ctaTitle": "Prêt à commencer ?",
+    "ctaButton": "Démarrer votre projet"
+  },
+  "faq": {
+    "title": "Questions fréquemment posées",
+    "subtitle": "Trouvez des réponses aux questions courantes sur nos services",
+    "heroTitle": "Questions",
+    "heroHighlight": "fréquentes",
+    "heroSubtitle": "Tout ce que vous devez savoir sur la collaboration avec Ever Knitting.",
+    "notFound": "Vous ne trouvez pas ce que vous cherchez ?",
+    "contactSupport": "Contacter le support"
+  },
+  "sections": {
+    "whatWeMake": "Ce que nous fabriquons",
+    "whyEverKnitting": "Pourquoi Ever Knitting",
+    "howWeWork": "Comment nous travaillons"
+  },
+  "cta": {
+    "partnerWithUs": "Devenez partenaire",
+    "scheduleConsultation": "Planifier une consultation",
+    "viewProducts": "Voir nos produits"
+  }
+}

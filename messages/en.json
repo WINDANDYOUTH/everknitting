@@ -1,0 +1,255 @@
+{
+  "metadata": {
+    "title": "Ever Knitting | Professional Knitwear Manufacturer in China and Cambodia",
+    "description": "Ever Knitting is a professional knitwear manufacturer offering OEM & ODM services for fashion brands, wholesalers, and private label companies."
+  },
+  "navigation": {
+    "home": "Home",
+    "materials": "Materials",
+    "process": "Process",
+    "products": "Products",
+    "services": "Services",
+    "industries": "Industries",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "faq": "FAQ",
+    "manufacturing": "Manufacturing",
+    "getQuote": "Get a Quote"
+  },
+  "hero": {
+    "brand": "Ever Knitting Company Limited",
+    "title": "Premium Cashmere & Knitwear Manufacturer",
+    "titleHighlight": "Since 1993",
+    "subtitle": "Factory-direct production of high-quality cashmere sweaters and knitted garments.",
+    "subtitleLine2": "From sampling to bulk orders, tailored for global brands.",
+    "cta": "Request a Quote",
+    "ctaSecondary": "Get Free Sample Consultation",
+    "ctaNote": "Reply in 12–24 hours • NDA available",
+    "badges": {
+      "experience": "30+ years knitting experience",
+      "specialists": "Cashmere & fine-gauge specialists",
+      "moq": "Low MOQ & flexible sampling",
+      "quality": "Stable quality & on-time delivery"
+    }
+  },
+  "common": {
+    "readMore": "Read More",
+    "viewAll": "View All",
+    "contactUs": "Contact Us",
+    "submit": "Submit",
+    "loading": "Loading...",
+    "error": "An error occurred",
+    "success": "Success!",
+    "required": "Required",
+    "optional": "Optional",
+    "learnMore": "Learn More",
+    "startProject": "Start Your Project",
+    "idealFor": "Ideal For:",
+    "faqTitle": "Frequently Asked Questions"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Get in touch with our team",
+    "heroTitle": "Let's Talk.",
+    "heroSubtitle": "Whether you are an established brand looking for a new partner or a startup launching your first collection, we are here to help.",
+    "infoTitle": "Contact Information",
+    "form": {
+      "name": "Your Name",
+      "email": "Email Address",
+      "company": "Company Name",
+      "phone": "Phone Number",
+      "country": "Country",
+      "message": "Your Message",
+      "submit": "Send Message",
+      "submitting": "Sending...",
+      "success": "Thank you! We will get back to you soon.",
+      "error": "Something went wrong. Please try again."
+    },
+    "info": {
+      "factoryAddress": "Factory Address",
+      "emailUs": "Email Us",
+      "callUs": "Call Us"
+    }
+  },
+  "footer": {
+    "company": "Company",
+    "services": "Services",
+    "navigation": "Navigation",
+    "legal": "Legal",
+    "contactUs": "Contact Us",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Policy",
+    "copyright": "© {year} Ever Knitting Company Limited. All rights reserved.",
+    "tagline": "Excellence in Knitwear Since 1993",
+    "description": "Premium knitwear manufacturer specializing in luxury cashmere and high-end blends since 1993.",
+    "links": {
+      "whatWeManufacture": "What We Manufacture",
+      "materialsYarns": "Materials & Yarns",
+      "customDevelopment": "Custom Development",
+      "qualityControl": "Quality Control",
+      "howWeWork": "How We Work",
+      "whyChooseUs": "Why Choose Us",
+      "faq": "FAQ",
+      "startProject": "Start Project"
+    },
+    "contactInfo": {
+      "factoryAddress": "Factory Address",
+      "phone": "Phone",
+      "inquiries": "Inquiries"
+    }
+  },
+  "about": {
+    "title": "About Ever Knitting",
+    "subtitle": "15+ years of excellence in knitwear manufacturing",
+    "heroTitle": "We Knit",
+    "heroHighlight": "Legacies",
+    "heroSubtitle": "Since 2008, Ever Knitting has been the silent partner behind some of the world's most prestigious fashion brands.",
+    "storyTitle": "Our Story",
+    "storyP1": "Founded in the heart of Dongguan's textile district, Ever Knitting started with just five knitting machines and a dream to redefine quality.",
+    "storyP2": "Over the last 15 years, we have expanded into a state-of-the-art facility employing over 200 skilled artisans and technicians. We blend traditional hand-finishing techniques with modern automated technology to deliver garments that truly stand out.",
+    "storyP3": "We believe that every stitch matters. From the tension of the yarn to the final steam, our obsession with detail is what sets us apart.",
+    "valuesTitle": "Our Core Values",
+    "values": {
+      "integrity": {
+        "title": "Integrity",
+        "desc": "Honest pricing and transparent communication with all our clients."
+      },
+      "quality": {
+        "title": "Quality",
+        "desc": "Zero tolerance for defects. If it's not perfect, it doesn't leave our factory."
+      },
+      "innovation": {
+        "title": "Innovation",
+        "desc": "Constantly exploring new knitting structures, yarns, and sustainable practices."
+      }
+    }
+  },
+  "materials": {
+    "title": "Premium Materials",
+    "subtitle": "We source only the finest materials for our knitwear",
+    "heroTitle": "Exquisite",
+    "heroTitleSuffix": "Materials",
+    "heroSubtitle": "We source only the finest yarns from around the globe. Does your brand require silky cashmere, durable merino, or sustainable organic cotton? We have the perfect fiber for every masterpiece.",
+    "cashmere": {
+      "title": "Pure Cashmere",
+      "desc": "Known as \"soft gold,\" our cashmere is sourced from inner Mongolia. It offers unparalleled softness, warmth, and luxury for premium collections."
+    },
+    "merino": {
+      "title": "Merino Wool",
+      "desc": "Extra-fine Merino wool that is breathable, moisture-wicking, and incredibly soft against the skin. Perfect for versatile, year-round knitwear."
+    },
+    "cotton": {
+      "title": "Cotton & Eco Blends",
+      "desc": "Organic cotton, recycled polyester, and innovative eco-blends for the environmentally conscious brand. Sustainable without compromising quality."
+    },
+    "sourcingTitle": "Global Sourcing,",
+    "sourcingHighlight": "Unmatched Quality",
+    "sourcingDesc": "Our material sourcing team travels the world to find yarns that meet our rigorous standards. We maintain strong relationships with top-tier spinners in Italy, Japan, and Peru to ensure consistency and excellence in every spool.",
+    "viewAllYarns": "View All Yarns"
+  },
+  "process": {
+    "title": "Our Process",
+    "subtitle": "From design to delivery, we ensure quality at every step",
+    "heroTitle": "The",
+    "heroHighlight": "Art",
+    "heroTitleSuffix": "of Production",
+    "heroSubtitle": "Precision engineering meets artisanal craftsmanship. See how we bring your designs to life.",
+    "steps": {
+      "step1": {
+        "title": "Design & Consultation",
+        "desc": "We begin by understanding your vision. Our design team collaborates with you to select yarns, define gauges, and finalize tech packs."
+      },
+      "step2": {
+        "title": "Prototyping & Sampling",
+        "desc": "We create a physical sample for your approval. This ensures the fit, feel, and look meet your exact specifications before bulk production."
+      },
+      "step3": {
+        "title": "Bulk Production",
+        "desc": "Using state-of-the-art Shima Seiki and Stoll machines, we begin mass production with strict adherence to the approved sample."
+      },
+      "step4": {
+        "title": "Quality Control",
+        "desc": "Every piece undergoes a multi-stage inspection process. We check for measurements, knitting defects, and finishing quality."
+      },
+      "step5": {
+        "title": "Finishing & Packaging",
+        "desc": "Garments are washed, steamed, labeled, and packed according to your retail requirements, ready for shipment."
+      }
+    },
+    "ctaTitle": "Ready to start?",
+    "ctaButton": "Start Your Project"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Find answers to common questions about our services",
+    "heroTitle": "Frequently Asked",
+    "heroHighlight": "Questions",
+    "heroSubtitle": "Everything you need to know about working with Ever Knitting.",
+    "notFound": "Can't find what you're looking for?",
+    "contactSupport": "Contact Support"
+  },
+  "sections": {
+    "whatWeMake": "What We Make",
+    "whyEverKnitting": "Why Ever Knitting",
+    "howWeWork": "How We Work"
+  },
+  "cta": {
+    "partnerWithUs": "Partner with Us",
+    "scheduleConsultation": "Schedule Consultation",
+    "viewProducts": "View Our Products"
+  },
+  "images": {
+    "hero": {
+      "alt": "Premium cashmere sweaters and knitwear by Ever Knitting"
+    },
+    "factory": {
+      "alt": "Ever Knitting factory floor with advanced Shima Seiki knitting machines"
+    },
+    "qualityControl": {
+      "alt": "Quality control inspector examining cashmere sweater for defects"
+    },
+    "yarnCones": {
+      "alt": "Premium yarn cones in various colors ready for knitting production"
+    },
+    "materials": {
+      "cashmere": {
+        "alt": "Mongolian Grade-A cashmere fibers in natural cream color"
+      },
+      "merino": {
+        "alt": "Extra-fine Australian merino wool fibers close-up"
+      },
+      "cotton": {
+        "alt": "Organic cotton and eco-blend yarn samples"
+      },
+      "alpacaMohair": {
+        "alt": "Alpaca and mohair blend luxury yarn"
+      }
+    },
+    "products": {
+      "mensKnitwear": {
+        "alt": "Men's premium cashmere crewneck sweater in navy blue"
+      },
+      "womensKnitwear": {
+        "alt": "Women's elegant cashmere cardigan in soft pink"
+      },
+      "luxuryCashmere": {
+        "alt": "Luxury cashmere crewneck sweater with ribbed details"
+      },
+      "woolBlend": {
+        "alt": "Wool blend knitted sweater with classic cable pattern"
+      }
+    },
+    "process": {
+      "knittingMachine": {
+        "alt": "Computerized Stoll knitting machine in operation"
+      },
+      "handLinking": {
+        "alt": "Skilled craftsman hand-linking cashmere sweater seams"
+      },
+      "steamFinishing": {
+        "alt": "Steam finishing process for premium knitwear"
+      }
+    }
+  }
+}

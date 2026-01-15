@@ -1,5 +1,6 @@
 // app/components/WhyEverKnittingSection.tsx
 import React from "react";
+import { QuoteButton } from "@/components/ui/QuoteButton";
 
 type Proof = {
   title: string;
@@ -90,12 +91,14 @@ export default function WhyEverKnittingSection() {
               </ul>
 
               <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center">
-                <a
-                  href="#contact"
+                {/* Quote button with GA4 tracking */}
+                <QuoteButton
+                  source="why_us_section"
+                  productType="knitwear"
                   className="inline-flex items-center justify-center rounded-2xl bg-copper px-5 py-2.5 text-sm font-semibold text-navy transition hover:opacity-90"
                 >
                   Request a Quote
-                </a>
+                </QuoteButton>
                 <span className="text-xs text-cashmere/60">
                   NDA available • Clear timeline & updates
                 </span>
