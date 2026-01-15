@@ -4,6 +4,8 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 
+export const runtime = 'edge';
+
 type Props = {
   params: Promise<{ locale: string }>;
 };

@@ -13,6 +13,8 @@ import { generateFAQSchema } from "@/lib/schema";
 import { Link } from '@/i18n/navigation';
 import { setRequestLocale } from 'next-intl/server';
 
+export const runtime = 'edge';
+
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };

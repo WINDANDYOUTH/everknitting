@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 
+export const runtime = 'edge';
+
 type Props = {
   params: Promise<{ locale: string }>;
 };

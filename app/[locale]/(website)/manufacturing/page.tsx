@@ -3,6 +3,8 @@ import ManufacturingHero from "@/components/sections/ManufacturingHero";
 import ManufacturingSection from "@/components/sections/ManufacturingSection";
 import { setRequestLocale } from 'next-intl/server';
 
+export const runtime = 'edge';
+
 type Props = {
   params: Promise<{ locale: string }>;
 };

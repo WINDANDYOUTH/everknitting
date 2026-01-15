@@ -5,6 +5,8 @@ import { FileText, Hash } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { setRequestLocale } from 'next-intl/server';
 
+export const runtime = 'edge';
+
 type Props = {
   params: Promise<{ locale: string; slug: string }>;
 };
