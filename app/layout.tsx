@@ -48,6 +48,7 @@ export const metadata: Metadata = {
 };
 
 import { ClerkProvider } from "@clerk/nextjs";
+import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 export default function RootLayout({
   children,
@@ -84,13 +85,20 @@ export default function RootLayout({
           />
         </head>
         <body className="antialiased font-sans" suppressHydrationWarning>
-          {/* GTM NoScript Fallback - loads when JavaScript is disabled */}
-          <GTMNoScript gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
-          
-          {/* Google Tag Manager - loads after page becomes interactive */}
-          <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
-          
-          {children}
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            {/* GTM NoScript Fallback - loads when JavaScript is disabled */}
+            <GTMNoScript gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+            
+            {/* Google Tag Manager - loads after page becomes interactive */}
+            <GoogleTagManager gtmId={process.env.NEXT_PUBLIC_GTM_ID} />
+            
+            {children}
+          </ThemeProvider>
         </body>
       </html>
     </ClerkProvider>

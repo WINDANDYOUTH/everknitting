@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 import { trackQuotationRequest } from "@/components/analytics";
 import { LanguageSwitcher } from "@/components/i18n";
 import { useTranslations } from "next-intl";
+import { ThemeSwitcher, ThemeToggle } from "@/components/ui/theme-switcher";
 
 const NAV_LINKS = [
   { nameKey: "manufacturing", href: "/manufacturing" },
@@ -90,12 +91,12 @@ export default function Header() {
       >
         <div 
           className={cn(
-            "container mx-auto px-4 md:px-6 flex items-center justify-between transition-all duration-300",
+            "container mx-auto px-4 md:px-6 flex items-center transition-all duration-300",
             scrolled ? "h-[60px] md:h-[70px]" : "h-[72px] md:h-[88px]"
           )}
         >
           {/* Left: Branding */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center shrink-0">
             <Link href="/" className="flex items-center gap-2 group">
               {/* Logo text for now, assume SVG logo later */}
               <span className="text-xl md:text-2xl font-bold tracking-tight text-foreground group-hover:opacity-80 transition-opacity">
@@ -110,14 +111,14 @@ export default function Header() {
             </span>
           </div>
 
-          {/* Center: Desktop Nav */}
-          <nav className="hidden lg:flex items-center gap-6 xl:gap-8 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
+          {/* Center: Desktop Nav - Uses flex-1 to fill available space */}
+          <nav className="hidden lg:flex flex-1 items-center justify-center gap-4 xl:gap-6 2xl:gap-8 mx-4 xl:mx-8">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  "text-sm font-medium transition-colors hover:text-primary relative py-1",
+                  "text-sm font-medium transition-colors hover:text-primary relative py-1 whitespace-nowrap",
                   pathname === link.href ? "text-primary" : "text-muted-foreground"
                 )}
               >
@@ -132,8 +133,14 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Right: Language Switcher, CTA & Mobile Toggle */}
-          <div className="flex items-center gap-2 md:gap-4">
+          {/* Right: Theme, Language, CTA & Mobile Toggle */}
+          <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3 shrink-0 ml-auto lg:ml-0">
+            {/* Theme Switcher (Desktop) */}
+            <ThemeSwitcher className="hidden xl:flex" />
+            
+            {/* Theme Toggle (Tablet - more compact) */}
+            <ThemeToggle className="hidden lg:flex xl:hidden" />
+            
             {/* Language Switcher (Desktop) */}
             <LanguageSwitcher className="hidden md:block" />
 
@@ -190,55 +197,62 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed inset-y-0 right-0 z-70 w-[85vw] max-w-xs bg-white text-black shadow-2xl lg:hidden flex flex-col"
+              className="fixed inset-y-0 right-0 z-70 w-[85vw] max-w-xs bg-background text-foreground shadow-2xl lg:hidden flex flex-col"
             >
-              {/* Drawer Header */}
-              <div className="flex items-center justify-between p-6 border-b border-gray-100">
-                <span className="text-xl font-bold tracking-tight text-navy-deep">Menu</span>
+              {/* Drawer Header - Fixed */}
+              <div className="shrink-0 flex items-center justify-between px-5 py-4 border-b border-border">
+                <span className="text-lg font-bold tracking-tight text-foreground">Menu</span>
                 <button 
                   onClick={() => setMobileMenuOpen(false)}
-                  className="p-2 -mr-2 text-navy-deep hover:text-copper transition-colors focus:outline-none"
+                  className="p-2 -mr-2 text-foreground hover:text-muted-foreground transition-colors focus:outline-none"
                   aria-label="Close menu"
                 >
-                  <X className="h-6 w-6" />
+                  <X className="h-5 w-5" />
                 </button>
               </div>
 
-              {/* Drawer Links */}
-              <nav className="flex-1 overflow-y-auto py-6 px-6 flex flex-col gap-2">
-                {NAV_LINKS.map((link, idx) => (
-                  <motion.div
-                    key={link.href}
-                    initial={{ opacity: 0, x: 20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: 0.1 + idx * 0.05 }}
-                  >
-                    <Link
-                      href={link.href}
-                      onClick={() => setMobileMenuOpen(false)}
-                      className={cn(
-                        "flex items-center justify-between py-3 text-lg font-medium transition-colors border-b border-dotted border-gray-100",
-                        pathname === link.href ? "text-copper" : "text-gray-900 hover:text-copper"
-                      )}
+              {/* Scrollable Content Area */}
+              <div className="flex-1 overflow-y-auto overscroll-contain">
+                {/* Navigation Links */}
+                <nav className="py-4 px-5">
+                  {NAV_LINKS.map((link, idx) => (
+                    <motion.div
+                      key={link.href}
+                      initial={{ opacity: 0, x: 20 }}
+                      animate={{ opacity: 1, x: 0 }}
+                      transition={{ delay: 0.1 + idx * 0.05 }}
                     >
-                      {t(link.nameKey)}
-                    </Link>
-                  </motion.div>
-                ))}
+                      <Link
+                        href={link.href}
+                        onClick={() => setMobileMenuOpen(false)}
+                        className={cn(
+                          "flex items-center justify-between py-2.5 text-base font-medium transition-colors border-b border-dotted border-border",
+                          pathname === link.href ? "text-primary" : "text-foreground hover:text-muted-foreground"
+                        )}
+                      >
+                        {t(link.nameKey)}
+                      </Link>
+                    </motion.div>
+                  ))}
+                </nav>
 
-                {/* Language Switcher (Mobile) */}
+                {/* Theme & Language Switcher */}
                 <motion.div
                   initial={{ opacity: 0, x: 20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: 0.1 + NAV_LINKS.length * 0.05 }}
-                  className="mt-6 pt-4 border-t border-gray-200"
+                  className="px-5 py-4 border-t border-border"
                 >
+                  <div className="flex items-center justify-between gap-3 mb-3">
+                    <span className="text-sm text-muted-foreground">Theme</span>
+                    <ThemeSwitcher />
+                  </div>
                   <LanguageSwitcher variant="mobile" />
                 </motion.div>
-              </nav>
+              </div>
 
-              {/* Drawer Footer */}
-              <div className="p-6 border-t border-gray-100 bg-gray-50">
+              {/* Drawer Footer - Fixed */}
+              <div className="shrink-0 p-5 border-t border-border bg-background">
                 <Link
                   href="/contact-us"
                   onClick={() => {
@@ -247,7 +261,7 @@ export default function Header() {
                       source: "header_cta_mobile",
                     });
                   }}
-                  className="w-full flex items-center justify-center rounded-xl bg-navy text-white h-12 text-lg font-semibold shadow-lg hover:bg-navy-deep active:scale-95 transition-all"
+                  className="w-full flex items-center justify-center rounded-sm bg-primary text-primary-foreground h-12 text-base font-bold shadow-lg shadow-primary/20 hover:opacity-90 active:scale-[0.98] transition-all"
                 >
                   {t("getQuote")}
                 </Link>

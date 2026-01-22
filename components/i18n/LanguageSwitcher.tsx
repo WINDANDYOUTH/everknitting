@@ -35,27 +35,34 @@ export function LanguageSwitcher({ className, variant = "desktop" }: LanguageSwi
     setIsOpen(false);
   };
 
-  // Mobile variant - full list
+  // Mobile variant - compact grid
   if (variant === "mobile") {
     return (
       <div className={cn("space-y-2", className)}>
-        <div className="flex items-center gap-2 text-sm text-gray-500 mb-3">
-          <Globe className="h-4 w-4" />
-          <span>Language</span>
+        <div className="flex items-center gap-2 text-xs text-gray-500 mb-2">
+          <Globe className="h-3.5 w-3.5" />
+          <span className="font-medium">Language</span>
         </div>
-        <div className="grid grid-cols-2 gap-2">
+        <div className="grid grid-cols-3 gap-2">
           {locales.map((loc) => (
             <button
               key={loc}
               onClick={() => handleLocaleChange(loc)}
               className={cn(
-                "flex items-center justify-center py-2.5 px-3 rounded-lg text-sm font-medium transition-all",
+                "relative flex items-center justify-center py-2 px-2 rounded-lg text-xs font-semibold transition-all border",
                 locale === loc
-                  ? "bg-copper text-white"
-                  : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                  ? "bg-foreground text-background border-foreground shadow-sm"
+                  : "bg-muted text-muted-foreground border-border hover:border-foreground/30 hover:bg-accent active:bg-accent/80"
               )}
             >
-              {localeNames[loc]}
+              <span className="truncate">{localeNames[loc]}</span>
+              {locale === loc && (
+                <span className="absolute -top-1 -right-1 w-4 h-4 bg-foreground rounded-full border border-background flex items-center justify-center">
+                  <svg className="w-2.5 h-2.5 text-background" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+                  </svg>
+                </span>
+              )}
             </button>
           ))}
         </div>
@@ -69,9 +76,9 @@ export function LanguageSwitcher({ className, variant = "desktop" }: LanguageSwi
       <button
         onClick={() => setIsOpen(!isOpen)}
         className={cn(
-          "flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all",
-          "text-muted-foreground hover:text-foreground hover:bg-muted/50",
-          isOpen && "bg-muted/50"
+          "flex items-center gap-1.5 px-3 py-2 rounded-lg text-sm font-medium transition-all border",
+          "text-foreground/80 hover:text-foreground hover:bg-accent hover:border-border",
+          isOpen ? "bg-accent border-border" : "border-transparent"
         )}
         aria-expanded={isOpen}
         aria-haspopup="listbox"
@@ -87,27 +94,30 @@ export function LanguageSwitcher({ className, variant = "desktop" }: LanguageSwi
 
       {/* Dropdown */}
       {isOpen && (
-        <div className="absolute right-0 top-full mt-2 w-40 bg-white rounded-lg shadow-lg border border-gray-100 overflow-hidden z-50 animate-in fade-in-0 zoom-in-95">
-          <ul role="listbox" className="py-1">
+        <div className="absolute right-0 top-full mt-2 w-44 bg-background rounded-xl shadow-xl shadow-black/10 border border-border overflow-hidden z-50 animate-in fade-in-0 zoom-in-95">
+          <ul role="listbox" className="py-1.5">
             {locales.map((loc) => (
               <li key={loc}>
                 <button
                   onClick={() => handleLocaleChange(loc)}
                   className={cn(
-                    "w-full flex items-center gap-3 px-4 py-2.5 text-sm transition-colors",
+                    "w-full flex items-center gap-3 px-4 py-3 text-sm transition-all",
                     locale === loc
-                      ? "bg-copper/10 text-copper font-medium"
-                      : "text-gray-700 hover:bg-gray-50"
+                      ? "bg-foreground text-background font-semibold"
+                      : "text-muted-foreground hover:bg-accent hover:text-foreground"
                   )}
                   role="option"
                   aria-selected={locale === loc}
                 >
-                  <span className="w-6 text-center text-xs text-gray-400 uppercase">
+                  <span className={cn(
+                    "w-6 text-center text-xs uppercase font-medium",
+                    locale === loc ? "text-background/80" : "text-muted-foreground"
+                  )}>
                     {loc}
                   </span>
                   <span>{localeNames[loc]}</span>
                   {locale === loc && (
-                    <svg className="ml-auto h-4 w-4 text-copper" fill="currentColor" viewBox="0 0 20 20">
+                    <svg className="ml-auto h-4 w-4 text-background" fill="currentColor" viewBox="0 0 20 20">
                       <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                     </svg>
                   )}
