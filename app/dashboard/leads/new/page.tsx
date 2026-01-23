@@ -1,4 +1,6 @@
 import Link from "next/link";
+export const runtime = 'edge';
+
 import { ArrowLeft } from "lucide-react";
 import { NewLeadForm } from "@/components/dashboard/NewLeadForm";
 
