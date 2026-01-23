@@ -1,4 +1,6 @@
 import { getLeads } from "@/app/actions/leads";
+export const dynamic = "force-dynamic";
+
 import Link from "next/link";
 
 export default async function LeadsPage() {
