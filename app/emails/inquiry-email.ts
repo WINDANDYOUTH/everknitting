@@ -11,6 +11,7 @@ type Inquiry = {
   // Optional extras:
   pageUrl?: string; // where the form was submitted (if you pass it)
   submittedAt?: string; // ISO or formatted date
+  attachmentCount?: number; // Number of attachments sent with the email
 };
 
 const BRAND = {
@@ -96,6 +97,7 @@ export function renderInquiryEmailHTML(data: Inquiry) {
                     ${chip("NDA Available")}
                     ${chip("OEM / ODM")}
                     ${chip("1.5gg–16gg")}
+                    ${data.attachmentCount && data.attachmentCount > 0 ? chip(`📎 ${data.attachmentCount} File${data.attachmentCount > 1 ? 's' : ''} Attached`) : ''}
                   </td>
                 </tr>
 

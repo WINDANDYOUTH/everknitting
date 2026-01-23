@@ -149,3 +149,181 @@ export async function sendInquiry(
     return { ok: false, message: errorMessage };
   }
 }
+
+// ============================================================================
+// SEND INQUIRY WITH ATTACHMENTS
+// ============================================================================
+
+type AttachmentData = {
+  filename: string;
+  contentType: string;
+  base64: string;
+  size: number;
+};
+
+const MAX_TOTAL_ATTACHMENT_SIZE = 10 * 1024 * 1024; // 10MB total
+
+/**
+ * Enhanced inquiry submission with file attachments
+ * Files are sent as Base64-encoded data and attached to the email via Resend
+ */
+export async function sendInquiryWithAttachments(
+  _prevState: ActionState | null,
+  formData: FormData
+): Promise<ActionState> {
+  try {
+    // 1️⃣ HONEYPOT CHECK
+    const honeypot = v(formData, "_website");
+    if (honeypot) {
+      console.warn("🚫 Spam detected: honeypot field filled");
+      return { ok: false, message: "Please try again later." };
+    }
+
+    // 2️⃣ TIMESTAMP CHECK
+    const timestampStr = v(formData, "_timestamp");
+    if (timestampStr) {
+      const timestamp = parseInt(timestampStr, 10);
+      const now = Date.now();
+      const elapsed = now - timestamp;
+      
+      if (elapsed < 2000) {
+        console.warn("🚫 Spam detected: form submitted too quickly");
+        return { ok: false, message: "Please take your time filling the form." };
+      }
+      
+      if (elapsed > 3600000) {
+        console.warn("🚫 Spam detected: form expired");
+        return { ok: false, message: "Form expired. Please refresh and try again." };
+      }
+    }
+
+    // 3️⃣ EXTRACT FORM FIELDS
+    const name = v(formData, "name");
+    const email = v(formData, "email");
+    const company = v(formData, "company");
+    const productType = v(formData, "productType");
+    const material = v(formData, "material");
+    const gauge = v(formData, "gauge");
+    const quantity = v(formData, "quantity");
+    const message = v(formData, "message");
+
+    // 4️⃣ BASIC VALIDATION
+    if (!email || !email.includes("@")) {
+      return { ok: false, message: "Please enter a valid email." };
+    }
+    if (!productType && !message) {
+      return { ok: false, message: "Please add Product Type or a Message." };
+    }
+
+    // 5️⃣ SPAM CONTENT CHECK
+    const allText = `${name} ${email} ${company} ${productType} ${message}`;
+    
+    if (containsSpam(allText)) {
+      console.warn("🚫 Spam detected: spam keywords found");
+      return { ok: false, message: "Your message contains prohibited content." };
+    }
+
+    if (countUrls(allText) > 3) {
+      console.warn("🚫 Spam detected: too many URLs");
+      return { ok: false, message: "Please limit URLs in your message." };
+    }
+
+    if (message.length > 5000) {
+      return { ok: false, message: "Message is too long. Please keep it under 5000 characters." };
+    }
+
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailPattern.test(email)) {
+      return { ok: false, message: "Please enter a valid email address." };
+    }
+
+    // 6️⃣ PARSE ATTACHMENTS
+    let attachments: AttachmentData[] = [];
+    const attachmentsJson = v(formData, "attachments");
+    
+    if (attachmentsJson) {
+      try {
+        attachments = JSON.parse(attachmentsJson) as AttachmentData[];
+        
+        // Validate total size
+        const totalSize = attachments.reduce((sum, att) => sum + att.size, 0);
+        if (totalSize > MAX_TOTAL_ATTACHMENT_SIZE) {
+          return { 
+            ok: false, 
+            message: "Total attachment size exceeds 10MB. Please email larger files directly to info@everknitting.com" 
+          };
+        }
+      } catch (parseError) {
+        console.error("Failed to parse attachments:", parseError);
+        // Continue without attachments rather than failing completely
+        attachments = [];
+      }
+    }
+
+    // 7️⃣ PREPARE EMAIL
+    const apiKey = process.env.RESEND_API_KEY;
+    const from = process.env.RESEND_FROM;
+    const to = process.env.INQUIRY_TO;
+
+    if (!apiKey) return { ok: false, message: "Email configuration error. Please email info@everknitting.com directly." };
+    if (!from) return { ok: false, message: "Email configuration error. Please email info@everknitting.com directly." };
+    if (!to) return { ok: false, message: "Email configuration error. Please email info@everknitting.com directly." };
+
+    const resend = new Resend(apiKey);
+
+    const attachmentCount = attachments.length;
+    const subject = `Start Your Project — ${company || name || "New Inquiry"}${attachmentCount > 0 ? ` (${attachmentCount} file${attachmentCount > 1 ? 's' : ''})` : ''}`;
+
+    const html = renderInquiryEmailHTML({
+      name,
+      email,
+      company,
+      productType,
+      material,
+      gauge,
+      quantity,
+      message,
+      attachmentCount, // Pass attachment count to email template
+    });
+
+    // 8️⃣ PREPARE RESEND ATTACHMENTS
+    const resendAttachments = attachments.map((att) => ({
+      filename: att.filename,
+      content: att.base64, // Resend accepts Base64 strings directly
+    }));
+
+    // 9️⃣ SEND EMAIL
+    const { error } = await resend.emails.send({
+      from,
+      to: [to],
+      subject,
+      html,
+      replyTo: email,
+      ...(resendAttachments.length > 0 && { attachments: resendAttachments }),
+    });
+
+    if (error) {
+      console.error("❌ Resend error:", error);
+      // Check if it's a size-related error
+      if (error.message?.toLowerCase().includes("size") || error.message?.toLowerCase().includes("large")) {
+        return { 
+          ok: false, 
+          message: "Files too large for email. Please send them directly to info@everknitting.com" 
+        };
+      }
+      return { ok: false, message: `Failed to send. Please email info@everknitting.com directly.` };
+    }
+
+    const successMessage = attachmentCount > 0 
+      ? `Sent with ${attachmentCount} file${attachmentCount > 1 ? 's' : ''}! We'll reply in 12–24 hours.`
+      : "Sent! We'll reply in 12–24 hours.";
+
+    return { ok: true, message: successMessage };
+  } catch (e: unknown) {
+    console.error("❌ Send inquiry with attachments error:", e);
+    return { 
+      ok: false, 
+      message: "Something went wrong. Please email info@everknitting.com directly with your inquiry." 
+    };
+  }
+}

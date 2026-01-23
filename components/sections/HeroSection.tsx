@@ -1,12 +1,15 @@
 // components/sections/HeroSection.tsx
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 import { QuoteButton } from "@/components/ui/QuoteButton";
 import { useTranslations } from "next-intl";
+import { RainbowButton } from "@/components/ui/rainbow-button";
+import { SampleConsultationModal } from "@/components/ui/SampleConsultationModal";
 
 export default function HeroSection() {
   const t = useTranslations("hero");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   const badges = [
     t("badges.experience"),
@@ -69,18 +72,25 @@ export default function HeroSection() {
             {t("cta")}
           </QuoteButton>
 
-          <a
-            href="#consultation"
-            className="inline-flex h-12 items-center justify-center rounded-2xl border border-wool/50 bg-cashmere/5 px-6 text-sm font-semibold text-cashmere backdrop-blur transition hover:bg-cashmere/10"
+          <RainbowButton
+            variant="outline"
+            className="h-12 px-6 text-sm font-semibold w-full sm:w-auto text-cashmere"
+            onClick={() => setIsModalOpen(true)}
+            style={{ "--background": "#2B3942" } as React.CSSProperties}
           >
             {t("ctaSecondary")}
-          </a>
+          </RainbowButton>
 
-          <span className="text-xs text-cashmere/60">
+          <span className="text-xs text-cashmere/60 text-center sm:text-left">
             {t("ctaNote")}
           </span>
         </div>
       </div>
+      
+      <SampleConsultationModal 
+        isOpen={isModalOpen} 
+        onClose={() => setIsModalOpen(false)} 
+      />
     </section>
   );
 }

@@ -69,11 +69,24 @@ export function trackFormSubmission(params: {
   formName: string;
   formLocation: string;
 }) {
+  // Track the form submission event
   trackEvent("form_submission", {
     event_category: "Engagement",
     form_name: params.formName,
     form_location: params.formLocation,
   });
+  
+  // For successful submissions, also trigger GA4's recommended 'generate_lead' event
+  // This is a recommended event that GA4 can use for conversion tracking
+  if (params.formName.includes("success")) {
+    trackEvent("generate_lead", {
+      event_category: "Lead Generation",
+      form_name: params.formName,
+      form_location: params.formLocation,
+      currency: "USD",
+      value: 0, // Set a value if you want to track lead value
+    });
+  }
 }
 
 /**

@@ -2,6 +2,7 @@
 
 import React from "react";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+import { cn } from "@/lib/utils";
 import { trackQuotationRequest } from "@/components/analytics";
 
 interface QuoteButtonProps {
@@ -39,8 +40,8 @@ export function QuoteButton({
   };
 
   return (
-    <a href={href} onClick={handleClick}>
-      <RainbowButton className={className}>
+    <a href={href} onClick={handleClick} className="w-full sm:w-auto">
+      <RainbowButton className={cn("w-full sm:w-auto", className)}>
         {children}
       </RainbowButton>
     </a>

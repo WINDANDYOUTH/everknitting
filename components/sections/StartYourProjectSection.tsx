@@ -32,20 +32,17 @@ export default function StartYourProjectSection() {
   // Capture timestamp once on mount to avoid impure function during render
   const [timestamp] = React.useState(() => Date.now().toString());
 
-  // Reset form on success & track results
+  // Reset form on success & track results (only track successful submissions)
   useEffect(() => {
     if (state?.ok) {
       formRef.current?.reset();
+      // ✅ Track SUCCESSFUL submission - this triggers 'generate_lead' for GA4
       trackFormSubmission({
         formName: "start_project_success",
         formLocation: "start_project_section",
       });
-    } else if (state && !state.ok) {
-      trackFormSubmission({
-        formName: "start_project_error",
-        formLocation: "start_project_section",
-      });
     }
+    // Note: We don't track errors to avoid inflating event counts
   }, [state]);
 
   // Client-side rate limiting wrapper
@@ -62,12 +59,6 @@ export default function StartYourProjectSection() {
         return;
       }
     }
-    
-    // Track submission start
-    trackFormSubmission({
-      formName: "start_project_submit",
-      formLocation: "start_project_section",
-    });
 
     localStorage.setItem("lastInquirySubmit", now.toString());
     return formAction(formData);

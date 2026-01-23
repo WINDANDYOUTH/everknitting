@@ -1,16 +1,15 @@
-"use client";
 import React, { useLayoutEffect, useRef, useCallback } from 'react';
 import type { ReactNode } from 'react';
 import Lenis from 'lenis';
 
 export interface ScrollStackItemProps {
   itemClassName?: string;
-  children?: ReactNode; // Made optional to prevent usage errors
+  children: ReactNode;
 }
 
 export const ScrollStackItem: React.FC<ScrollStackItemProps> = ({ children, itemClassName = '' }) => (
   <div
-    className={`scroll-stack-card relative w-full h-80 my-8 p-12 rounded-[40px] shadow-[0_0_30px_rgba(0,0,0,0.1)] box-border origin-top will-change-transform ${itemClassName}`.trim()}
+    className={`scroll-stack-card relative w-full h-[420px] my-8 p-6 md:p-10 rounded-[32px] md:rounded-[40px] shadow-[0_0_30px_rgba(0,0,0,0.1)] box-border origin-top will-change-transform ${itemClassName}`.trim()}
     style={{
       backfaceVisibility: 'hidden',
       transformStyle: 'preserve-3d'
@@ -22,7 +21,7 @@ export const ScrollStackItem: React.FC<ScrollStackItemProps> = ({ children, item
 
 interface ScrollStackProps {
   className?: string;
-  children?: ReactNode;
+  children: ReactNode;
   itemDistance?: number;
   itemScale?: number;
   itemStackDistance?: number;
@@ -34,13 +33,6 @@ interface ScrollStackProps {
   blurAmount?: number;
   useWindowScroll?: boolean;
   onStackComplete?: () => void;
-}
-
-interface TransformState {
-  translateY: number;
-  scale: number;
-  rotation: number;
-  blur: number;
 }
 
 const ScrollStack: React.FC<ScrollStackProps> = ({
@@ -63,7 +55,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
   const animationFrameRef = useRef<number | null>(null);
   const lenisRef = useRef<Lenis | null>(null);
   const cardsRef = useRef<HTMLElement[]>([]);
-  const lastTransformsRef = useRef(new Map<number, TransformState>());
+  const lastTransformsRef = useRef(new Map<number, any>());
   const isUpdatingRef = useRef(false);
 
   const calculateProgress = useCallback((scrollTop: number, start: number, end: number) => {
@@ -113,7 +105,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
 
     isUpdatingRef.current = true;
 
-    const { scrollTop, containerHeight } = getScrollData();
+    const { scrollTop, containerHeight, scrollContainer } = getScrollData();
     const stackPositionPx = parsePercentage(stackPosition, containerHeight);
     const scaleEndPositionPx = parsePercentage(scaleEndPosition, containerHeight);
 
@@ -345,7 +337,7 @@ const ScrollStack: React.FC<ScrollStackProps> = ({
         willChange: 'scroll-position'
       }}
     >
-      <div className="scroll-stack-inner pt-[20vh] px-20 pb-200 min-h-screen">
+      <div className="scroll-stack-inner pt-[20vh] px-4 md:px-20 pb-200 min-h-screen">
         {children}
         {/* Spacer so the last pin can release cleanly */}
         <div className="scroll-stack-end w-full h-px" />
