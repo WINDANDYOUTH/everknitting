@@ -1,0 +1,22 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "everknitting-outbound",
+  "account_id": "5cea8763c48ff370ca3266f526a37f05",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-23",
+  "compatibility_flags": ["nodejs_compat"],
+  "workers_dev": true,
+  "observability": {"enabled": true},
+  "triggers": {"crons": ["*/15 * * * *"]},
+  "d1_databases": [{"binding":"DB", "database_name":"everknitting-outbound", "database_id":"6e0a21de-1bfa-4125-965a-b9d4a3beac4e", "migrations_dir":"migrations"}],
+  "send_email": [{"name":"EMAIL"}],
+  "vars": {
+    "SEND_ENABLED":"false",
+    "DISCOVERY_ENABLED":"false",
+    "FROM_EMAIL":"hello@everknitting.com",
+    "REPLY_EMAIL":"replies@reply.everknitting.com",
+    "PUBLIC_BASE_URL":"https://everknitting.com/api/outbound",
+    "DAILY_SEND_LIMIT":"10",
+    "DAILY_RESEARCH_LIMIT":"10"
+  }
+}

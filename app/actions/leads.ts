@@ -23,8 +23,8 @@ export async function createLead(formData: FormData) {
     email: formData.get("email") as string,
     country: formData.get("country") as string,
     source: formData.get("source") as string,
-    status: formData.get("status") as any,
-    priority: formData.get("priority") as any || "MEDIUM",
+    status: formData.get("status"),
+    priority: formData.get("priority") || "MEDIUM",
     owner: formData.get("owner") as string,
   }
 

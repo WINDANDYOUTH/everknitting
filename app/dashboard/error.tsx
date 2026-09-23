@@ -28,7 +28,7 @@ export default function Error({
       {isDatabaseError && (
         <div className="mt-6 p-4 bg-blue-50 text-blue-800 rounded text-sm text-left max-w-lg">
           <p className="font-bold mb-2">Setup Required:</p>
-          <p>It looks like the database tables haven't been created yet.</p>
+          <p>It looks like the database tables haven&apos;t been created yet.</p>
           <p className="mt-2">Please run the SQL script provided in <code>docs/setup-database.sql</code> in your Supabase SQL Editor.</p>
         </div>
       )}

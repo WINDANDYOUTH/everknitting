@@ -1,4 +1,5 @@
 import { getLeads } from "@/app/actions/leads";
+import type { Lead } from '@prisma/client';
 export const dynamic = "force-dynamic";
 export const runtime = 'edge';
 
@@ -66,7 +67,7 @@ export default async function LeadsPage() {
                 </td>
                </tr>
             ) : (
-              leads.map((lead: any) => (
+              leads.map((lead: Lead) => (
                 <tr key={lead.id} className="hover:bg-neutral-50 group border-b last:border-0 transition-colors">
                   <td className="py-3 px-4 font-medium text-neutral-900">
                     <Link href={`/dashboard/leads/${lead.id}`} className="hover:text-emerald-600 hover:underline block w-full">

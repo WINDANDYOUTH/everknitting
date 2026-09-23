@@ -20,6 +20,7 @@ export default function DashboardLayout({
         <nav className="flex-1 p-4 space-y-1 overflow-y-auto">
           <SidebarItem href="/dashboard" icon={<LayoutDashboard size={20} />} label="Overview" />
           <SidebarItem href="/dashboard/leads" icon={<Users size={20} />} label="Leads & Clients" />
+          <SidebarItem href="/dashboard/outbound" icon={<Users size={20} />} label="AI Outbound" />
           <SidebarItem href="/dashboard/samples" icon={<Package size={20} />} label="Sample Requests" />
           <SidebarItem href="/dashboard/quotations" icon={<FileText size={20} />} label="Quotations" />
         </nav>

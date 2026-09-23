@@ -39,3 +39,9 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Worker local dependencies, secrets and simulator state
+**/node_modules/
+**/.wrangler/
+**/.dev.vars*
+**/dist/

@@ -1,0 +1,4 @@
+{
+  "discovery":{"type":"object","additionalProperties":false,"required":["companies"],"properties":{"companies":{"type":"array","maxItems":5,"items":{"type":"object","additionalProperties":false,"required":["company","domain","source_url","country"],"properties":{"company":{"type":"string"},"domain":{"type":"string"},"source_url":{"type":"string"},"country":{"type":"string"}}}}}},
+  "research":{"type":"object","additionalProperties":false,"required":["score","summary","reasons","sources","subject","body","email","contact_source"],"properties":{"score":{"type":"integer","minimum":0,"maximum":100},"summary":{"type":"string"},"reasons":{"type":"array","items":{"type":"string"}},"sources":{"type":"array","items":{"type":"string"}},"subject":{"type":"string"},"body":{"type":"string"},"email":{"type":["string","null"]},"contact_source":{"type":["string","null"]}}}
+}
