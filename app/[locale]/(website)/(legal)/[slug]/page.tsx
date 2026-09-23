@@ -67,7 +67,7 @@ export default async function LegalPage({ params }: Props) {
             source={content} 
             options={{
               mdxOptions: {
-                // @ts-ignore - Types compatibility issues between rehype versions commonly occur but runtime is fine
+                // rehype-slug adds stable heading anchors.
                 rehypePlugins: [rehypeSlug],
               }
             }}

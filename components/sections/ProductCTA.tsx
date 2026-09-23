@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { trackQuotationRequest } from "@/components/analytics";
 
 interface ProductCTAProps {
@@ -30,13 +31,13 @@ export function ProductCTA({ productKeyword, productSlug }: ProductCTAProps) {
       <p className="text-lg mb-6 text-blue-100">
         Get a custom quote for your project. We&apos;ll respond within 24 hours.
       </p>
-      <a
+      <Link
         href="/contact-us"
         onClick={handleClick}
         className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
       >
         Get a Quote
-      </a>
+      </Link>
     </section>
   );
 }

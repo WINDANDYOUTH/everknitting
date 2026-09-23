@@ -27,6 +27,8 @@ export default clerkMiddleware(async (auth, req: NextRequest) => {
   // Check authentication for protected routes
   if (isProtectedRoute(req)) {
     await auth.protect();
+    // CRM lives at /dashboard, outside the localized marketing route group.
+    if (req.nextUrl.pathname.startsWith('/dashboard')) return;
   }
 
   // Apply i18n middleware for all other routes

@@ -2,6 +2,7 @@ import { getLeadById } from "@/app/actions/lead-details";
 import Link from "next/link";
 import { ArrowLeft, Plus } from "lucide-react";
 import { notFound } from "next/navigation";
+import type { Interaction, FollowUp, SampleRequest } from '@prisma/client';
 
 export const runtime = 'edge';
 
@@ -90,7 +91,7 @@ export default async function LeadDetailPage({ params }: { params: Promise<{ id:
              </div>
              <div className="divide-y">
                 {leadingComment(lead.interactions, "No outreach activities logged yet.")}
-                {lead.interactions.map((interaction: any) => (
+                {lead.interactions.map((interaction: Interaction) => (
                   <div key={interaction.id} className="p-4 hover:bg-neutral-50">
                     <div className="flex items-center justify-between mb-1">
                       <span className="font-medium text-sm text-neutral-900">{interaction.type}</span>
@@ -114,7 +115,7 @@ export default async function LeadDetailPage({ params }: { params: Promise<{ id:
              <div className="p-6">
                 <div className="relative border-l border-neutral-200 ml-3 space-y-8">
                   {lead.followUps.length === 0 && <p className="text-sm text-neutral-500 pl-6">No scheduled follow-ups.</p>}
-                  {lead.followUps.map((fu: any) => (
+                  {lead.followUps.map((fu: FollowUp) => (
                     <div key={fu.id} className="relative pl-6">
                       <div className="absolute -left-[5px] top-1.5 w-2.5 h-2.5 rounded-full bg-emerald-500 border border-white shadow-sm" />
                       <div className="flex flex-col gap-1">
@@ -141,14 +142,14 @@ export default async function LeadDetailPage({ params }: { params: Promise<{ id:
                   <p className="text-sm text-neutral-500 text-center py-4">No samples requested.</p>
                 ) : (
                   <div className="space-y-4">
-                    {lead.samples.map((sample: any) => (
+                    {lead.samples.map((sample: SampleRequest) => (
                       <div key={sample.id} className="border rounded-lg p-4 flex items-center justify-between">
                         <div>
                           <div className="text-sm font-medium">Tracking: {sample.trackingNumber || "Pending"}</div>
                           <div className="text-xs text-neutral-500 mt-1">Status: {sample.status} • Paid: {sample.isPaid ? "Yes" : "No"}</div>
                         </div>
                          <div className="text-right">
-                           <div className="text-sm font-bold text-neutral-900">${sample.cost || "0.00"}</div>
+                           <div className="text-sm font-bold text-neutral-900">${sample.cost?.toString() || "0.00"}</div>
                            <div className="text-xs text-neutral-500">Prob: {sample.probability}%</div>
                          </div>
                       </div>
@@ -170,7 +171,7 @@ function Badge({ children, variant = "default" }: { children: React.ReactNode, v
   return <span className={`${base} ${styles}`}>{children}</span>;
 }
 
-function leadingComment(arr: any[], msg: string) {
+function leadingComment(arr: unknown[], msg: string) {
   if (arr.length === 0) return <div className="p-8 text-center text-sm text-neutral-500">{msg}</div>;
   return null;
 }

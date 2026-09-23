@@ -1,0 +1,39 @@
+name: Outbound checks
+on:
+  pull_request:
+    paths: ['workers/outbound/**', 'components/outbound-console.tsx', 'app/api/outbound/**', 'app/dashboard/**', 'middleware.ts', 'package*.json', 'eslint.config.mjs', '.github/workflows/outbound.yml']
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  worker:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: workers/outbound
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+          cache-dependency-path: workers/outbound/package-lock.json
+      - run: npm ci
+      - run: npm run types
+      - run: npm run check
+      - run: npm test
+      - run: npx wrangler deploy --dry-run
+  pages:
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY: pk_test_bmVhcmJ5LWpvZXktMjUuY2xlcmsuYWNjb3VudHMuZGV2JA
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci
+      - run: npx prisma generate --no-engine
+      - run: npx eslint components/outbound-console.tsx app/dashboard/outbound/page.tsx 'app/api/outbound/[...path]/route.ts' middleware.ts
+      - run: npm run pages:build

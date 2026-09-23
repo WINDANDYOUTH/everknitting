@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { trackQuotationRequest } from "@/components/analytics";
 
 interface ServiceCTAProps {
@@ -29,13 +30,13 @@ export function ServiceCTA({ serviceKeyword, serviceSlug }: ServiceCTAProps) {
         Contact us today for a consultation about your {serviceKeyword.toLowerCase()}{" "}
         project.
       </p>
-      <a
+      <Link
         href="/contact-us"
         onClick={handleClick}
         className="inline-block bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors"
       >
         Request a Quote
-      </a>
+      </Link>
     </section>
   );
 }
