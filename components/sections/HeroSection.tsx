@@ -44,7 +44,7 @@ export default function HeroSection() {
 
         {/* Subtitle */}
         <p className="mt-5 max-w-3xl text-base leading-relaxed text-wool sm:text-lg">
-          {t("subtitle")}
+          {t("subtitle")}{" "}
           <br className="hidden sm:block" />
           {t("subtitleLine2")}
         </p>

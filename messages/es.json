@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Ever Knitting | Fabricante profesional de prendas de punto en China y Camboya",
-    "description": "Ever Knitting es un fabricante profesional de prendas de punto que ofrece servicios OEM y ODM para marcas de moda, mayoristas y empresas de marca propia."
+    "description": "Ever Knitting ofrece fabricación de prendas de punto OEM y ODM para marcas de ropa consolidadas que desarrollan o amplían sus colecciones de punto."
   },
   "navigation": {
     "home": "Inicio",
@@ -19,16 +19,16 @@
   "hero": {
     "brand": "Ever Knitting Company Limited",
     "title": "Fabricante Premium de Cachemira y Prendas de Punto",
-    "titleHighlight": "Desde 1993",
+    "titleHighlight": "Desde 2009",
     "subtitle": "Producción directa de fábrica de jerséis de cachemira de alta calidad y prendas de punto.",
-    "subtitleLine2": "Desde muestreo hasta pedidos a granel, a medida para marcas globales.",
+    "subtitleLine2": "Muestras y producción en serie para marcas de ropa consolidadas que desarrollan o amplían sus colecciones de punto.",
     "cta": "Solicitar presupuesto",
     "ctaSecondary": "Consulta de muestras gratis",
     "ctaNote": "Respuesta en 12–24 horas • NDA disponible",
     "badges": {
-      "experience": "30+ años de experiencia en tejido",
+      "experience": "Experiencia en punto desde 2009",
       "specialists": "Especialistas en cachemira y punto fino",
-      "moq": "MOQ bajo y muestreo flexible",
+      "moq": "MOQ habitual: 100 prendas por color y por talla, negociable según el proyecto",
       "quality": "Calidad estable y entrega puntual"
     }
   },
@@ -51,7 +51,7 @@
     "title": "Contáctenos",
     "subtitle": "Póngase en contacto con nuestro equipo",
     "heroTitle": "Hablemos.",
-    "heroSubtitle": "Ya sea que sea una marca establecida buscando un nuevo socio o una startup lanzando su primera colección, estamos aquí para ayudarle.",
+    "heroSubtitle": "¿Está desarrollando o ampliando su colección de punto? Acompañamos a las marcas de ropa consolidadas desde el diseño y las muestras hasta la producción en serie.",
     "infoTitle": "Información de contacto",
     "form": {
       "name": "Su nombre",
@@ -62,7 +62,7 @@
       "message": "Su mensaje",
       "submit": "Enviar mensaje",
       "submitting": "Enviando...",
-      "success": "¡Gracias! Nos pondremos en contacto pronto.",
+      "success": "¡Gracias! Le responderemos en 12–24 horas.",
       "error": "Algo salió mal. Por favor, inténtelo de nuevo."
     },
     "info": {
@@ -83,8 +83,8 @@
     "terms": "Términos de servicio",
     "cookies": "Política de cookies",
     "copyright": "© {year} Ever Knitting Company Limited. Todos los derechos reservados.",
-    "tagline": "Excelencia en prendas de punto desde 1993",
-    "description": "Fabricante de prendas de punto premium especializado en cachemira de lujo y mezclas de alta gama desde 1993.",
+    "tagline": "Excelencia en prendas de punto desde 2009",
+    "description": "Fabricante de prendas de punto premium especializado en cachemira de lujo y mezclas de alta gama desde 2009.",
     "links": {
       "whatWeManufacture": "Lo que fabricamos",
       "materialsYarns": "Materiales e hilos",
@@ -103,13 +103,13 @@
   },
   "about": {
     "title": "Acerca de Ever Knitting",
-    "subtitle": "Más de 15 años de excelencia en la fabricación de prendas de punto",
+    "subtitle": "Excelencia en la fabricación de prendas de punto desde 2009",
     "heroTitle": "Tejemos",
     "heroHighlight": "Legados",
-    "heroSubtitle": "Desde 2008, Ever Knitting ha sido el socio silencioso detrás de algunas de las marcas de moda más prestigiosas del mundo.",
+    "heroSubtitle": "Desde 2009, Ever Knitting ha sido el socio silencioso detrás de algunas de las marcas de moda más prestigiosas del mundo.",
     "storyTitle": "Nuestra historia",
     "storyP1": "Fundada en el corazón del distrito textil de Dongguan, Ever Knitting comenzó con solo cinco máquinas de tejer y el sueño de redefinir la calidad.",
-    "storyP2": "En los últimos 15 años, nos hemos expandido a una instalación de última generación que emplea a más de 200 artesanos y técnicos calificados. Combinamos técnicas tradicionales de acabado a mano con tecnología automatizada moderna para entregar prendas que realmente se destacan.",
+    "storyP2": "Desde nuestra fundación en 2009, nos hemos expandido a una instalación de última generación que emplea a más de 200 artesanos y técnicos calificados. Combinamos técnicas tradicionales de acabado a mano con tecnología automatizada moderna para entregar prendas que realmente se destacan. La capacidad de producción anual del conjunto del grupo es de 10 millones de prendas.",
     "storyP3": "Creemos que cada puntada importa. Desde la tensión del hilo hasta el planchado final al vapor, nuestra obsesión por el detalle es lo que nos distingue.",
     "valuesTitle": "Nuestros valores fundamentales",
     "values": {
@@ -164,11 +164,11 @@
       },
       "step2": {
         "title": "Prototipado y muestreo",
-        "desc": "Creamos una muestra física para su aprobación. Esto asegura que el ajuste, el tacto y el aspecto cumplan con sus especificaciones exactas antes de la producción en masa."
+        "desc": "Creamos una muestra para su aprobación y así confirmar el ajuste, el tacto y el aspecto antes de la producción en serie. El plazo orientativo de muestreo es de 1–7 días, según la complejidad y los requisitos del proyecto."
       },
       "step3": {
         "title": "Producción en masa",
-        "desc": "Utilizando máquinas Shima Seiki y Stoll de última generación, comenzamos la producción en masa con estricta adherencia a la muestra aprobada."
+        "desc": "Con máquinas de última generación Shima Seiki y Stoll, producimos según la muestra aprobada. El plazo orientativo de producción en serie va de 15 días a 2 meses y se confirma para cada pedido según la cantidad, el proceso de fabricación y los requisitos."
       },
       "step4": {
         "title": "Control de calidad",

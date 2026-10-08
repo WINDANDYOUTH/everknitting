@@ -2,6 +2,7 @@ import React from "react";
 import type { Metadata } from "next";
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import { COMPANY_FACTS } from '@/lib/company-facts';
 
 export const runtime = 'edge';
 
@@ -27,11 +28,19 @@ type FAQItem = {
 const faqs: FAQItem[] = [
   {
     q: "What is your Minimum Order Quantity (MOQ)?",
-    a: "Our standard MOQ is 200 pieces per style, which can be split into different sizes and 2 colorways. For premium materials like Cashmere, we can sometimes accommodate lower quantities. Please contact us for specific inquiries."
+    a: COMPANY_FACTS.moq,
   },
   {
     q: "What is your sampling lead time?",
-    a: "Ideally, initial prototyping takes 7-14 days depending on yarn availability. Complex patterns or custom-dyed yarns may require additional time."
+    a: COMPANY_FACTS.sampling,
+  },
+  {
+    q: "What is your bulk production lead time?",
+    a: COMPANY_FACTS.bulk,
+  },
+  {
+    q: "What is your group's annual production capacity?",
+    a: COMPANY_FACTS.groupCapacity,
   },
   {
     q: "Do you offer private labeling services?",

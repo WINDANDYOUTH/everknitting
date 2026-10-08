@@ -172,7 +172,7 @@ export default function StartYourProjectSection() {
                     <input
                       name="quantity"
                       className={inputClass}
-                      placeholder="e.g. 300 pcs total, 3 colors, sizes S–XL"
+                      placeholder="Quantity per color and size, color count, and size range"
                       maxLength={300}
                     />
                   </Field>

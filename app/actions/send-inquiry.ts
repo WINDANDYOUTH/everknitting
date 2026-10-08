@@ -3,6 +3,7 @@
 
 import { Resend } from "resend";
 import { renderInquiryEmailHTML } from "@/app/emails/inquiry-email";
+import { parseInquiryAttachments } from "@/lib/inquiry-attachments";
 
 export type ActionState =
   | { ok: true; message: string }
@@ -154,15 +155,6 @@ export async function sendInquiry(
 // SEND INQUIRY WITH ATTACHMENTS
 // ============================================================================
 
-type AttachmentData = {
-  filename: string;
-  contentType: string;
-  base64: string;
-  size: number;
-};
-
-const MAX_TOTAL_ATTACHMENT_SIZE = 10 * 1024 * 1024; // 10MB total
-
 /**
  * Enhanced inquiry submission with file attachments
  * Files are sent as Base64-encoded data and attached to the email via Resend
@@ -237,28 +229,10 @@ export async function sendInquiryWithAttachments(
       return { ok: false, message: "Please enter a valid email address." };
     }
 
-    // 6️⃣ PARSE ATTACHMENTS
-    let attachments: AttachmentData[] = [];
-    const attachmentsJson = v(formData, "attachments");
-    
-    if (attachmentsJson) {
-      try {
-        attachments = JSON.parse(attachmentsJson) as AttachmentData[];
-        
-        // Validate total size
-        const totalSize = attachments.reduce((sum, att) => sum + att.size, 0);
-        if (totalSize > MAX_TOTAL_ATTACHMENT_SIZE) {
-          return { 
-            ok: false, 
-            message: "Total attachment size exceeds 10MB. Please email larger files directly to info@everknitting.com" 
-          };
-        }
-      } catch (parseError) {
-        console.error("Failed to parse attachments:", parseError);
-        // Continue without attachments rather than failing completely
-        attachments = [];
-      }
-    }
+    // 6️⃣ VALIDATE ATTACHMENTS - use decoded bytes, never client size claims.
+    const attachmentResult = parseInquiryAttachments(formData.get("attachments"));
+    if (!attachmentResult.ok) return attachmentResult;
+    const attachments = attachmentResult.attachments;
 
     // 7️⃣ PREPARE EMAIL
     const apiKey = process.env.RESEND_API_KEY;

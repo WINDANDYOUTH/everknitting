@@ -31,7 +31,7 @@ export function SampleConsultationModal({
     {
       name: "WhatsApp",
       icon: MessageCircle,
-      description: "Instant response for sample requests",
+      description: "Replies in 12–24 hours",
       action: "Chat on WhatsApp",
       href: BUSINESS_CONTACT.whatsappHref,
       color: "bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20",
@@ -77,8 +77,8 @@ export function SampleConsultationModal({
                   Sample Consultation
                 </h3>
                 <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
-                  Connect with our knitwear specialists directly. We usually
-                  respond within 15 minutes during business hours.
+                  Connect with our knitwear specialists directly. We respond
+                  in 12–24 hours.
                 </p>
               </div>
 

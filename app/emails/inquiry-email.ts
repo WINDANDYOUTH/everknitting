@@ -72,7 +72,7 @@ export function renderInquiryEmailHTML(data: Inquiry) {
                         New Inquiry — Start Your Project
                       </div>
                       <div style="color:${BRAND.wool};font-size:12px;line-height:1.4;margin-top:8px;">
-                        Premium Cashmere &amp; Knitwear Manufacturer Since 1993
+                        Premium Cashmere &amp; Knitwear Manufacturer Since 2009
                       </div>
                     </div>
                   </td>
@@ -93,7 +93,7 @@ export function renderInquiryEmailHTML(data: Inquiry) {
                 <!-- Summary chips -->
                 <tr>
                   <td style="padding:0 0 14px 0;">
-                    ${chip("Reply in 12–24h")}
+                    ${chip("Reply in 12–24 hours")}
                     ${chip("NDA Available")}
                     ${chip("OEM / ODM")}
                     ${chip("1.5gg–16gg")}
@@ -154,7 +154,7 @@ export function renderInquiryEmailHTML(data: Inquiry) {
                   <td style="padding:18px 0 0 0;">
                     <div style="border-top:1px solid rgba(111,116,119,0.35);padding-top:14px;">
                       <div style="font-family:ui-sans-serif,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial;color:${BRAND.wool};font-size:12px;line-height:1.6;">
-                        Ever Knitting Company Limited • Factory-direct knitwear OEM/ODM • Since 1993
+                        Ever Knitting Company Limited • Factory-direct knitwear OEM/ODM • Since 2009
                         <br/>
                         This message was generated from your website inquiry form.
                       </div>

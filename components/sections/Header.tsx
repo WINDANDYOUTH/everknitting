@@ -105,7 +105,7 @@ export default function Header() {
               "text-[10px] md:text-xs text-muted-foreground font-medium tracking-wide hidden sm:block transition-opacity duration-300",
               scrolled ? "opacity-0 h-0 overflow-hidden mt-0" : "opacity-100 mt-0.5" // Hide tagline on scroll to save space
             )}>
-              Cashmere & Knitwear Manufacturer Since 1993
+              Cashmere & Knitwear Manufacturer Since 2009
             </span>
           </div>
 

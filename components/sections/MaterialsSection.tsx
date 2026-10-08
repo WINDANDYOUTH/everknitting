@@ -7,7 +7,7 @@ type Card = {
   points: string[];
 };
 
-const proofChips = ["Swatches available", "Lab dips 5–7 days", "1.5gg–16gg supported"];
+const proofChips = ["Swatches available", "Lab dips available", "1.5gg–16gg supported"];
 
 const weControl = [
   "Hand-feel matching (based on your reference)",

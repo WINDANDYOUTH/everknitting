@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Ever Knitting | Fabricant professionnel de tricots en Chine et au Cambodge",
-    "description": "Ever Knitting est un fabricant professionnel de tricots offrant des services OEM et ODM pour les marques de mode, les grossistes et les entreprises de marque privée."
+    "description": "Ever Knitting propose la fabrication de maille en OEM et ODM aux marques de vêtements établies qui créent ou élargissent leurs collections de maille."
   },
   "navigation": {
     "home": "Accueil",
@@ -19,16 +19,16 @@
   "hero": {
     "brand": "Ever Knitting Company Limited",
     "title": "Fabricant de Cachemire & Tricots Premium",
-    "titleHighlight": "Depuis 1993",
+    "titleHighlight": "Depuis 2009",
     "subtitle": "Production directe en usine de pulls en cachemire de haute qualité et de vêtements tricotés.",
-    "subtitleLine2": "De l'échantillonnage aux commandes en gros, sur mesure pour les marques mondiales.",
+    "subtitleLine2": "Échantillonnage et production en série pour les marques de vêtements établies qui créent ou élargissent leurs collections de maille.",
     "cta": "Demander un devis",
     "ctaSecondary": "Consultation d'échantillon gratuite",
     "ctaNote": "Réponse sous 12–24 heures • NDA disponible",
     "badges": {
-      "experience": "30+ ans d'expérience en tricot",
+      "experience": "Savoir-faire en maille depuis 2009",
       "specialists": "Spécialistes cachemire & jauge fine",
-      "moq": "MOQ faible & échantillonnage flexible",
+      "moq": "MOQ indicative : 100 pièces par couleur et par taille, négociable selon le projet",
       "quality": "Qualité stable & livraison ponctuelle"
     }
   },
@@ -51,7 +51,7 @@
     "title": "Contactez-nous",
     "subtitle": "Prenez contact avec notre équipe",
     "heroTitle": "Parlons.",
-    "heroSubtitle": "Que vous soyez une marque établie à la recherche d'un nouveau partenaire ou une startup lançant sa première collection, nous sommes là pour vous aider.",
+    "heroSubtitle": "Vous créez ou élargissez votre collection de maille ? Nous accompagnons les marques de vêtements établies, de la conception et des échantillons à la production en série.",
     "infoTitle": "Coordonnées",
     "form": {
       "name": "Votre nom",
@@ -62,7 +62,7 @@
       "message": "Votre message",
       "submit": "Envoyer le message",
       "submitting": "Envoi en cours...",
-      "success": "Merci ! Nous vous répondrons bientôt.",
+      "success": "Merci ! Nous vous répondrons sous 12–24 heures.",
       "error": "Une erreur s'est produite. Veuillez réessayer."
     },
     "info": {
@@ -83,8 +83,8 @@
     "terms": "Conditions d'utilisation",
     "cookies": "Politique de cookies",
     "copyright": "© {year} Ever Knitting Company Limited. Tous droits réservés.",
-    "tagline": "Excellence en tricot depuis 1993",
-    "description": "Fabricant de tricots premium spécialisé dans le cachemire de luxe et les mélanges haut de gamme depuis 1993.",
+    "tagline": "Excellence en tricot depuis 2009",
+    "description": "Fabricant de tricots premium spécialisé dans le cachemire de luxe et les mélanges haut de gamme depuis 2009.",
     "links": {
       "whatWeManufacture": "Ce que nous fabriquons",
       "materialsYarns": "Matériaux et fils",
@@ -103,13 +103,13 @@
   },
   "about": {
     "title": "À propos d'Ever Knitting",
-    "subtitle": "Plus de 15 ans d'excellence dans la fabrication de tricots",
+    "subtitle": "Excellence dans la fabrication de maille depuis 2009",
     "heroTitle": "Nous tricotons des",
     "heroHighlight": "Héritages",
-    "heroSubtitle": "Depuis 2008, Ever Knitting est le partenaire discret derrière certaines des marques de mode les plus prestigieuses au monde.",
+    "heroSubtitle": "Depuis 2009, Ever Knitting est le partenaire discret derrière certaines des marques de mode les plus prestigieuses au monde.",
     "storyTitle": "Notre histoire",
     "storyP1": "Fondée au cœur du quartier textile de Dongguan, Ever Knitting a démarré avec seulement cinq machines à tricoter et le rêve de redéfinir la qualité.",
-    "storyP2": "Au cours des 15 dernières années, nous nous sommes développés en une installation ultramoderne employant plus de 200 artisans et techniciens qualifiés. Nous allions les techniques de finition traditionnelles à la main avec une technologie automatisée moderne pour livrer des vêtements qui se démarquent vraiment.",
+    "storyP2": "Depuis notre création en 2009, nous nous sommes développés en une installation ultramoderne employant plus de 200 artisans et techniciens qualifiés. Nous allions les techniques de finition traditionnelles à la main avec une technologie automatisée moderne pour livrer des vêtements qui se démarquent vraiment. La capacité de production annuelle de l’ensemble du groupe est de 10 millions de pièces.",
     "storyP3": "Nous croyons que chaque point compte. De la tension du fil au repassage final à la vapeur, notre obsession du détail est ce qui nous distingue.",
     "valuesTitle": "Nos valeurs fondamentales",
     "values": {
@@ -164,11 +164,11 @@
       },
       "step2": {
         "title": "Prototypage & Échantillonnage",
-        "desc": "Nous créons un échantillon physique pour votre approbation. Cela garantit que la coupe, le toucher et l'apparence correspondent exactement à vos spécifications avant la production en masse."
+        "desc": "Nous réalisons un échantillon pour validation afin de confirmer la coupe, le toucher et l’aspect avant la production en série. Le délai indicatif d’échantillonnage est de 1–7 jours, selon la complexité et les exigences du projet."
       },
       "step3": {
         "title": "Production en série",
-        "desc": "Utilisant des machines Shima Seiki et Stoll à la pointe de la technologie, nous commençons la production de masse en stricte conformité avec l'échantillon approuvé."
+        "desc": "Nos machines de pointe Shima Seiki et Stoll assurent une production conforme à l’échantillon approuvé. Le délai indicatif de production en série va de 15 jours à 2 mois ; il est confirmé pour chaque commande selon les quantités, les procédés de fabrication et les exigences."
       },
       "step4": {
         "title": "Contrôle qualité",

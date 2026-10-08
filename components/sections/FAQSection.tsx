@@ -2,13 +2,14 @@
 "use client";
 
 import React, { useState } from "react";
+import { COMPANY_FACTS } from "@/lib/company-facts";
 
 export type FAQ = { q: string; a: string };
 
 export const faqs: FAQ[] = [
   {
     q: "What is your minimum order quantity (MOQ)?",
-    a: "MOQ depends on the product type, gauge, and yarn. For cashmere and fine-gauge knitwear, MOQ usually starts from 100–300 pcs per style, with flexibility for sampling and repeat programs.",
+    a: COMPANY_FACTS.moq,
   },
   {
     q: "Do you offer sampling before bulk production?",
@@ -16,11 +17,11 @@ export const faqs: FAQ[] = [
   },
   {
     q: "What is the typical lead time for samples?",
-    a: "Sample lead time is usually 7–14 days after confirming yarn, gauge, and design details. Lab dips and swatches may take 5–7 days if required.",
+    a: COMPANY_FACTS.sampling,
   },
   {
     q: "What is the bulk production lead time?",
-    a: "Bulk lead time depends on order quantity, yarn availability, and seasonality. Typically, production takes 30–45 days after sample approval.",
+    a: COMPANY_FACTS.bulk,
   },
   {
     q: "Can you match our quality and hand-feel standards?",

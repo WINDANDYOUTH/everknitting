@@ -9,7 +9,9 @@
     "lint": "eslint",
     "test:boundaries": "node --test tests/public-auth-boundary.test.mjs",
     "test:logo": "node --test tests/brand-logo.test.mjs",
-    "test": "npm run test:boundaries && npm run test:logo",
+    "test:attachments": "node --test tests/inquiry-attachments.test.mjs",
+    "test:content": "node --test tests/company-content.test.mjs",
+    "test": "npm run test:boundaries && npm run test:logo && npm run test:attachments && npm run test:content",
     "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "npm run pages:build && wrangler pages dev .vercel/output/static"
   },

@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Ever Knitting | Professioneller Strickwarenhersteller in China und Kambodscha",
-    "description": "Ever Knitting ist ein professioneller Strickwarenhersteller mit OEM- und ODM-Dienstleistungen für Modemarken, Großhändler und Private-Label-Unternehmen."
+    "description": "Ever Knitting bietet OEM- und ODM-Strickwarenfertigung für etablierte Bekleidungsmarken, die ihre Strickkollektionen entwickeln oder erweitern."
   },
   "navigation": {
     "home": "Startseite",
@@ -19,16 +19,16 @@
   "hero": {
     "brand": "Ever Knitting Company Limited",
     "title": "Premium Kaschmir & Strickwaren Hersteller",
-    "titleHighlight": "Seit 1993",
+    "titleHighlight": "Seit 2009",
     "subtitle": "Direkte Fabrikproduktion von hochwertigen Kaschmir-Pullovern und Strickwaren.",
-    "subtitleLine2": "Von Musterproduktion bis Großaufträgen, maßgeschneidert für globale Marken.",
+    "subtitleLine2": "Musterentwicklung und Serienfertigung für etablierte Bekleidungsmarken, die ihre Strickkollektionen entwickeln oder erweitern.",
     "cta": "Angebot anfordern",
     "ctaSecondary": "Kostenlose Musterberatung",
     "ctaNote": "Antwort in 12–24 Stunden • NDA verfügbar",
     "badges": {
-      "experience": "30+ Jahre Strickerfahrung",
+      "experience": "Strickkompetenz seit 2009",
       "specialists": "Kaschmir & Fein-Gauge Spezialisten",
-      "moq": "Niedrige MOQ & flexible Muster",
+      "moq": "Übliche Mindestmenge: 100 Stück je Farbe und Größe, je nach Projekt verhandelbar",
       "quality": "Stabile Qualität & pünktliche Lieferung"
     }
   },
@@ -51,7 +51,7 @@
     "title": "Kontaktieren Sie uns",
     "subtitle": "Nehmen Sie Kontakt zu unserem Team auf",
     "heroTitle": "Lassen Sie uns sprechen.",
-    "heroSubtitle": "Ob Sie eine etablierte Marke auf der Suche nach einem neuen Partner sind oder ein Startup, das seine erste Kollektion lanciert – wir sind für Sie da.",
+    "heroSubtitle": "Sie entwickeln oder erweitern Ihre Strickkollektion? Wir begleiten etablierte Bekleidungsmarken vom Design über die Musterentwicklung bis zur Serienfertigung.",
     "infoTitle": "Kontaktinformationen",
     "form": {
       "name": "Ihr Name",
@@ -62,7 +62,7 @@
       "message": "Ihre Nachricht",
       "submit": "Nachricht senden",
       "submitting": "Wird gesendet...",
-      "success": "Vielen Dank! Wir werden uns bald bei Ihnen melden.",
+      "success": "Vielen Dank! Wir antworten Ihnen in 12–24 Stunden.",
       "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
     },
     "info": {
@@ -83,8 +83,8 @@
     "terms": "Nutzungsbedingungen",
     "cookies": "Cookie-Richtlinie",
     "copyright": "© {year} Ever Knitting Company Limited. Alle Rechte vorbehalten.",
-    "tagline": "Exzellenz in Strickwaren seit 1993",
-    "description": "Premium-Strickwarenhersteller, spezialisiert auf Luxus-Kaschmir und hochwertige Mischungen seit 1993.",
+    "tagline": "Exzellenz in Strickwaren seit 2009",
+    "description": "Premium-Strickwarenhersteller, spezialisiert auf Luxus-Kaschmir und hochwertige Mischungen seit 2009.",
     "links": {
       "whatWeManufacture": "Was wir herstellen",
       "materialsYarns": "Materialien & Garne",
@@ -103,13 +103,13 @@
   },
   "about": {
     "title": "Über Ever Knitting",
-    "subtitle": "Über 15 Jahre Erfahrung in der Strickwarenherstellung",
+    "subtitle": "Exzellenz in der Strickwarenherstellung seit 2009",
     "heroTitle": "Wir stricken",
     "heroHighlight": "Vermächtnisse",
-    "heroSubtitle": "Seit 2008 ist Ever Knitting der stille Partner hinter einigen der renommiertesten Modemarken der Welt.",
+    "heroSubtitle": "Seit 2009 ist Ever Knitting der stille Partner hinter einigen der renommiertesten Modemarken der Welt.",
     "storyTitle": "Unsere Geschichte",
     "storyP1": "Im Herzen des Textilviertels von Dongguan gegründet, startete Ever Knitting mit nur fünf Strickmaschinen und dem Traum, Qualität neu zu definieren.",
-    "storyP2": "In den letzten 15 Jahren haben wir uns zu einer hochmodernen Anlage mit über 200 qualifizierten Handwerkern und Technikern entwickelt. Wir verbinden traditionelle Handveredelungstechniken mit moderner automatisierter Technologie, um Kleidungsstücke zu liefern, die wirklich herausragen.",
+    "storyP2": "Seit unserer Gründung im Jahr 2009 haben wir uns zu einer hochmodernen Anlage mit über 200 qualifizierten Handwerkern und Technikern entwickelt. Wir verbinden traditionelle Handveredelungstechniken mit moderner automatisierter Technologie, um Kleidungsstücke zu liefern, die wirklich herausragen. Die jährliche Produktionskapazität der gesamten Unternehmensgruppe beträgt 10 Millionen Stück.",
     "storyP3": "Wir glauben, dass jeder Stich zählt. Von der Garnspannung bis zum letzten Dampfbügeln – unsere Liebe zum Detail ist das, was uns auszeichnet.",
     "valuesTitle": "Unsere Kernwerte",
     "values": {
@@ -164,11 +164,11 @@
       },
       "step2": {
         "title": "Prototyping & Muster",
-        "desc": "Wir erstellen ein physisches Muster zur Freigabe. Dies stellt sicher, dass Passform, Gefühl und Aussehen Ihren genauen Spezifikationen entsprechen, bevor die Massenproduktion beginnt."
+        "desc": "Wir fertigen ein Muster zur Freigabe an, um Passform, Griff und Aussehen vor der Serienfertigung abzustimmen. Als Richtwert gelten 1–7 Tage für die Musterentwicklung, abhängig von Komplexität und Anforderungen des Projekts."
       },
       "step3": {
         "title": "Massenproduktion",
-        "desc": "Mit modernsten Shima Seiki und Stoll Maschinen beginnen wir die Massenproduktion unter strenger Einhaltung des genehmigten Musters."
+        "desc": "Mit hochmodernen Maschinen von Shima Seiki und Stoll fertigen wir nach dem freigegebenen Muster. Als Richtwert für die Serienfertigung gelten 15 Tage bis 2 Monate; der konkrete Zeitrahmen wird für jeden Auftrag anhand von Menge, Fertigungsverfahren und Anforderungen bestätigt."
       },
       "step4": {
         "title": "Qualitätskontrolle",

@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     template: "%s | Ever Knitting",
   },
   description:
-    "Ever Knitting is a professional knitwear manufacturer offering OEM & ODM services for fashion brands, wholesalers, and private label companies. ISO-certified factory with 15+ years experience.",
+    "Ever Knitting has supported established apparel brands with OEM & ODM knitwear since 2009. ISO-certified manufacturing for new or expanded knitwear collections.",
   keywords: [
     "knitwear manufacturer",
     "sweater factory",

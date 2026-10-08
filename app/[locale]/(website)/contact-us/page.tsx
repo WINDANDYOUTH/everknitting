@@ -34,7 +34,7 @@ export default async function ContactPage({ params }: Props) {
             Let&apos;s <span className="text-copper">Talk.</span>
           </h1>
           <p className="text-xl text-wool max-w-2xl">
-            Whether you are an established brand looking for a new partner or a startup launching your first collection, we are here to help.
+            {t('heroSubtitle')}
           </p>
         </div>
       </section>
