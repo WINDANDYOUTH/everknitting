@@ -1,19 +1,20 @@
 // app/components/WhyEverKnittingSection.tsx
 import React from "react";
 import { QuoteButton } from "@/components/ui/QuoteButton";
+import { COMPANY_FACTS } from "@/lib/company-facts";
 
 type Proof = {
   title: string;
   description: string;
 };
 
-const chips = ["Reply in 12–24h", "Lab dips 5–7 days", "1.5gg–16gg", "OEM / ODM"];
+const chips = ["Reply in 12–24 hours", "Sampling reference: 1–7 days", "1.5gg–16gg", "OEM / ODM"];
 
 const proofs: Proof[] = [
   {
-    title: "30+ Years Manufacturing Experience",
+    title: "Knitwear Manufacturing Since 2009",
     description:
-      "Established in 1993 with a stable production system built for long-term brand partnerships.",
+      "Established in 2009 with a stable production system built for long-term partnerships with established apparel brands.",
   },
   {
     title: "Fine-Gauge & Cashmere Specialists",
@@ -21,14 +22,13 @@ const proofs: Proof[] = [
       "From premium cashmere to fine-gauge knitwear, we focus on hand-feel, stitch definition, and drape.",
   },
   {
-    title: "Low MOQ & Flexible Sampling",
-    description:
-      "Efficient sampling workflow with practical options for early-stage development and repeat programs.",
+    title: "Flexible Project Quantities",
+    description: COMPANY_FACTS.moq,
   },
   {
-    title: "Stable Quality & Bulk Consistency",
+    title: "Group Capacity & Bulk Consistency",
     description:
-      "Process control from yarn selection to finishing, aligned to your standards and inspection checklist.",
+      `${COMPANY_FACTS.groupCapacity} Process control from yarn selection to finishing is aligned to your standards and inspection checklist.`,
   },
   {
     title: "On-Time Delivery, Clear Communication",
@@ -54,9 +54,9 @@ export default function WhyEverKnittingSection() {
             </h2>
 
             <p className="mt-4 text-base leading-relaxed text-wool">
-              Factory-direct knitwear production since 1993—built for global
-              brands that require consistent quality, reliable timelines, and
-              professional development support.
+              Factory-direct knitwear production since 2009 for established
+              apparel brands developing or expanding their knitwear collections,
+              with professional development support and order-specific timelines.
             </p>
 
             <div className="mt-6 flex flex-wrap gap-2">

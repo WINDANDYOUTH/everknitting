@@ -26,7 +26,7 @@ export const industries: Record<string, IndustryData> = {
       "Partner with Ever Knitting for your fashion brand's knitwear production. Design support, sample development, and scalable manufacturing. Serve 100+ global brands.",
     h1: "Knitwear Manufacturing Partner for Fashion Brands",
     intro:
-      "Ever Knitting supports fashion brands of all sizes with flexible OEM/ODM knitwear manufacturing. From emerging designers to established labels, we provide design expertise, quality production, and reliable delivery.",
+      "Ever Knitting supports established apparel brands developing or expanding their knitwear collections with OEM/ODM manufacturing. We provide design expertise, sampling, quality production, and delivery planning aligned with each order.",
     painPoints: [
       "High MOQs from traditional manufacturers limiting creativity",
       "Quality inconsistency across production batches",
@@ -34,19 +34,19 @@ export const industries: Record<string, IndustryData> = {
       "Lack of design support for technical specifications",
     ],
     solutions: [
-      "Flexible MOQ starting at 100 pieces per style",
+      "Typical MOQ: 100 pieces per color per size, negotiable per project",
       "In-house QC team with AQL 2.5 standard inspection",
-      "Express production lane for seasonal collections",
+      "Production timing agreed per order based on quantity and requirements",
       "Free tech pack review and design consultation",
     ],
     faq: [
       {
         q: "What is your experience working with fashion brands?",
-        a: "We've partnered with over 100 fashion brands across US, Europe, and Asia for 15+ years. Our clients range from emerging designers to established contemporary labels with retail presence in major department stores.",
+        a: "Since 2009, we've partnered with over 100 fashion brands across the US, Europe, and Asia. We work with established apparel brands developing or expanding knitwear collections, including contemporary labels with retail presence in major department stores.",
       },
       {
-        q: "Can you handle small batch production for new fashion brands?",
-        a: "Yes, we understand emerging brands need flexibility. Our MOQ is 100 pieces per style, and we offer sampling packages starting at 5-10 pieces for collection development and photoshoots.",
+        q: "Can you support new knitwear collections for established apparel brands?",
+        a: "Yes. Our typical MOQ is 100 pieces per color per size, negotiable per project. We offer sampling packages starting at 5-10 pieces for collection development and photoshoots.",
       },
       {
         q: "Do you offer design and technical support for fashion brands?",
@@ -87,7 +87,7 @@ export const industries: Record<string, IndustryData> = {
       },
       {
         q: "What is the reorder process for wholesale accounts?",
-        a: "Reorders are streamlined with maintained yarn lots, dye formulas, and production records. Lead time for reorders is typically 30-40 days, and you can add or remove colors from existing approved styles.",
+        a: "Reorders are streamlined with maintained yarn lots, dye formulas, and production records. The reference timeframe for bulk production is 15 days to 2 months. Timing is confirmed for each reorder based on quantity, production process, and requirements. You can add or remove colors from existing approved styles.",
       },
     ],
   },
@@ -97,10 +97,10 @@ export const industries: Record<string, IndustryData> = {
     keyword: "Knitwear Manufacturer for E-commerce",
     title: "Knitwear Manufacturer for E-commerce Brands | Dropship Ready | Ever Knitting",
     description:
-      "E-commerce knitwear manufacturer with low MOQ, fast turnaround, and direct shipping services. Perfect for DTC brands, Amazon sellers, and online boutiques.",
+      "Knitwear manufacturing for established e-commerce apparel brands developing or expanding knitwear collections. Project-specific MOQ, production planning, and shipping support.",
     h1: "Knitwear Manufacturing Solutions for E-commerce Brands",
     intro:
-      "Ever Knitting understands the unique needs of e-commerce brands: fast trends, low initial inventory, and quality photography. We offer e-commerce-optimized manufacturing with flexible ordering and fulfillment support.",
+      "Ever Knitting supports established e-commerce apparel brands developing or expanding their knitwear collections. We offer sample development, project-specific production planning, and fulfillment support.",
     painPoints: [
       "High upfront inventory investment risking cash flow",
       "Slow response to trending styles and customer feedback",
@@ -108,8 +108,8 @@ export const industries: Record<string, IndustryData> = {
       "Returns due to sizing or quality issues",
     ],
     solutions: [
-      "Low MOQ (100 pieces) to test styles before scaling",
-      "30-day express production for trend-based collections",
+      "Typical MOQ: 100 pieces per color per size, negotiable per project",
+      "Production timing agreed per order based on quantity and requirements",
       "Sample provision for content creation and photoshoots",
       "Detailed measurement charts to reduce return rates",
     ],
@@ -120,7 +120,7 @@ export const industries: Record<string, IndustryData> = {
       },
       {
         q: "How quickly can I get samples for product photography?",
-        a: "Sample development takes 10-15 days. We can provide 5-10 sample pieces in different sizes for photography, fit testing, and marketplace listings before committing to bulk production.",
+        a: "The reference sampling timeframe is 1–7 days, subject to project complexity and requirements. We can provide 5-10 sample pieces in different sizes for photography, fit testing, and marketplace listings before committing to bulk production.",
       },
       {
         q: "Do you offer blind drop shipping or custom packaging for e-commerce?",
@@ -147,7 +147,7 @@ export const industries: Record<string, IndustryData> = {
     solutions: [
       "Bulk order QC with lot inspection and approval process",
       "Jacquard logo knitting and multi-head embroidery in-house",
-      "Priority production lane for corporate deadlines",
+      "Production timing agreed per order based on quantity and requirements",
       "Comprehensive size runs (XS-3XL+) with fit samples",
     ],
     faq: [
@@ -157,7 +157,7 @@ export const industries: Record<string, IndustryData> = {
       },
       {
         q: "What is the minimum order for corporate branded knitwear?",
-        a: "For corporate orders, our MOQ is 100 pieces total across all sizes. However, we can be flexible for executive gifts or special events. Contact us with your specific requirements.",
+        a: "For corporate orders, our typical MOQ is 100 pieces per color per size, negotiable per project. Contact us with your color and size breakdown and specific requirements.",
       },
       {
         q: "Do you offer gift packaging for corporate client gifts?",

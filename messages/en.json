@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Ever Knitting | Professional Knitwear Manufacturer in China and Cambodia",
-    "description": "Ever Knitting is a professional knitwear manufacturer offering OEM & ODM services for fashion brands, wholesalers, and private label companies."
+    "description": "Ever Knitting provides OEM & ODM knitwear manufacturing for established apparel brands developing or expanding their knitwear collections."
   },
   "navigation": {
     "home": "Home",
@@ -19,16 +19,16 @@
   "hero": {
     "brand": "Ever Knitting Company Limited",
     "title": "Premium Cashmere & Knitwear Manufacturer",
-    "titleHighlight": "Since 1993",
+    "titleHighlight": "Since 2009",
     "subtitle": "Factory-direct production of high-quality cashmere sweaters and knitted garments.",
-    "subtitleLine2": "From sampling to bulk orders, tailored for global brands.",
+    "subtitleLine2": "Sampling and bulk production for established apparel brands developing or expanding their knitwear collections.",
     "cta": "Request a Quote",
     "ctaSecondary": "Get Free Sample Consultation",
     "ctaNote": "Reply in 12–24 hours • NDA available",
     "badges": {
-      "experience": "30+ years knitting experience",
+      "experience": "Knitting expertise since 2009",
       "specialists": "Cashmere & fine-gauge specialists",
-      "moq": "Low MOQ & flexible sampling",
+      "moq": "Typical MOQ: 100 pieces per color per size, negotiable per project",
       "quality": "Stable quality & on-time delivery"
     }
   },
@@ -51,7 +51,7 @@
     "title": "Contact Us",
     "subtitle": "Get in touch with our team",
     "heroTitle": "Let's Talk.",
-    "heroSubtitle": "Whether you are an established brand looking for a new partner or a startup launching your first collection, we are here to help.",
+    "heroSubtitle": "Developing or expanding your knitwear collection? We help established apparel brands move from design and sampling to bulk production.",
     "infoTitle": "Contact Information",
     "form": {
       "name": "Your Name",
@@ -62,7 +62,7 @@
       "message": "Your Message",
       "submit": "Send Message",
       "submitting": "Sending...",
-      "success": "Thank you! We will get back to you soon.",
+      "success": "Thank you! We will reply in 12–24 hours.",
       "error": "Something went wrong. Please try again."
     },
     "info": {
@@ -83,8 +83,8 @@
     "terms": "Terms of Service",
     "cookies": "Cookie Policy",
     "copyright": "© {year} Ever Knitting Company Limited. All rights reserved.",
-    "tagline": "Excellence in Knitwear Since 1993",
-    "description": "Premium knitwear manufacturer specializing in luxury cashmere and high-end blends since 1993.",
+    "tagline": "Excellence in Knitwear Since 2009",
+    "description": "Premium knitwear manufacturer specializing in luxury cashmere and high-end blends since 2009.",
     "links": {
       "whatWeManufacture": "What We Manufacture",
       "materialsYarns": "Materials & Yarns",
@@ -103,13 +103,13 @@
   },
   "about": {
     "title": "About Ever Knitting",
-    "subtitle": "15+ years of excellence in knitwear manufacturing",
+    "subtitle": "Excellence in knitwear manufacturing since 2009",
     "heroTitle": "We Knit",
     "heroHighlight": "Legacies",
-    "heroSubtitle": "Since 2008, Ever Knitting has been the silent partner behind some of the world's most prestigious fashion brands.",
+    "heroSubtitle": "Since 2009, Ever Knitting has been the silent partner behind some of the world's most prestigious fashion brands.",
     "storyTitle": "Our Story",
     "storyP1": "Founded in the heart of Dongguan's textile district, Ever Knitting started with just five knitting machines and a dream to redefine quality.",
-    "storyP2": "Over the last 15 years, we have expanded into a state-of-the-art facility employing over 200 skilled artisans and technicians. We blend traditional hand-finishing techniques with modern automated technology to deliver garments that truly stand out.",
+    "storyP2": "Since our founding in 2009, we have expanded into a state-of-the-art facility employing over 200 skilled artisans and technicians. We blend traditional hand-finishing techniques with modern automated technology to deliver garments that truly stand out. Across the entire group, annual production capacity is 10 million pieces.",
     "storyP3": "We believe that every stitch matters. From the tension of the yarn to the final steam, our obsession with detail is what sets us apart.",
     "valuesTitle": "Our Core Values",
     "values": {
@@ -164,11 +164,11 @@
       },
       "step2": {
         "title": "Prototyping & Sampling",
-        "desc": "We create a physical sample for your approval. This ensures the fit, feel, and look meet your exact specifications before bulk production."
+        "desc": "We create a physical sample for your approval to confirm the fit, feel, and look before bulk production. The reference sampling timeframe is 1–7 days, subject to project complexity and requirements."
       },
       "step3": {
         "title": "Bulk Production",
-        "desc": "Using state-of-the-art Shima Seiki and Stoll machines, we begin mass production with strict adherence to the approved sample."
+        "desc": "Using state-of-the-art Shima Seiki and Stoll machines, we produce in line with the approved sample. The reference timeframe for bulk production is 15 days to 2 months, with timing confirmed per order based on quantity, production process, and requirements."
       },
       "step4": {
         "title": "Quality Control",

@@ -29,7 +29,7 @@ export const products: Record<string, ProductData> = {
     keyword: "Women's Cashmere Sweaters",
     title: "Women's Cashmere Sweaters Manufacturer | OEM Factory | Ever Knitting",
     description:
-      "Manufacture premium women's cashmere sweaters: crew neck, V-neck, turtleneck, cardigan styles. 12GG-18GG available. Grade A Mongolian cashmere. MOQ 100pcs.",
+      "Manufacture premium women's cashmere sweaters: crew neck, V-neck, turtleneck, cardigan styles. 12GG-18GG available. Grade A Mongolian cashmere. Typical MOQ: 100 pieces per color per size, negotiable per project.",
     h1: "Women's Cashmere Sweaters: OEM Manufacturing Services",
     intro:
       "Ever Knitting manufactures high-quality women's cashmere sweaters for fashion brands and retailers. We offer full customization in styles, colors, and sizing with rigorous quality control standards.",
@@ -168,7 +168,7 @@ export const products: Record<string, ProductData> = {
     keyword: "Pullover Hoodies Manufacturer",
     title: "Pullover Hoodie Manufacturer | Custom Knit Hoodies | Ever Knitting",
     description:
-      "Custom knit pullover hoodie manufacturer for streetwear and activewear brands. French terry, fleece, and premium knits. Custom embroidery and printing. MOQ 100.",
+      "Custom knit pullover hoodie manufacturer for streetwear and activewear brands. French terry, fleece, and premium knits. Custom embroidery and printing. Typical MOQ: 100 pieces per color per size, negotiable per project.",
     h1: "Pullover Hoodie Manufacturing: Premium Knit Hoodies for Brands",
     intro:
       "We manufacture premium knit pullover hoodies for streetwear, athleisure, and casual fashion brands. All hoodies feature quality construction with reinforced seams, metal-tipped drawstrings, and custom branding options.",

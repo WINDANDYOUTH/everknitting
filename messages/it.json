@@ -1,7 +1,7 @@
 {
   "metadata": {
     "title": "Ever Knitting | Produttore professionale di maglieria in Cina e Cambogia",
-    "description": "Ever Knitting è un produttore professionale di maglieria che offre servizi OEM e ODM per marchi di moda, grossisti e aziende di private label."
+    "description": "Ever Knitting offre produzione di maglieria OEM e ODM per marchi di abbigliamento affermati che sviluppano o ampliano le loro collezioni di maglieria."
   },
   "navigation": {
     "home": "Home",
@@ -19,16 +19,16 @@
   "hero": {
     "brand": "Ever Knitting Company Limited",
     "title": "Produttore Premium di Cashmere e Maglieria",
-    "titleHighlight": "Dal 1993",
+    "titleHighlight": "Dal 2009",
     "subtitle": "Produzione diretta in fabbrica di maglioni in cashmere di alta qualità e capi in maglia.",
-    "subtitleLine2": "Dalla campionatura agli ordini all'ingrosso, su misura per marchi globali.",
+    "subtitleLine2": "Campionatura e produzione in serie per marchi di abbigliamento affermati che sviluppano o ampliano le loro collezioni di maglieria.",
     "cta": "Richiedi preventivo",
     "ctaSecondary": "Consulenza campioni gratuita",
     "ctaNote": "Risposta in 12–24 ore • NDA disponibile",
     "badges": {
-      "experience": "30+ anni di esperienza nella maglieria",
+      "experience": "Esperienza nella maglieria dal 2009",
       "specialists": "Specialisti cashmere e finezze",
-      "moq": "MOQ basso e campionatura flessibile",
+      "moq": "MOQ indicativo: 100 pezzi per colore e per taglia, negoziabile in base al progetto",
       "quality": "Qualità stabile e consegna puntuale"
     }
   },
@@ -51,7 +51,7 @@
     "title": "Contattaci",
     "subtitle": "Mettiti in contatto con il nostro team",
     "heroTitle": "Parliamo.",
-    "heroSubtitle": "Che tu sia un marchio affermato alla ricerca di un nuovo partner o una startup che lancia la sua prima collezione, siamo qui per aiutarti.",
+    "heroSubtitle": "Stai sviluppando o ampliando la tua collezione di maglieria? Affianchiamo i marchi di abbigliamento affermati dal design e dalla campionatura alla produzione in serie.",
     "infoTitle": "Informazioni di contatto",
     "form": {
       "name": "Il tuo nome",
@@ -62,7 +62,7 @@
       "message": "Il tuo messaggio",
       "submit": "Invia messaggio",
       "submitting": "Invio in corso...",
-      "success": "Grazie! Ti risponderemo presto.",
+      "success": "Grazie! Ti risponderemo entro 12–24 ore.",
       "error": "Qualcosa è andato storto. Riprova."
     },
     "info": {
@@ -83,8 +83,8 @@
     "terms": "Termini di servizio",
     "cookies": "Informativa sui cookie",
     "copyright": "© {year} Ever Knitting Company Limited. Tutti i diritti riservati.",
-    "tagline": "Eccellenza nella maglieria dal 1993",
-    "description": "Produttore di maglieria premium specializzato in cashmere di lusso e miscele di alta gamma dal 1993.",
+    "tagline": "Eccellenza nella maglieria dal 2009",
+    "description": "Produttore di maglieria premium specializzato in cashmere di lusso e miscele di alta gamma dal 2009.",
     "links": {
       "whatWeManufacture": "Cosa produciamo",
       "materialsYarns": "Materiali e filati",
@@ -103,13 +103,13 @@
   },
   "about": {
     "title": "Chi è Ever Knitting",
-    "subtitle": "Oltre 15 anni di eccellenza nella produzione di maglieria",
+    "subtitle": "Eccellenza nella produzione di maglieria dal 2009",
     "heroTitle": "Tessiamo",
     "heroHighlight": "Eredità",
-    "heroSubtitle": "Dal 2008, Ever Knitting è il partner silenzioso dietro alcuni dei marchi di moda più prestigiosi al mondo.",
+    "heroSubtitle": "Dal 2009, Ever Knitting è il partner silenzioso dietro alcuni dei marchi di moda più prestigiosi al mondo.",
     "storyTitle": "La nostra storia",
     "storyP1": "Fondata nel cuore del distretto tessile di Dongguan, Ever Knitting è iniziata con sole cinque macchine da maglieria e il sogno di ridefinire la qualità.",
-    "storyP2": "Negli ultimi 15 anni, ci siamo espansi in uno stabilimento all'avanguardia che impiega oltre 200 artigiani e tecnici qualificati. Uniamo tecniche tradizionali di rifinitura a mano con moderna tecnologia automatizzata per consegnare capi che si distinguono davvero.",
+    "storyP2": "Dalla nostra fondazione nel 2009, ci siamo espansi in uno stabilimento all'avanguardia che impiega oltre 200 artigiani e tecnici qualificati. Uniamo tecniche tradizionali di rifinitura a mano con moderna tecnologia automatizzata per consegnare capi che si distinguono davvero. La capacità produttiva annuale dell’intero gruppo è di 10 milioni di capi.",
     "storyP3": "Crediamo che ogni punto conti. Dalla tensione del filato alla stiratura finale a vapore, la nostra ossessione per i dettagli è ciò che ci distingue.",
     "valuesTitle": "I nostri valori fondamentali",
     "values": {
@@ -164,11 +164,11 @@
       },
       "step2": {
         "title": "Prototipazione e campionatura",
-        "desc": "Creiamo un campione fisico per la tua approvazione. Questo assicura che vestibilità, sensazione e aspetto soddisfino le tue esatte specifiche prima della produzione di massa."
+        "desc": "Realizziamo un campione da approvare per verificare vestibilità, mano e aspetto prima della produzione in serie. Il tempo indicativo per la campionatura è di 1–7 giorni, in base alla complessità e alle esigenze del progetto."
       },
       "step3": {
         "title": "Produzione di massa",
-        "desc": "Utilizzando macchinari Shima Seiki e Stoll all'avanguardia, iniziamo la produzione di massa con rigorosa aderenza al campione approvato."
+        "desc": "Utilizziamo macchine all’avanguardia Shima Seiki e Stoll per produrre secondo il campione approvato. Il tempo indicativo per la produzione in serie va da 15 giorni a 2 mesi; viene confermato per ogni ordine in base alla quantità, al processo produttivo e alle esigenze."
       },
       "step4": {
         "title": "Controllo qualità",

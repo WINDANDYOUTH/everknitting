@@ -5,6 +5,13 @@ import { Loader2, CheckCircle, AlertCircle, Upload, X, FileText, Mail, AlertTria
 import { sendInquiryWithAttachments } from "@/app/actions/send-inquiry";
 import { trackFormSubmission } from "@/components/analytics";
 import { cn } from "@/lib/utils";
+import {
+  ALLOWED_ATTACHMENT_EXTENSIONS,
+  ATTACHMENT_LIMIT_LABEL,
+  MAX_ATTACHMENT_FILES,
+  MAX_TOTAL_ATTACHMENT_SIZE,
+  attachmentMetadataError,
+} from "@/lib/inquiry-attachments";
 
 const MATERIALS = [
   "Cashmere",
@@ -13,24 +20,6 @@ const MATERIALS = [
   "Mohair",
   "Custom / Not sure",
 ] as const;
-
-// File limits - conservative to ensure email delivery
-const MAX_FILE_SIZE = 5 * 1024 * 1024; // 5MB per file
-const MAX_TOTAL_SIZE = 10 * 1024 * 1024; // 10MB total (safe for email)
-const MAX_FILES = 5;
-const ALLOWED_TYPES = [
-  "image/jpeg",
-  "image/png",
-  "image/webp",
-  "image/gif",
-  "application/pdf",
-  "application/msword",
-  "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-  "application/vnd.ms-excel",
-  "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-];
-
-const ALLOWED_EXTENSIONS = ".pdf,.doc,.docx,.xls,.xlsx,.jpg,.jpeg,.png,.webp,.gif";
 
 type FileWithPreview = {
   file: File;
@@ -51,6 +40,9 @@ type FileWithPreview = {
  */
 export function ContactForm() {
   const [isPending, setIsPending] = useState(false);
+  const [isReadingFiles, setIsReadingFiles] = useState(false);
+  // A synchronous lock also covers repeated clicks/drops before React rerenders.
+  const busyRef = useRef(false);
   const [state, setState] = useState<{ ok: boolean; message: string } | null>(null);
   const [files, setFiles] = useState<FileWithPreview[]>([]);
   const [dragActive, setDragActive] = useState(false);
@@ -67,17 +59,23 @@ export function ContactForm() {
       const reader = new FileReader();
       reader.readAsDataURL(file);
       reader.onload = () => {
-        const result = reader.result as string;
-        // Remove the data URL prefix (e.g., "data:image/png;base64,")
-        const base64 = result.split(",")[1];
-        resolve(base64);
+        const result = reader.result;
+        if (typeof result !== "string" || !result.includes(",")) {
+          reject(new Error("Could not read the attachment."));
+          return;
+        }
+        // Remove the data URL prefix (e.g., "data:image/png;base64,").
+        resolve(result.slice(result.indexOf(",") + 1));
       };
       reader.onerror = reject;
+      reader.onabort = () => reject(new Error("Attachment read was interrupted."));
     });
   };
 
   const handleFiles = useCallback(async (newFiles: FileList | null) => {
-    if (!newFiles) return;
+    if (!newFiles || busyRef.current) return;
+    busyRef.current = true;
+    setIsReadingFiles(true);
     setFileWarning(null);
     
     const currentTotal = files.reduce((sum, f) => sum + f.size, 0);
@@ -88,26 +86,20 @@ export function ContactForm() {
     
     for (const file of Array.from(newFiles)) {
       // Check max file count
-      if (currentCount + validFiles.length >= MAX_FILES) {
-        warnings.push(`Maximum ${MAX_FILES} files allowed`);
+      if (currentCount + validFiles.length >= MAX_ATTACHMENT_FILES) {
+        warnings.push(`Maximum ${MAX_ATTACHMENT_FILES} files allowed`);
         break;
       }
       
-      // Check file type
-      if (!ALLOWED_TYPES.includes(file.type)) {
-        warnings.push(`"${file.name}" - file type not supported`);
-        continue;
-      }
-      
-      // Check individual file size
-      if (file.size > MAX_FILE_SIZE) {
-        warnings.push(`"${file.name}" exceeds 5MB limit`);
+      const metadataError = attachmentMetadataError(file.name, file.type, file.size);
+      if (metadataError) {
+        warnings.push(`"${file.name}" - ${metadataError}`);
         continue;
       }
       
       // Check total size
-      if (runningTotal + file.size > MAX_TOTAL_SIZE) {
-        warnings.push(`Total size would exceed 10MB limit`);
+      if (runningTotal + file.size > MAX_TOTAL_ATTACHMENT_SIZE) {
+        warnings.push(`Total size would exceed ${ATTACHMENT_LIMIT_LABEL} limit`);
         break;
       }
       
@@ -132,9 +124,13 @@ export function ContactForm() {
     }
     
     setFiles((prev) => [...prev, ...validFiles]);
+    busyRef.current = false;
+    setIsReadingFiles(false);
+    if (fileInputRef.current) fileInputRef.current.value = "";
   }, [files]);
 
   const removeFile = (index: number) => {
+    if (busyRef.current) return;
     setFiles((prev) => prev.filter((_, i) => i !== index));
     setFileWarning(null);
   };
@@ -158,22 +154,22 @@ export function ContactForm() {
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (busyRef.current) return;
+    busyRef.current = true;
     setIsPending(true);
     setState(null);
 
-    const formData = new FormData(event.currentTarget);
-    
-    // Prepare attachments data as JSON
-    const attachments = files.map((f) => ({
-      filename: f.name,
-      contentType: f.type,
-      base64: f.base64,
-      size: f.size,
-    }));
-    
-    formData.set("attachments", JSON.stringify(attachments));
-
     try {
+      const formData = new FormData(event.currentTarget);
+
+      // Prepare attachments data as JSON.
+      const attachments = files.map((f) => ({
+        filename: f.name,
+        contentType: f.type,
+        base64: f.base64,
+        size: f.size,
+      }));
+      formData.set("attachments", JSON.stringify(attachments));
       const result = await sendInquiryWithAttachments(null, formData);
       setState(result);
 
@@ -197,6 +193,7 @@ export function ContactForm() {
         message: "Failed to send. Please try emailing us directly at info@everknitting.com" 
       });
     } finally {
+      busyRef.current = false;
       setIsPending(false);
     }
   }
@@ -314,7 +311,7 @@ export function ContactForm() {
             name="quantity"
             type="text"
             className={inputClass}
-            placeholder="e.g. 300 pcs total, 3 colors, sizes S–XL"
+            placeholder="Quantity per color and size, color count, and size range"
             maxLength={300}
           />
         </Field>
@@ -337,7 +334,7 @@ export function ContactForm() {
             </label>
             {files.length > 0 && (
               <span className="text-xs text-muted-foreground">
-                {files.length}/{MAX_FILES} files • {formatFileSize(totalFileSize)}/{formatFileSize(MAX_TOTAL_SIZE)}
+                {files.length}/{MAX_ATTACHMENT_FILES} files • {formatFileSize(totalFileSize)}/{formatFileSize(MAX_TOTAL_ATTACHMENT_SIZE)}
               </span>
             )}
           </div>
@@ -347,7 +344,7 @@ export function ContactForm() {
             onDragLeave={handleDrag}
             onDragOver={handleDrag}
             onDrop={handleDrop}
-            onClick={() => fileInputRef.current?.click()}
+            onClick={() => { if (!busyRef.current) fileInputRef.current?.click(); }}
             className={cn(
               "relative flex flex-col items-center justify-center gap-2 p-6 border-2 border-dashed rounded-2xl cursor-pointer transition-all",
               "hover:border-primary/50 hover:bg-accent/50",
@@ -359,10 +356,13 @@ export function ContactForm() {
             <Upload className="w-8 h-8 text-muted-foreground" />
             <div className="text-center">
               <p className="text-sm font-medium text-foreground">
-                Drop files here or click to upload
+                {isReadingFiles ? "Reading attachments..." : "Drop files here or click to upload"}
               </p>
               <p className="text-xs text-muted-foreground mt-1">
-                Max 5MB/file, 10MB total • Up to {MAX_FILES} files
+                Max {ATTACHMENT_LIMIT_LABEL} total per inquiry • Up to {MAX_ATTACHMENT_FILES} files
+              </p>
+              <p className="text-xs text-muted-foreground">
+                A single file can use the full {ATTACHMENT_LIMIT_LABEL} limit.
               </p>
               <p className="text-xs text-muted-foreground">
                 PDF, Word, Excel, JPG, PNG, WebP, GIF
@@ -372,7 +372,8 @@ export function ContactForm() {
               ref={fileInputRef}
               type="file"
               multiple
-              accept={ALLOWED_EXTENSIONS}
+              accept={ALLOWED_ATTACHMENT_EXTENSIONS}
+              disabled={isPending || isReadingFiles}
               onChange={(e) => handleFiles(e.target.files)}
               className="hidden"
             />
@@ -418,6 +419,7 @@ export function ContactForm() {
                       removeFile(index);
                     }}
                     className="p-1.5 rounded-lg hover:bg-destructive/20 text-muted-foreground hover:text-foreground transition-colors"
+                    disabled={isPending || isReadingFiles}
                     aria-label={`Remove ${fileData.name}`}
                   >
                     <X className="w-4 h-4" />
@@ -452,7 +454,7 @@ export function ContactForm() {
         {/* Submit Button */}
         <button 
           type="submit" 
-          disabled={isPending}
+          disabled={isPending || isReadingFiles}
           className={cn(
             "w-full py-4 rounded-xl font-bold text-base transition-all flex items-center justify-center gap-2",
             "bg-primary text-primary-foreground hover:opacity-90",
@@ -464,6 +466,8 @@ export function ContactForm() {
               <Loader2 className="animate-spin w-5 h-5" />
               Sending{files.length > 0 ? ` (${files.length} file${files.length > 1 ? 's' : ''})` : ''}...
             </>
+          ) : isReadingFiles ? (
+            "Reading attachments..."
           ) : (
             "Send Inquiry"
           )}
@@ -483,7 +487,7 @@ export function ContactForm() {
               >
                 info@everknitting.com
               </a>
-              {" "}— we can handle any file size.
+              {" "}to arrange a suitable way to share larger files.
             </p>
           </div>
         </div>

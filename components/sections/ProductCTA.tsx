@@ -29,7 +29,7 @@ export function ProductCTA({ productKeyword, productSlug }: ProductCTAProps) {
         Need {productKeyword}?
       </h2>
       <p className="text-lg mb-6 text-blue-100">
-        Get a custom quote for your project. We&apos;ll respond within 24 hours.
+        Get a custom quote for your project. We&apos;ll respond in 12–24 hours.
       </p>
       <Link
         href="/contact-us"

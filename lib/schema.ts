@@ -40,7 +40,7 @@ export function generateOrganizationSchema() {
       height: 60,
     },
     description:
-      "Professional knitwear manufacturer offering OEM and ODM services for fashion brands, wholesalers, and private label clothing companies worldwide.",
+      "Founded in 2009, Ever Knitting provides OEM and ODM knitwear manufacturing for established apparel brands developing or expanding knitwear collections.",
     address: {
       "@type": "PostalAddress",
       streetAddress: BUSINESS_CONTACT.samplingStreet,
@@ -70,7 +70,7 @@ export function generateOrganizationSchema() {
       // "https://www.facebook.com/everknitting",
       // "https://www.instagram.com/everknitting",
     ],
-    foundingDate: "2009", // Adjust to actual founding year
+    foundingDate: "2009", // Confirmed founding year
     makesOffer: {
       "@type": "Offer",
       itemOffered: {
@@ -98,7 +98,7 @@ export function generateWebsiteSchema() {
     "@id": `${BASE_URL}#website`,
     url: BASE_URL,
     name: "Ever Knitting",
-    description: "Professional knitwear manufacturer for global fashion brands",
+    description: "Knitwear manufacturing for established apparel brands developing or expanding knitwear collections",
     publisher: {
       "@id": `${BASE_URL}#organization`,
     },

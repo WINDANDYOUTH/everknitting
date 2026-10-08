@@ -32,14 +32,14 @@ export const services: Record<string, ServiceData> = {
     keyword: "Knitwear Manufacturer",
     title: "Knitwear Manufacturer | OEM & ODM Factory in China | Ever Knitting",
     description:
-      "Professional knitwear manufacturer offering OEM & ODM services for fashion brands. ISO-certified factory with 15+ years experience in cashmere, wool, and cotton knits.",
+      "Professional knitwear manufacturer offering OEM & ODM services for fashion brands. ISO-certified factory specializing in cashmere, wool, and cotton knits since 2009.",
     h1: "Professional Knitwear Manufacturer for Fashion Brands",
     intro:
-      "Ever Knitting is a China-based knitwear manufacturer specializing in OEM and ODM production for global fashion brands. We handle everything from design consultation to mass production, with MOQ as low as 100 pieces per style.",
+      "Ever Knitting provides OEM and ODM knitwear manufacturing for established apparel brands developing or expanding their knitwear collections. We handle everything from design consultation to mass production. Our typical MOQ is 100 pieces per color per size, negotiable per project.",
     useCases: [
       "Fashion brands seeking OEM manufacturing",
       "Wholesale buyers requiring private label products",
-      "Startups launching custom knitwear collections",
+      "Established apparel brands developing or expanding knitwear collections",
     ],
     faq: [
       {
@@ -48,7 +48,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         q: "What is your minimum order quantity (MOQ) for knitwear?",
-        a: "Our standard MOQ is 100 pieces per style per color. For startups and small brands, we can discuss flexible options for initial sampling and test orders.",
+        a: "Our typical MOQ is 100 pieces per color per size, negotiable per project. Share your style, yarn, color and size breakdown so we can discuss the requirements for your order.",
       },
       {
         q: "Do you provide design services for custom knitwear?",
@@ -62,7 +62,7 @@ export const services: Record<string, ServiceData> = {
     keyword: "Custom Sweater Manufacturer",
     title: "Custom Sweater Manufacturer | OEM Cashmere & Wool Knits | Ever Knitting",
     description:
-      "Custom sweater manufacturing for brands: cashmere, merino wool, cotton. Design to delivery in 45-60 days. ISO factory with BSCI certification. Request quote today.",
+      "Custom sweater manufacturing for brands: cashmere, merino wool, cotton. Production timing agreed per order based on quantity and requirements. ISO factory with BSCI certification. Request quote today.",
     h1: "Custom Sweater Manufacturer: From Design to Bulk Production",
     intro:
       "We help fashion brands manufacture custom sweaters from concept to finished product. Specializing in cashmere, merino wool, and premium cotton knits with full customization: yarn, gauge, stitching, and finishing.",
@@ -78,7 +78,7 @@ export const services: Record<string, ServiceData> = {
       },
       {
         q: "How long does it take to manufacture custom sweaters?",
-        a: "Sample development takes 10-15 days. After approval, bulk production typically takes 45-60 days depending on order quantity and complexity. Rush orders can be accommodated.",
+        a: "The reference sampling timeframe is 1–7 days, subject to project complexity and requirements. After sample approval, the reference timeframe for bulk production is 15 days to 2 months. Timing is confirmed for each order based on quantity, production process, and requirements.",
       },
       {
         q: "Can you match a sweater sample I provide?",
@@ -92,7 +92,7 @@ export const services: Record<string, ServiceData> = {
     keyword: "Cashmere Sweater Factory",
     title: "Cashmere Sweater Factory | Premium Mongolian & Chinese Cashmere | Ever Knitting",
     description:
-      "Direct cashmere sweater factory in China. 100% Mongolian and Chinese cashmere. 12GG to 18GG knitting. BSCI certified. MOQ 100pcs. Get wholesale pricing now.",
+      "Direct cashmere sweater factory in China. 100% Mongolian and Chinese cashmere. 12GG to 18GG knitting. BSCI certified. Typical MOQ: 100 pieces per color per size, negotiable per project. Get wholesale pricing now.",
     h1: "Cashmere Sweater Factory: Premium Quality, Factory Direct Pricing",
     intro:
       "Ever Knitting operates a specialized cashmere sweater production facility with advanced computerized knitting machines (12GG, 14GG, 16GG, 18GG). We source Grade A Mongolian and Chinese cashmere for luxury brands and premium retailers.",
@@ -122,13 +122,13 @@ export const services: Record<string, ServiceData> = {
     keyword: "Sweater OEM ODM Service",
     title: "Sweater OEM ODM Service | Full Design to Production | Ever Knitting",
     description:
-      "Complete sweater OEM and ODM service: design, sampling, production, QC, shipping. Support tech packs or just concepts. 15+ years serving global brands.",
+      "Complete sweater OEM and ODM service: design, sampling, production, QC, shipping. Support tech packs or just concepts. Serving global brands since 2009.",
     h1: "Sweater OEM & ODM Service: Turnkey Manufacturing Solutions",
     intro:
       "Our OEM and ODM services cover the entire sweater production lifecycle. Whether you have complete tech packs or just a concept sketch, we provide design development, sampling, material sourcing, manufacturing, and quality control.",
     useCases: [
       "Brands with existing designs (OEM)",
-      "Startups needing design assistance (ODM)",
+      "Established apparel brands developing knitwear designs (ODM)",
       "Retailers expanding private label categories",
     ],
     faq: [
