@@ -55,6 +55,19 @@ test("all locale messages keep the confirmed year, reply window and group capaci
     assert.match(data.about.storyP2, /10 (?:million|Millionen|millions|millones|milioni)/, locale);
   }
   assert.match(read("app/[locale]/(website)/about-us/page.tsx"), /t\('storyP2'\)/);
+  assert.match(read("app/[locale]/(website)/contact-us/page.tsx"), /t\('heroSubtitle'\)/);
+  assert.doesNotMatch(read("app/[locale]/(website)/contact-us/page.tsx"), /startup launching your first collection/);
+  const audiences = {
+    en: "established apparel brands",
+    de: "etablierte Bekleidungsmarken",
+    fr: "marques de vêtements établies",
+    es: "marcas de ropa consolidadas",
+    it: "marchi di abbigliamento affermati",
+  };
+  for (const [locale, data] of messages) {
+    assert.ok(data.contact.heroSubtitle.includes(audiences[locale]), locale);
+  }
+  assert.match(read("components/sections/HeroSection.tsx"), /\{t\("subtitle"\)\}\{" "\}/);
 });
 
 test("English commercial references preserve units, negotiability and qualified timings", () => {
