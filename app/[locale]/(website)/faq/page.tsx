@@ -39,7 +39,7 @@ const faqs: FAQItem[] = [
   },
   {
     q: "Where is your factory located?",
-    a: "Our main production facility is located in Dongguan, China – a global hub for high-quality knitwear manufacturing. We welcome client visits by appointment."
+    a: "Our main manufacturing site is our group-owned factory in Cambodia. Our group also has 10 additional factories in various locations. Our sampling and pattern room is at No.34 Changlang Road, Changping Town, Dongguan City, Guangdong Province, China. Contact us to arrange a visit."
   },
   {
     q: "Can you source sustainable yarns?",

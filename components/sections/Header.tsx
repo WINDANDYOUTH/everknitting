@@ -10,6 +10,7 @@ import { trackQuotationRequest } from "@/components/analytics";
 import { LanguageSwitcher } from "@/components/i18n";
 import { useTranslations } from "next-intl";
 import { ThemeSwitcher, ThemeToggle } from "@/components/ui/theme-switcher";
+import { BrandLogo } from "@/components/ui/BrandLogo";
 
 const NAV_LINKS = [
   { nameKey: "manufacturing", href: "/manufacturing" },
@@ -92,20 +93,17 @@ export default function Header() {
         <div 
           className={cn(
             "container mx-auto px-4 md:px-6 flex items-center transition-all duration-300",
-            scrolled ? "h-[60px] md:h-[70px]" : "h-[72px] md:h-[88px]"
+            scrolled ? "h-[72px] md:h-[80px]" : "h-[72px] sm:h-[90px]"
           )}
         >
           {/* Left: Branding */}
           <div className="flex flex-col justify-center shrink-0">
-            <Link href="/" className="flex items-center gap-2 group">
-              {/* Logo text for now, assume SVG logo later */}
-              <span className="text-xl md:text-2xl font-bold tracking-tight text-foreground group-hover:opacity-80 transition-opacity">
-                Ever Knitting
-              </span>
+            <Link href="/" className="flex items-center group transition-opacity hover:opacity-80">
+              <BrandLogo width={180} priority />
             </Link>
             <span className={cn(
-              "text-[10px] md:text-xs text-muted-foreground font-medium tracking-wide hidden sm:block mt-0.5 transition-opacity duration-300",
-              scrolled ? "opacity-0 h-0 overflow-hidden" : "opacity-100" // Hide tagline on scroll to save space
+              "text-[10px] md:text-xs text-muted-foreground font-medium tracking-wide hidden sm:block transition-opacity duration-300",
+              scrolled ? "opacity-0 h-0 overflow-hidden mt-0" : "opacity-100 mt-0.5" // Hide tagline on scroll to save space
             )}>
               Cashmere & Knitwear Manufacturer Since 1993
             </span>

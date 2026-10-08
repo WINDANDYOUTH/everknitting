@@ -66,9 +66,11 @@
       "error": "Algo salió mal. Por favor, inténtelo de nuevo."
     },
     "info": {
-      "factoryAddress": "Dirección de fábrica",
+      "samplingAddress": "Sala de muestras y patronaje",
       "emailUs": "Envíenos un correo",
-      "callUs": "Llámenos"
+      "callUs": "Llámenos",
+      "manufacturingTitle": "Producción",
+      "manufacturingDescription": "Nuestro principal centro de producción es nuestra fábrica del grupo en Camboya. Nuestro grupo también cuenta con otras 10 fábricas en distintas ubicaciones. Nuestra sala de muestras y patronaje en Dongguan, China, apoya el desarrollo de productos."
     }
   },
   "footer": {
@@ -94,7 +96,7 @@
       "startProject": "Iniciar proyecto"
     },
     "contactInfo": {
-      "factoryAddress": "Dirección de fábrica",
+      "samplingAddress": "Sala de muestras y patronaje",
       "phone": "Teléfono",
       "inquiries": "Consultas"
     }

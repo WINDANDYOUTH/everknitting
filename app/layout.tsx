@@ -47,7 +47,6 @@ export const metadata: Metadata = {
   },
 };
 
-import { ClerkProvider } from "@clerk/nextjs";
 import { ThemeProvider } from "@/components/providers/ThemeProvider";
 
 export default function RootLayout({
@@ -60,7 +59,6 @@ export default function RootLayout({
   const websiteSchema = generateWebsiteSchema();
 
   return (
-    <ClerkProvider>
       <html className="scroll-smooth" suppressHydrationWarning>
         <head>
           {/*
@@ -101,6 +99,5 @@ export default function RootLayout({
           </ThemeProvider>
         </body>
       </html>
-    </ClerkProvider>
   );
 }

@@ -7,6 +7,9 @@
     "build": "prisma generate --no-engine && next build",
     "start": "next start",
     "lint": "eslint",
+    "test:boundaries": "node --test tests/public-auth-boundary.test.mjs",
+    "test:logo": "node --test tests/brand-logo.test.mjs",
+    "test": "npm run test:boundaries && npm run test:logo",
     "pages:build": "npx @cloudflare/next-on-pages",
     "preview": "npm run pages:build && wrangler pages dev .vercel/output/static"
   },

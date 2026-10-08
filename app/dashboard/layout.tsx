@@ -1,13 +1,20 @@
-import { UserButton } from "@clerk/nextjs";
+import { ClerkProvider, UserButton } from "@clerk/nextjs";
 import Link from "next/link";
 import { LayoutDashboard, Users, Package, FileText, Settings } from "lucide-react";
+import { requireCrmUser } from "@/lib/crm-auth";
 
-export default function DashboardLayout({
+export const dynamic = "force-dynamic";
+export const runtime = "edge";
+
+export default async function DashboardLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
+  await requireCrmUser();
+
   return (
+    <ClerkProvider>
     <div className="flex h-screen bg-neutral-50">
       {/* Sidebar */}
       <aside className="w-64 border-r bg-white hidden md:flex flex-col">
@@ -45,6 +52,7 @@ export default function DashboardLayout({
         </div>
       </main>
     </div>
+    </ClerkProvider>
   );
 }
 

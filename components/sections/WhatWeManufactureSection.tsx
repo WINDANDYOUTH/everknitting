@@ -14,7 +14,7 @@ const CATEGORIES: Category[] = [
   {
     key: "cashmere",
     label: "Cashmere Sweaters",
-    image: "/luxury-cashmere-crewneck-sweater.png",
+    image: "/products/luxury-cashmere-crewneck-sweater.png",
   },
   {
     key: "wool",

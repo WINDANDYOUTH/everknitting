@@ -1,6 +1,6 @@
 "use server"
 
-import { prisma } from "@/lib/prisma"
+import { requireCrmUser } from "@/lib/crm-auth"
 import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
 import { z } from "zod"
@@ -17,6 +17,8 @@ const leadSchema = z.object({
 })
 
 export async function createLead(formData: FormData) {
+  await requireCrmUser()
+
   const data = {
     companyName: formData.get("companyName") as string,
     contactName: formData.get("contactName") as string,
@@ -30,6 +32,7 @@ export async function createLead(formData: FormData) {
 
   const validated = leadSchema.parse(data)
 
+  const { prisma } = await import("@/lib/prisma")
   await prisma.lead.create({
     data: {
       companyName: validated.companyName,
@@ -48,6 +51,8 @@ export async function createLead(formData: FormData) {
 }
 
 export async function getLeads() {
+  await requireCrmUser()
+  const { prisma } = await import("@/lib/prisma")
   return await prisma.lead.findMany({
     orderBy: { createdAt: "desc" },
   })

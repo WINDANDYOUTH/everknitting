@@ -4,6 +4,7 @@
 import React, { useEffect, useRef } from "react";
 import { useFormStatus } from "react-dom";
 import { RainbowButton } from "@/components/ui/rainbow-button";
+import { SampleConsultationModal } from "@/components/ui/SampleConsultationModal";
 import { sendInquiry } from "@/app/actions/send-inquiry";
 import { trackFormSubmission } from "@/components/analytics";
 
@@ -21,6 +22,7 @@ type ActionState =
   | null;
 
 export default function StartYourProjectSection() {
+  const [isConsultationOpen, setIsConsultationOpen] = React.useState(false);
   // ✅ React 19 / Next 16: useActionState (NOT useFormState)
   const [state, formAction] = React.useActionState<ActionState, FormData>(
     sendInquiry,
@@ -225,12 +227,13 @@ export default function StartYourProjectSection() {
                 {/* Actions */}
                 <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
                   <SubmitRainbow />
-                  <a
-                    href="#consultation"
+                  <button
+                    type="button"
+                    onClick={() => setIsConsultationOpen(true)}
                     className="inline-flex h-12 items-center justify-center rounded-2xl border border-wool/50 bg-cashmere/5 px-6 text-sm font-semibold text-cashmere backdrop-blur transition hover:bg-cashmere/10"
                   >
                     Get Free Sample Consultation
-                  </a>
+                  </button>
                 </div>
 
                 <p className="text-xs text-cashmere/60">
@@ -242,6 +245,10 @@ export default function StartYourProjectSection() {
           </div>
         </div>
       </div>
+      <SampleConsultationModal
+        isOpen={isConsultationOpen}
+        onClose={() => setIsConsultationOpen(false)}
+      />
     </section>
   );
 }

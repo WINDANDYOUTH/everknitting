@@ -66,9 +66,11 @@
       "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
     },
     "info": {
-      "factoryAddress": "Fabrikadresse",
+      "samplingAddress": "Muster- und Schnittatelier",
       "emailUs": "E-Mail an uns",
-      "callUs": "Rufen Sie uns an"
+      "callUs": "Rufen Sie uns an",
+      "manufacturingTitle": "Produktion",
+      "manufacturingDescription": "Unser Hauptproduktionsstandort ist unsere gruppeneigene Fabrik in Kambodscha. Zu unserer Gruppe gehören außerdem 10 weitere Fabriken an verschiedenen Standorten. Unser Muster- und Schnittatelier in Dongguan, China, unterstützt die Produktentwicklung."
     }
   },
   "footer": {
@@ -94,7 +96,7 @@
       "startProject": "Projekt starten"
     },
     "contactInfo": {
-      "factoryAddress": "Fabrikadresse",
+      "samplingAddress": "Muster- und Schnittatelier",
       "phone": "Telefon",
       "inquiries": "Anfragen"
     }
