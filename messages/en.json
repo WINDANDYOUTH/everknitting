@@ -66,9 +66,11 @@
       "error": "Something went wrong. Please try again."
     },
     "info": {
-      "factoryAddress": "Factory Address",
+      "samplingAddress": "Sampling & Pattern Room",
       "emailUs": "Email Us",
-      "callUs": "Call Us"
+      "callUs": "Call Us",
+      "manufacturingTitle": "Manufacturing",
+      "manufacturingDescription": "Our main manufacturing site is our group-owned factory in Cambodia. Our group also has 10 additional factories in various locations. Product development is supported by our sampling and pattern room in Dongguan, China."
     }
   },
   "footer": {
@@ -94,7 +96,7 @@
       "startProject": "Start Project"
     },
     "contactInfo": {
-      "factoryAddress": "Factory Address",
+      "samplingAddress": "Sampling & Pattern Room",
       "phone": "Phone",
       "inquiries": "Inquiries"
     }

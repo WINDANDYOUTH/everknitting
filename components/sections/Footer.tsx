@@ -5,6 +5,8 @@ import React from "react";
 import { Mail, Phone, MapPin, Linkedin, ArrowUpRight } from "lucide-react";
 import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
+import { BrandLogo } from "@/components/ui/BrandLogo";
+import { BUSINESS_CONTACT } from "@/lib/contact";
 
 export default function Footer() {
   const t = useTranslations("footer");
@@ -46,8 +48,10 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="lg:col-span-4">
             <div className="flex flex-col gap-6">
-              <h2 className="text-2xl font-bold tracking-tight">
-                EVER KNITTING
+              <h2>
+                <Link href="/" className="inline-flex transition-opacity hover:opacity-80">
+                  <BrandLogo width={216} />
+                </Link>
               </h2>
               <p className="max-w-xs text-sm leading-relaxed text-wool">
                 Ever Knitting Company Limited.
@@ -65,7 +69,8 @@ export default function Footer() {
                   <Linkedin size={20} />
                 </a>
                 <a 
-                  href="mailto:info@everknitting.com"
+                  href={BUSINESS_CONTACT.emailHref}
+                  aria-label={t("contactInfo.inquiries")}
                   className="flex h-10 w-10 items-center justify-center rounded-xl border border-wool/30 bg-cashmere/5 transition hover:border-copper hover:text-copper"
                 >
                   <Mail size={20} />
@@ -109,10 +114,10 @@ export default function Footer() {
                   <MapPin size={18} />
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-cashmere">{t("contactInfo.factoryAddress")}</p>
+                  <p className="text-sm font-medium text-cashmere">{t("contactInfo.samplingAddress")}</p>
                   <p className="mt-1 text-xs leading-relaxed text-wool">
-                    No. 34, Changlang Road, Changping Town,<br />
-                    Dongguan City, Guangdong, China
+                    {BUSINESS_CONTACT.samplingStreet},<br />
+                    {BUSINESS_CONTACT.samplingCity}, {BUSINESS_CONTACT.samplingRegion}, {BUSINESS_CONTACT.samplingCountry}
                   </p>
                 </div>
               </div>
@@ -123,7 +128,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-cashmere">{t("contactInfo.phone")}</p>
-                  <p className="mt-1 text-xs text-wool">+86 15626260157</p>
+                  <a href={BUSINESS_CONTACT.phoneHref} className="mt-1 block text-xs text-wool hover:text-cashmere">{BUSINESS_CONTACT.phone}</a>
                 </div>
               </div>
 
@@ -133,7 +138,7 @@ export default function Footer() {
                 </div>
                 <div>
                   <p className="text-sm font-medium text-cashmere">{t("contactInfo.inquiries")}</p>
-                  <p className="mt-1 text-xs text-wool">info@everknitting.com</p>
+                  <a href={BUSINESS_CONTACT.emailHref} className="mt-1 block text-xs text-wool hover:text-cashmere">{BUSINESS_CONTACT.email}</a>
                 </div>
               </div>
             </div>

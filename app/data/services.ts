@@ -44,7 +44,7 @@ export const services: Record<string, ServiceData> = {
     faq: [
       {
         q: "Are you a direct knitwear manufacturer or a trading company?",
-        a: "Ever Knitting is a direct manufacturer with our own factory in Dongguan, China. We handle production in-house with no middlemen, ensuring quality control and competitive pricing.",
+        a: "Our main manufacturing site is our group-owned factory in Cambodia. Our group also has 10 additional factories in various locations. Our Dongguan sampling and pattern room supports product development.",
       },
       {
         q: "What is your minimum order quantity (MOQ) for knitwear?",

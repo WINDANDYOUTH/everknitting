@@ -1,5 +1,6 @@
 // components/seo/JSONLD.tsx
 import React from "react";
+import { BUSINESS_CONTACT } from "@/lib/contact";
 
 type FAQ = { q: string; a: string };
 
@@ -18,9 +19,9 @@ export default function JSONLD({ faqs }: JSONLDProps) {
     "logo": "https://everknitting.com/logo.png", // Ensure this exists or update
     "contactPoint": {
       "@type": "ContactPoint",
-      "telephone": "", // Add if available
+      "telephone": BUSINESS_CONTACT.phoneE164,
       "contactType": "customer service",
-      "email": "info@everknitting.com",
+      "email": BUSINESS_CONTACT.email,
       "availableLanguage": ["English", "Chinese"]
     },
     "sameAs": [

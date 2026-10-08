@@ -66,9 +66,11 @@
       "error": "Qualcosa è andato storto. Riprova."
     },
     "info": {
-      "factoryAddress": "Indirizzo fabbrica",
+      "samplingAddress": "Sala campioni e modellistica",
       "emailUs": "Scrivici",
-      "callUs": "Chiamaci"
+      "callUs": "Chiamaci",
+      "manufacturingTitle": "Produzione",
+      "manufacturingDescription": "Il nostro principale sito produttivo è la fabbrica di proprietà del nostro gruppo in Cambogia. Il nostro gruppo comprende anche altre 10 fabbriche in diverse località. La nostra sala campioni e modellistica a Dongguan, in Cina, supporta lo sviluppo dei prodotti."
     }
   },
   "footer": {
@@ -94,7 +96,7 @@
       "startProject": "Inizia progetto"
     },
     "contactInfo": {
-      "factoryAddress": "Indirizzo fabbrica",
+      "samplingAddress": "Sala campioni e modellistica",
       "phone": "Telefono",
       "inquiries": "Richieste"
     }

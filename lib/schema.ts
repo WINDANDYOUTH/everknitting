@@ -14,6 +14,7 @@
 import type { ServiceData } from "@/app/data/services";
 import type { ProductData } from "@/app/data/products";
 import { BASE_URL } from "./seo";
+import { BUSINESS_CONTACT } from "./contact";
 
 /**
  * ORGANIZATION SCHEMA
@@ -42,21 +43,24 @@ export function generateOrganizationSchema() {
       "Professional knitwear manufacturer offering OEM and ODM services for fashion brands, wholesalers, and private label clothing companies worldwide.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Dongguan City",
-      addressRegion: "Guangdong Province",
+      streetAddress: BUSINESS_CONTACT.samplingStreet,
+      addressLocality: BUSINESS_CONTACT.samplingCity,
+      addressRegion: BUSINESS_CONTACT.samplingRegion,
       addressCountry: "CN",
     },
     contactPoint: [
       {
         "@type": "ContactPoint",
         contactType: "sales",
-        email: "sales@everknitting.com",
+        email: BUSINESS_CONTACT.email,
+        telephone: BUSINESS_CONTACT.phoneE164,
         availableLanguage: ["English", "Chinese"],
       },
       {
         "@type": "ContactPoint",
         contactType: "customer service",
-        email: "info@everknitting.com",
+        email: BUSINESS_CONTACT.email,
+        telephone: BUSINESS_CONTACT.phoneE164,
         availableLanguage: ["English", "Chinese"],
       },
     ],

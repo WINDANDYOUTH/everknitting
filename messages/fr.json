@@ -66,9 +66,11 @@
       "error": "Une erreur s'est produite. Veuillez réessayer."
     },
     "info": {
-      "factoryAddress": "Adresse de l'usine",
+      "samplingAddress": "Atelier d’échantillonnage et de patronage",
       "emailUs": "Envoyez-nous un e-mail",
-      "callUs": "Appelez-nous"
+      "callUs": "Appelez-nous",
+      "manufacturingTitle": "Production",
+      "manufacturingDescription": "Notre principal site de production est notre usine appartenant à notre groupe au Cambodge. Notre groupe possède également 10 autres usines dans différents lieux. Notre atelier d’échantillonnage et de patronage à Dongguan, en Chine, accompagne le développement des produits."
     }
   },
   "footer": {
@@ -94,7 +96,7 @@
       "startProject": "Démarrer un projet"
     },
     "contactInfo": {
-      "factoryAddress": "Adresse de l'usine",
+      "samplingAddress": "Atelier d’échantillonnage et de patronage",
       "phone": "Téléphone",
       "inquiries": "Demandes"
     }

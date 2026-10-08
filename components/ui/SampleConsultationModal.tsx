@@ -4,6 +4,7 @@ import React from "react";
 import { Mail, MessageCircle, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/utils";
+import { BUSINESS_CONTACT } from "@/lib/contact";
 
 interface SampleConsultationModalProps {
   isOpen: boolean;
@@ -32,7 +33,7 @@ export function SampleConsultationModal({
       icon: MessageCircle,
       description: "Instant response for sample requests",
       action: "Chat on WhatsApp",
-      href: "https://wa.me/8615626260157", // Placeholder, user can update
+      href: BUSINESS_CONTACT.whatsappHref,
       color: "bg-[#25D366]/10 text-[#25D366] hover:bg-[#25D366]/20",
     },
     {
@@ -40,7 +41,7 @@ export function SampleConsultationModal({
       icon: Mail,
       description: "Send us your tech pack or questions",
       action: "Send Email",
-      href: "mailto:info@everknitting.com",
+      href: BUSINESS_CONTACT.emailHref,
       color: "bg-blue-500/10 text-blue-500 hover:bg-blue-500/20",
     },
   ];

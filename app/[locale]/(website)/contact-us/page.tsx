@@ -1,6 +1,7 @@
 import React from "react";
 import type { Metadata } from "next";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Mail, MapPin, Phone, MessageCircle } from "lucide-react";
+import { BUSINESS_CONTACT } from "@/lib/contact";
 import { ContactForm } from "@/components/sections/ContactForm";
 import { setRequestLocale, getTranslations } from 'next-intl/server';
 
@@ -23,6 +24,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function ContactPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: 'contact' });
 
   return (
     <div className="bg-navy min-h-screen text-cashmere">
@@ -41,18 +43,18 @@ export default async function ContactPage({ params }: Props) {
         <div className="grid md:grid-cols-2 gap-8">
           {/* Contact Info */}
           <div className="bg-navy p-8 md:p-12 rounded-3xl shadow-2xl border border-wool/10 h-full">
-            <h2 className="text-2xl font-bold mb-8">Contact Information</h2>
+            <h2 className="text-2xl font-bold mb-8">{t('infoTitle')}</h2>
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="p-3 bg-navy-deep rounded-lg text-copper">
                   <MapPin size={24} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg text-cashmere">Factory Address</h3>
+                  <h3 className="font-semibold text-lg text-cashmere">{t('info.samplingAddress')}</h3>
                   <p className="text-wool mt-1">
-                    No. 123 Textile Road, Dalang Town<br />
-                    Dongguan City, Guangdong Province<br />
-                    China
+                    {BUSINESS_CONTACT.samplingStreet}<br />
+                    {BUSINESS_CONTACT.samplingCity}, {BUSINESS_CONTACT.samplingRegion}<br />
+                    {BUSINESS_CONTACT.samplingCountry}
                   </p>
                 </div>
               </div>
@@ -62,9 +64,9 @@ export default async function ContactPage({ params }: Props) {
                   <Mail size={24} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg text-cashmere">Email Us</h3>
+                  <h3 className="font-semibold text-lg text-cashmere">{t('info.emailUs')}</h3>
                   <p className="text-wool mt-1">
-                    inquiries@everknitting.com
+                    <a href={BUSINESS_CONTACT.emailHref} className="hover:text-cashmere underline underline-offset-4">{BUSINESS_CONTACT.email}</a>
                   </p>
                 </div>
               </div>
@@ -74,12 +76,33 @@ export default async function ContactPage({ params }: Props) {
                  <Phone size={24} />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-lg text-cashmere">Call Us</h3>
+                  <h3 className="font-semibold text-lg text-cashmere">{t('info.callUs')}</h3>
                   <p className="text-wool mt-1">
-                    +86 769 1234 5678
+                    <a href={BUSINESS_CONTACT.phoneHref} className="hover:text-cashmere underline underline-offset-4">{BUSINESS_CONTACT.phone}</a>
                   </p>
                 </div>
               </div>
+              <div className="flex items-start gap-4">
+                <div className="p-3 bg-navy-deep rounded-lg text-copper">
+                  <MessageCircle size={24} />
+                </div>
+                <div>
+                  <h3 className="font-semibold text-lg text-cashmere">WhatsApp</h3>
+                  <p className="text-wool mt-1">
+                    <a href={BUSINESS_CONTACT.whatsappHref} target="_blank" rel="noopener noreferrer" className="hover:text-cashmere underline underline-offset-4">{BUSINESS_CONTACT.phone}</a>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div className="mt-8 border-t border-wool/20 pt-6">
+              <h3 className="font-semibold text-lg text-cashmere">{t('info.manufacturingTitle')}</h3>
+              <p className="text-wool mt-2">{t('info.manufacturingDescription')}</p>
+              <p className="mt-4 font-medium text-cashmere">{BUSINESS_CONTACT.manufacturingName}</p>
+              <p className="text-wool mt-1">
+                {BUSINESS_CONTACT.manufacturingStreet}<br />
+                {BUSINESS_CONTACT.manufacturingRegion}<br />
+                {BUSINESS_CONTACT.manufacturingCountry}
+              </p>
             </div>
           </div>
 

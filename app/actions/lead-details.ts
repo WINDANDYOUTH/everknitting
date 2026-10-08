@@ -1,8 +1,10 @@
 "use server"
 
-import { prisma } from "@/lib/prisma"
+import { requireCrmUser } from "@/lib/crm-auth"
 
 export async function getLeadById(id: string) {
+  await requireCrmUser()
+  const { prisma } = await import("@/lib/prisma")
   return await prisma.lead.findUnique({
     where: { id },
     include: {

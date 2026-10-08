@@ -76,7 +76,7 @@ export default function HeroSection() {
             variant="outline"
             className="h-12 px-6 text-sm font-semibold w-full sm:w-auto text-cashmere"
             onClick={() => setIsModalOpen(true)}
-            style={{ "--background": "#2B3942" } as React.CSSProperties}
+            style={{ "--background": "#2B3942", color: "#EDE6D8" } as React.CSSProperties}
           >
             {t("ctaSecondary")}
           </RainbowButton>
