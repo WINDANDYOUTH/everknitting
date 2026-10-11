@@ -1,14 +1,22 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 
 type BrandLogoProps = {
   width?: number;
+  mobileWidth?: number;
   priority?: boolean;
 };
 
 // Approved concept A: EK symbol and wordmark, with native 1288:256 proportions.
-export function BrandLogo({ width = 250, priority = false }: BrandLogoProps) {
+export function BrandLogo({ width = 200, mobileWidth = width, priority = false }: BrandLogoProps) {
   return (
-    <span className="inline-block max-w-full shrink-0" style={{ width }}>
+    <span
+      className="inline-block w-[var(--brand-logo-mobile-width)] max-w-full shrink-0 sm:w-[var(--brand-logo-width)]"
+      style={{
+        "--brand-logo-width": `${width}px`,
+        "--brand-logo-mobile-width": `${mobileWidth}px`,
+      } as CSSProperties}
+    >
       <Image
         src="/brand/everknitting-horizontal-cocoa.svg"
         alt="Ever Knitting"

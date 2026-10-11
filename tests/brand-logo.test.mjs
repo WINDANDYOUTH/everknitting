@@ -37,8 +37,8 @@ const { BrandLogo } = loaded.exports;
 
 test("header logo has accessible text, native proportions and theme variants", () => {
   imageCalls.length = 0;
-  const html = renderToStaticMarkup(React.createElement(BrandLogo, { width: 250, priority: true }));
-  assert.match(html, /style="width:250px"/);
+  const html = renderToStaticMarkup(React.createElement(BrandLogo, { width: 200, mobileWidth: 160, priority: true }));
+  assert.match(html, /--brand-logo-width:200px;--brand-logo-mobile-width:160px/);
   assert.equal(imageCalls.length, 2);
   assert.deepEqual(imageCalls.map((p) => p.src), ["/brand/everknitting-horizontal-cocoa.svg", "/brand/everknitting-horizontal-white.svg"]);
   for (const p of imageCalls) {
@@ -51,10 +51,10 @@ test("header logo has accessible text, native proportions and theme variants", (
   assert.equal(imageCalls[1].className, "hidden h-auto w-full dark:block");
 });
 
-test("footer uses the approved wider size without priority preloading", () => {
+test("footer uses the compact size without priority preloading", () => {
   imageCalls.length = 0;
-  const html = renderToStaticMarkup(React.createElement(BrandLogo, { width: 256 }));
-  assert.match(html, /style="width:256px"/);
+  const html = renderToStaticMarkup(React.createElement(BrandLogo, { width: 200 }));
+  assert.match(html, /--brand-logo-width:200px;--brand-logo-mobile-width:200px/);
   assert.ok(imageCalls.every((p) => p.priority === false));
 });
 
@@ -76,9 +76,9 @@ test("approved concept A assets stay byte-identical", () => {
 test("header and footer use legible combined logos and native aspect ratios", () => {
   const header = readFileSync("components/sections/Header.tsx", "utf8");
   const footer = readFileSync("components/sections/Footer.tsx", "utf8");
-  assert.match(header, /<BrandLogo width=\{250\} priority \/>/);
-  assert.match(footer, /<BrandLogo width=\{256\} \/>/);
-  assert.match(header, /h-\[72px\] sm:h-\[90px\]/);
+  assert.match(header, /<BrandLogo width=\{200\} mobileWidth=\{160\} priority \/>/);
+  assert.match(footer, /<BrandLogo width=\{200\} \/>/);
+  assert.match(header, /h-\[64px\] sm:h-\[80px\]/);
   for (const variant of ["cocoa", "black", "white"]) {
     const svg = readFileSync(`public/brand/everknitting-horizontal-${variant}.svg`, "utf8");
     assert.match(svg, /viewBox="0 0 1288 256"/);
@@ -134,7 +134,7 @@ test("tablet navigation uses the drawer and the logo can fit narrow viewports", 
   assert.match(header, /hidden xl:flex flex-1/);
   assert.match(header, /xl:hidden p-2/);
   assert.match(header, /flex min-w-0 flex-col justify-center/);
-  assert.match(source, /inline-block max-w-full shrink-0/);
+  assert.match(source, /max-w-full shrink-0 sm:w-/);
   assert.doesNotMatch(header, /(?:shadow-2xl|backdrop-blur-sm) lg:hidden/);
 });
 
@@ -146,5 +146,11 @@ test("header keeps theme-aware logo contrast over light and dark page heroes", (
 
 test("homepage content clears the fixed themed header at every breakpoint", () => {
   const hero = readFileSync("components/sections/HeroSection.tsx", "utf8");
-  assert.match(hero, /pt-24 pb-16 sm:pt-28 sm:pb-20 lg:px-8 lg:pb-24/);
+  assert.match(hero, /pt-20 pb-16 sm:pt-24 sm:pb-20 lg:px-8 lg:pb-24/);
+});
+
+test("logo sizes use CSS responsive variables without a hydration-dependent swap", () => {
+  assert.match(source, /w-\[var\(--brand-logo-mobile-width\)\]/);
+  assert.match(source, /sm:w-\[var\(--brand-logo-width\)\]/);
+  assert.doesNotMatch(source, /useEffect|window.innerWidth/);
 });

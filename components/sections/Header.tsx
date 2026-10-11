@@ -100,13 +100,13 @@ export default function Header() {
         <div 
           className={cn(
             "container mx-auto px-4 md:px-6 flex items-center transition-all duration-300",
-            scrolled ? "h-[72px] md:h-[80px]" : "h-[72px] sm:h-[90px]"
+            scrolled ? "h-[64px] sm:h-[72px]" : "h-[64px] sm:h-[80px]"
           )}
         >
           {/* Left: Branding */}
           <div className="flex min-w-0 flex-col justify-center mr-3 xl:mr-0">
             <Link href="/" className="flex items-center group transition-opacity hover:opacity-80">
-              <BrandLogo width={250} priority />
+              <BrandLogo width={200} mobileWidth={160} priority />
             </Link>
             <span className={cn(
               "text-[10px] md:text-xs text-muted-foreground font-medium tracking-wide hidden sm:block transition-opacity duration-300",
