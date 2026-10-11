@@ -126,3 +126,14 @@ test("existing public logo URLs use the approved artwork", () => {
   assert.equal(readFileSync("public/brand/ever-knitting-white.svg", "utf8"),
     readFileSync("public/brand/everknitting-horizontal-white.svg", "utf8"));
 });
+
+test("tablet navigation uses the drawer and the logo can fit narrow viewports", () => {
+  const header = readFileSync("components/sections/Header.tsx", "utf8");
+  assert.match(header, /window.innerWidth < 1280/);
+  assert.match(header, /if \(!mobile\) \{\s+setMobileMenuOpen\(false\);\s+setHidden\(false\);/);
+  assert.match(header, /hidden xl:flex flex-1/);
+  assert.match(header, /xl:hidden p-2/);
+  assert.match(header, /flex min-w-0 flex-col justify-center/);
+  assert.match(source, /inline-block max-w-full shrink-0/);
+  assert.doesNotMatch(header, /(?:shadow-2xl|backdrop-blur-sm) lg:hidden/);
+});

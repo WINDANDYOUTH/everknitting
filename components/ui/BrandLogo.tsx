@@ -8,7 +8,7 @@ type BrandLogoProps = {
 // Approved concept A: EK symbol and wordmark, with native 1288:256 proportions.
 export function BrandLogo({ width = 250, priority = false }: BrandLogoProps) {
   return (
-    <span className="inline-block shrink-0" style={{ width }}>
+    <span className="inline-block max-w-full shrink-0" style={{ width }}>
       <Image
         src="/brand/everknitting-horizontal-cocoa.svg"
         alt="Ever Knitting"
