@@ -137,3 +137,9 @@ test("tablet navigation uses the drawer and the logo can fit narrow viewports", 
   assert.match(source, /inline-block max-w-full shrink-0/);
   assert.doesNotMatch(header, /(?:shadow-2xl|backdrop-blur-sm) lg:hidden/);
 });
+
+test("header keeps theme-aware logo contrast over light and dark page heroes", () => {
+  const header = readFileSync("components/sections/Header.tsx", "utf8");
+  assert.match(header, /\? "bg-background\/90 backdrop-blur-md shadow-sm border-b border-border\/40"\s+: "bg-background\/90 backdrop-blur-md"/);
+  assert.doesNotMatch(header, /"bg-transparent"/);
+});
