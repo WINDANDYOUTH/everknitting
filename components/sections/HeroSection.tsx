@@ -30,7 +30,7 @@ export default function HeroSection() {
         className="absolute inset-0 opacity-[0.08] bg-[linear-gradient(to_right,rgba(237,230,216,0.55)_1px,transparent_1px),linear-gradient(to_bottom,rgba(237,230,216,0.55)_1px,transparent_1px)] bg-size-[72px_72px]"
       />
 
-      <div className="relative mx-auto max-w-6xl px-6 py-16 sm:py-20 lg:px-8 lg:py-24">
+      <div className="relative mx-auto max-w-6xl px-6 pt-24 pb-16 sm:pt-28 sm:pb-20 lg:px-8 lg:pb-24">
         {/* Brand one-liner */}
         <p className="text-sm font-medium tracking-wide text-cashmere/75">
           {t("brand")}

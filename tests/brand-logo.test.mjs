@@ -143,3 +143,8 @@ test("header keeps theme-aware logo contrast over light and dark page heroes", (
   assert.match(header, /\? "bg-background\/90 backdrop-blur-md shadow-sm border-b border-border\/40"\s+: "bg-background\/90 backdrop-blur-md"/);
   assert.doesNotMatch(header, /"bg-transparent"/);
 });
+
+test("homepage content clears the fixed themed header at every breakpoint", () => {
+  const hero = readFileSync("components/sections/HeroSection.tsx", "utf8");
+  assert.match(hero, /pt-24 pb-16 sm:pt-28 sm:pb-20 lg:px-8 lg:pb-24/);
+});
