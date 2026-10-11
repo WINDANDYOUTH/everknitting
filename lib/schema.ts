@@ -36,8 +36,8 @@ export function generateOrganizationSchema() {
     logo: {
       "@type": "ImageObject",
       url: `${BASE_URL}/logo.png`,
-      width: 250,
-      height: 60,
+      width: 1200,
+      height: 239,
     },
     description:
       "Founded in 2009, Ever Knitting provides OEM and ODM knitwear manufacturing for established apparel brands developing or expanding knitwear collections.",

@@ -99,7 +99,7 @@ export default function Header() {
           {/* Left: Branding */}
           <div className="flex flex-col justify-center shrink-0">
             <Link href="/" className="flex items-center group transition-opacity hover:opacity-80">
-              <BrandLogo width={180} priority />
+              <BrandLogo width={250} priority />
             </Link>
             <span className={cn(
               "text-[10px] md:text-xs text-muted-foreground font-medium tracking-wide hidden sm:block transition-opacity duration-300",
