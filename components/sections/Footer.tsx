@@ -50,7 +50,7 @@ export default function Footer() {
             <div className="flex flex-col gap-6">
               <h2>
                 <Link href="/" className="inline-flex transition-opacity hover:opacity-80">
-                  <BrandLogo width={216} />
+                  <BrandLogo width={200} />
                 </Link>
               </h2>
               <p className="max-w-xs text-sm leading-relaxed text-wool">

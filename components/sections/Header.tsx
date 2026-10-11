@@ -31,7 +31,14 @@ export default function Header() {
 
   // Handle Resize for isMobile
   React.useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 1024);
+    const checkMobile = () => {
+      const mobile = window.innerWidth < 1280;
+      setIsMobile(mobile);
+      if (!mobile) {
+        setMobileMenuOpen(false);
+        setHidden(false);
+      }
+    };
     checkMobile();
     window.addEventListener("resize", checkMobile);
     return () => window.removeEventListener("resize", checkMobile);
@@ -87,19 +94,19 @@ export default function Header() {
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           scrolled || mobileMenuOpen
             ? "bg-background/90 backdrop-blur-md shadow-sm border-b border-border/40"
-            : "bg-transparent"
+            : "bg-background/90 backdrop-blur-md"
         )}
       >
         <div 
           className={cn(
             "container mx-auto px-4 md:px-6 flex items-center transition-all duration-300",
-            scrolled ? "h-[72px] md:h-[80px]" : "h-[72px] sm:h-[90px]"
+            scrolled ? "h-[64px] sm:h-[72px]" : "h-[64px] sm:h-[80px]"
           )}
         >
           {/* Left: Branding */}
-          <div className="flex flex-col justify-center shrink-0">
+          <div className="flex min-w-0 flex-col justify-center mr-3 xl:mr-0">
             <Link href="/" className="flex items-center group transition-opacity hover:opacity-80">
-              <BrandLogo width={180} priority />
+              <BrandLogo width={200} mobileWidth={160} priority />
             </Link>
             <span className={cn(
               "text-[10px] md:text-xs text-muted-foreground font-medium tracking-wide hidden sm:block transition-opacity duration-300",
@@ -110,7 +117,7 @@ export default function Header() {
           </div>
 
           {/* Center: Desktop Nav - Uses flex-1 to fill available space */}
-          <nav className="hidden lg:flex flex-1 items-center justify-center gap-4 xl:gap-6 2xl:gap-8 mx-4 xl:mx-8">
+          <nav className="hidden xl:flex flex-1 items-center justify-center gap-4 xl:gap-6 2xl:gap-8 mx-4 xl:mx-8">
             {NAV_LINKS.map((link) => (
               <Link
                 key={link.href}
@@ -132,7 +139,7 @@ export default function Header() {
           </nav>
 
           {/* Right: Theme, Language, CTA & Mobile Toggle */}
-          <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3 shrink-0 ml-auto lg:ml-0">
+          <div className="flex items-center gap-1.5 sm:gap-2 lg:gap-3 shrink-0 ml-auto xl:ml-0">
             {/* Theme Switcher (Desktop) */}
             <ThemeSwitcher className="hidden xl:flex" />
             
@@ -161,7 +168,7 @@ export default function Header() {
             {/* Mobile Menu Toggle */}
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="lg:hidden p-2 -mr-2 text-foreground hover:text-primary transition-colors focus:outline-none"
+              className="xl:hidden p-2 -mr-2 text-foreground hover:text-primary transition-colors focus:outline-none"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? (
@@ -185,7 +192,7 @@ export default function Header() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
               onClick={() => setMobileMenuOpen(false)}
-              className="fixed inset-0 z-60 bg-black/60 backdrop-blur-sm lg:hidden"
+              className="fixed inset-0 z-60 bg-black/60 backdrop-blur-sm xl:hidden"
               aria-hidden="true"
             />
             
@@ -195,7 +202,7 @@ export default function Header() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", damping: 25, stiffness: 200 }}
-              className="fixed inset-y-0 right-0 z-70 w-[85vw] max-w-xs bg-background text-foreground shadow-2xl lg:hidden flex flex-col"
+              className="fixed inset-y-0 right-0 z-70 w-[85vw] max-w-xs bg-background text-foreground shadow-2xl xl:hidden flex flex-col"
             >
               {/* Drawer Header - Fixed */}
               <div className="shrink-0 flex items-center justify-between px-5 py-4 border-b border-border">

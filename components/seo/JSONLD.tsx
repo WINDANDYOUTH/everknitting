@@ -16,7 +16,7 @@ export default function JSONLD({ faqs }: JSONLDProps) {
     "name": "Ever Knitting Company Limited",
     "alternateName": "Ever Knitting",
     "url": "https://everknitting.com",
-    "logo": "https://everknitting.com/logo.png", // Ensure this exists or update
+    "logo": "https://everknitting.com/logo.png",
     "contactPoint": {
       "@type": "ContactPoint",
       "telephone": BUSINESS_CONTACT.phoneE164,
